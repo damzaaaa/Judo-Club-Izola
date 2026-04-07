@@ -6,6 +6,7 @@ const HERO_IMAGE = "https://customer-assets.emergentagent.com/job_ad56f1e8-e5f7-
 const DEMO_IMAGE = "https://customer-assets.emergentagent.com/job_ad56f1e8-e5f7-431f-947a-6697b9684b20/artifacts/lm6c8pu4_Demonstracija%20vtopa%20z%20izravnote%C5%BEenjem.webp";
 const GROUP_IMAGE = "https://customer-assets.emergentagent.com/job_ad56f1e8-e5f7-431f-947a-6697b9684b20/artifacts/lhho1c0o_Skupina%20mlaj%C5%A1ih%20judoistov.webp";
 const MAIN_LOGO = "https://customer-assets.emergentagent.com/job_ad56f1e8-e5f7-431f-947a-6697b9684b20/artifacts/vvsly6ll_JUDO%20%282%29.jpg";
+const JUDO_SOLA_LOGO = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/tstr51lv_image.png";
 
 export default function Domov() {
   const scrollToNews = () => {
@@ -162,15 +163,24 @@ export default function Domov() {
         
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Logo */}
+            {/* Logos */}
             <div className="flex justify-center lg:justify-start order-2 lg:order-1">
-              <div className="relative">
-                <div className="absolute -inset-4 bg-[#D4AF37]/10 blur-2xl rounded-full" />
-                <img
-                  src={MAIN_LOGO}
-                  alt="Judo Klub Izola logo"
-                  className="w-64 h-64 lg:w-80 lg:h-80 object-contain relative z-10"
-                />
+              <div className="flex items-center gap-8">
+                <div className="relative">
+                  <div className="absolute -inset-4 bg-[#D4AF37]/10 blur-2xl rounded-full" />
+                  <img
+                    src={MAIN_LOGO}
+                    alt="Judo Klub Izola logo"
+                    className="w-40 h-40 lg:w-48 lg:h-48 object-contain relative z-10"
+                  />
+                </div>
+                <div className="relative">
+                  <img
+                    src={JUDO_SOLA_LOGO}
+                    alt="Judo šola Iztoka Babiča logo"
+                    className="w-40 h-40 lg:w-48 lg:h-48 object-contain relative z-10"
+                  />
+                </div>
               </div>
             </div>
 

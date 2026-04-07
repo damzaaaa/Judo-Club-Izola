@@ -24,7 +24,17 @@
         <script>window.addEventListener("error",function(e){if(e.error instanceof DOMException&&e.error.name==="DataCloneError"&&e.message&&e.message.includes("PerformanceServerTiming")){e.stopImmediatePropagation();e.preventDefault()}},true);</script>
         <script src="https://assets.emergent.sh/scripts/emergent-main.js"></script>
         <style>
-            #emergent-badge { display: none !important; }
+            #emergent-badge,
+            [id*="emergent"],
+            [class*="emergent"],
+            a[href*="emergent.sh"] {
+                display: none !important;
+                visibility: hidden !important;
+                opacity: 0 !important;
+                pointer-events: none !important;
+                position: absolute !important;
+                left: -9999px !important;
+            }
         </style>
     </head>
     <body>

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { Mail, MapPin, Phone } from 'lucide-react';
 
 const LOGO_URL = "https://customer-assets.emergentagent.com/job_ad56f1e8-e5f7-431f-947a-6697b9684b20/artifacts/vvsly6ll_JUDO%20%282%29.jpg";
+const JUDO_SOLA_LOGO = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/tstr51lv_image.png";
 
 const navLinks = [
   { name: 'Domov', path: '/' },
@@ -19,11 +20,16 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Logo & Description */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex items-center gap-4 mb-6">
               <img
                 src={LOGO_URL}
                 alt="Judo Klub Izola"
-                className="h-16 w-16 object-contain rounded-full bg-white p-1"
+                className="h-14 w-14 object-contain rounded-full bg-white p-1"
+              />
+              <img
+                src={JUDO_SOLA_LOGO}
+                alt="Judo šola Iztoka Babiča"
+                className="h-14 w-14 object-contain"
               />
               <div>
                 <h3 className="font-['Outfit'] font-bold text-xl tracking-tight">
