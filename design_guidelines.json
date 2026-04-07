@@ -1,0 +1,137 @@
+{
+  "theme": "light",
+  "archetype": "Archetype 4: Swiss & High-Contrast (Customized with Gold accents)",
+  "colors": {
+    "primary": "#D4AF37",
+    "primary_hover": "#C5A059",
+    "background": "#FFFFFF",
+    "surface": "#F9F9F9",
+    "text_primary": "#0A0A0A",
+    "text_secondary": "#52525B",
+    "border": "#E5E7EB",
+    "accent_gold": "#D4AF37",
+    "accent_gold_subtle": "rgba(212, 175, 55, 0.1)",
+    "rules": [
+      "No full-screen gold or black backgrounds. Rely on white (#FFFFFF) with 10% grey (#F9F9F9) for structure.",
+      "Gold (#D4AF37) is reserved ONLY for interaction highlights, tiny overlines, button borders, and selected active states.",
+      "The 'Tinted Grey' Rule: Neutral greys should lean cool or neutral, never muddy.",
+      "Never use pure black (#000000) for text. Use deep obsidian (#0A0A0A)."
+    ]
+  },
+  "typography": {
+    "headings": {
+      "font_family": "Outfit, sans-serif",
+      "style": "Wide geometric sans, authoritative but modern.",
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tighter leading-none font-bold",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl tracking-tight leading-tight font-semibold",
+      "h3": "text-xl sm:text-2xl tracking-tight font-medium"
+    },
+    "body": {
+      "font_family": "Manrope, sans-serif",
+      "style": "Clean, highly readable, precise.",
+      "base": "text-base leading-relaxed text-[#52525B]",
+      "small": "text-sm leading-snug text-[#52525B]"
+    },
+    "overlines": "Uppercase, tiny text-xs tracking-[0.2em] text-[#D4AF37] font-semibold",
+    "rules": [
+      "DO NOT USE INTER, ROBOTO, OR OPEN SANS for headings.",
+      "Headings over 32px MUST use tracking-tight or tracking-tighter.",
+      "Hierarchy Gap Rule: Never jump from text-6xl to text-sm. Use text-xl for subheadings."
+    ]
+  },
+  "layout_and_spacing": {
+    "padding_scale": "p-4, p-8, p-16, p-24, p-32",
+    "philosophy": "Generous spacing. Use 2-3x more white space than standard SaaS designs to achieve the premium 'Awwwards' feel. (e.g., py-32 for sections).",
+    "grid_system": "Use The 'Bento' Protocol for the gallery (Tetris Grid). Asymmetrical blocks, wide gaps (gap-8).",
+    "alignment": "Left-align dense text and headings for readability. Only center in the main hero if visually balanced.",
+    "containers": "Max width 7xl for standard content, larger for bleeding images."
+  },
+  "components": {
+    "buttons": "Flat, sharp edges (rounded-none or rounded-sm). Primary button: bg-[#0A0A0A] text-white hover:bg-[#D4AF37] transition-colors. Secondary button: bg-transparent border border-[#0A0A0A] text-[#0A0A0A] hover:bg-[#F9F9F9].",
+    "navigation": "Sticky, glassmorphism (backdrop-blur-xl bg-white/70) with 1px border-b border-border/40. Links MUST be visible on desktop (no hamburger on md/lg).",
+    "cards": "Cardless or completely flat. Subtle 1px borders (border-[#E5E7EB]), zero shadow, or extremely faint ambient shadow (shadow-sm) on hover.",
+    "forms": "Shadcn UI Input/Textarea but heavily customized: h-12, flat borders, focus:ring-1 focus:ring-[#D4AF37] focus:border-[#D4AF37].",
+    "lightbox": "For the gallery, clicking a photo MUST open a full-screen lightbox overlay (bg-black/90) to display the large image."
+  },
+  "motion_and_interactions": {
+    "hover_states": "Images slightly scale up inside their container (overflow-hidden) with a slow ease transition. Links have an underline expansion or subtle gold color shift.",
+    "reveal": "Use simple staggered fade-ups for section content.",
+    "accessibility": "Always respect prefers-reduced-motion."
+  },
+  "pages": {
+    "domov": {
+      "title": "Domov",
+      "sections": [
+        "Hero: Minimalist layout. Massive H1 (Judo Klub Izola), gold accent overline, large high-quality action shot (Technique demo photo).",
+        "News Spotlight 1 (Asymmetric layout): Olympic champion Andrea Leški visiting for special training. Use Photo 1 (Training supervision).",
+        "News Spotlight 2: Celebration of winning a public grant project. Clean text block, bold stats/typography.",
+        "Affiliated Clubs: Horizontal marquee or bento grid showing the 4 club logos (Logo 1 asset)."
+      ]
+    },
+    "o_nas": {
+      "title": "O nas",
+      "sections": [
+        "History/About: Clean typography-focused layout. Ample white space.",
+        "Team/Values: Use Photo 3 (Young judoists) in a large edge-to-edge or rounded-none container."
+      ]
+    },
+    "galerija": {
+      "title": "Galerija",
+      "sections": [
+        "Bento Grid / Masonry: Show all judo photos. MUST include thumbnail view with click-to-enlarge (Lightbox) functionality."
+      ]
+    },
+    "kontakt": {
+      "title": "Kontakt",
+      "sections": [
+        "Split layout (lg:grid-cols-2). Left: Contact info, map placeholder, large typography. Right: Minimalist clean form (Shadcn customized)."
+      ]
+    }
+  },
+  "media": {
+    "images": [
+      {
+        "url": "https://customer-assets.emergentagent.com/job_ad56f1e8-e5f7-431f-947a-6697b9684b20/artifacts/vvsly6ll_JUDO%20%282%29.jpg",
+        "description": "Main Judo Klub Izola Logo",
+        "category": "header_logo"
+      },
+      {
+        "url": "https://customer-assets.emergentagent.com/job_ad56f1e8-e5f7-431f-947a-6697b9684b20/artifacts/3462nyw9_JUDO.jpg",
+        "description": "Affiliated Clubs Logos (Izola, Ankaran, Marezige, Babič)",
+        "category": "affiliated_logos_section"
+      },
+      {
+        "url": "https://customer-assets.emergentagent.com/job_ad56f1e8-e5f7-431f-947a-6697b9684b20/artifacts/lm6c8pu4_Demonstracija%20vtopa%20z%20izravnote%C5%BEenjem.webp",
+        "description": "Technique demonstration",
+        "category": "hero_or_featured_action"
+      },
+      {
+        "url": "https://customer-assets.emergentagent.com/job_ad56f1e8-e5f7-431f-947a-6697b9684b20/artifacts/kbs2nshy_Nadzor%20vadbe.webp",
+        "description": "Training supervision (Andrea Leški news)",
+        "category": "news_article_andrea"
+      },
+      {
+        "url": "https://customer-assets.emergentagent.com/job_ad56f1e8-e5f7-431f-947a-6697b9684b20/artifacts/lhho1c0o_Skupina%20mlaj%C5%A1ih%20judoistov.webp",
+        "description": "Group of young judoists",
+        "category": "about_page_team"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1548685913-fe6678babe8d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1Mjh8MHwxfHNlYXJjaHwyfHxtaW5pbWFsaXN0JTIwd2hpdGUlMjB0ZXh0dXJlJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3NzU1MzU1MDR8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Minimalist white texture",
+        "category": "background_texture_fallback"
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "You are executing a design by E1. The site is for an elite sports club, so use sharp, clean edges. NO cutesy soft borders unless explicitly modifying a Shadcn default.",
+    "Implement routing for the 4 pages (Domov, O nas, Galerija, Kontakt).",
+    "Language MUST be Slovenian.",
+    "Add data-testid attributes to all interactive elements, navigation links, and buttons.",
+    "Install Google Fonts 'Outfit' and 'Manrope' in your HTML/CSS.",
+    "Ensure 'Domov' hero uses an impactful image layout (avoid generic Vercel look).",
+    "Use framer-motion or standard CSS for smooth image reveal/scale on hover in the gallery.",
+    "For the gallery lightbox, use a simple React state or Dialog from Shadcn configured to be full screen.",
+    "Use Phosphor icons or Lucide for UI arrows and symbols.",
+    "Strictly follow the color palette. DO NOT inject teal, purple, or generic blue."
+  ]
+}
