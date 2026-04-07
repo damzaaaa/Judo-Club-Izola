@@ -17,11 +17,6 @@ const EVENTS = [
         description: "Andrea Leški nadzoruje vadbo članov"
       },
       {
-        url: "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/uaoy5ize_Nadzor%20vadbe.webp",
-        title: "Nadzor vadbe II",
-        description: "Andrea Leški med nadzorom treninga"
-      },
-      {
         url: "https://customer-assets.emergentagent.com/job_ad56f1e8-e5f7-431f-947a-6697b9684b20/artifacts/lm6c8pu4_Demonstracija%20vtopa%20z%20izravnote%C5%BEenjem.webp",
         title: "Demonstracija vtopa z izravnoteženjem",
         description: "Andrea Leški prikazuje tehniko"
