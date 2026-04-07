@@ -14,42 +14,43 @@ Build a modern, professional and premium-looking website for Judo klub Izola in 
 - White background with black and gold (#D4AF37) accents
 - Responsive design (mobile-friendly)
 - High-quality images display
-- Gallery with lightbox functionality
+- Gallery with event-based organization and lightbox
 
 ## Implementation Status (Jan 2026)
 
 ### Completed
+- [x] Full-screen hero with Andrea Leški training image
+- [x] Hero click-to-scroll to news functionality
+- [x] News article with full Andrea Leški visit content
+- [x] Gallery page with event cards (click to view all event photos)
 - [x] Navigation with sticky header and mobile menu
-- [x] Domov (Home) page with hero, news sections, club logos
-- [x] O nas (About) page with values and team photo
-- [x] Galerija (Gallery) with lightbox functionality
+- [x] O nas (About) page - removed "Temelji juda" values section
 - [x] Kontakt (Contact) page with placeholders
 - [x] Footer with contact info
-- [x] Responsive design
-- [x] Gold accent color scheme
+- [x] Premium design with animations and hover effects
 - [x] Outfit + Manrope fonts
 
+### Removed Per User Request
+- 4 logos image at bottom of homepage
+- Stats section (10+ years, 100+ articles)
+- "Temelji juda" values section
+
 ### Images Used
-1. Main logo: Judo Klub Izola
-2. All club logos (Izola, Ankaran, Marezige, Babič school)
-3. Training photos: Andrea Leški visit, technique demo, youth group
+1. Hero: Nadzor vadbe (Andrea Leški training supervision)
+2. News: Demonstracija vtopa, Skupina mlajših judoistov
+3. About: Main Judo Klub Izola logo, Youth group photo
 
 ## Prioritized Backlog
 
 ### P0 (User to provide)
 - Contact details (address, phone, email)
 - Training schedule
-- Exact address for map integration
+- Additional dinner photos from Andrea Leški event
 
 ### P1 (Future)
-- Add more photos to gallery
+- Add more events to gallery
 - Club history content
 - Trainer profiles
-
-### P2 (Enhancement)
-- Contact form functionality
-- Social media integration
-- Newsletter signup
 
 ## Architecture
 - Frontend: React + Tailwind CSS

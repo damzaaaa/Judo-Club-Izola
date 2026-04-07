@@ -16,7 +16,7 @@ export default function Domov() {
     <div data-testid="domov-page" className="min-h-screen">
       {/* Hero Section - Full Screen */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
+        {/* Background Image - Clickable */}
         <div 
           className="absolute inset-0 cursor-pointer group"
           onClick={scrollToNews}
@@ -27,11 +27,11 @@ export default function Domov() {
             alt="Olimpijska prvakinja Andrea Leški v Judo klubu Izola"
             className="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/70" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/70 pointer-events-none" />
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
+        <div className="relative z-10 text-center px-6 max-w-5xl mx-auto pointer-events-none">
           <div className="animate-fade-in-up">
             <span className="inline-block uppercase text-xs tracking-[0.3em] text-[#D4AF37] font-semibold font-['Manrope'] mb-6 border border-[#D4AF37]/30 px-4 py-2 backdrop-blur-sm bg-black/20">
               Dobrodošli
@@ -45,7 +45,7 @@ export default function Domov() {
             Tradicija, disciplina in odličnost v judu
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animation-delay-300">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animation-delay-300 pointer-events-auto">
             <Link
               to="/kontakt"
               data-testid="hero-cta-kontakt"
