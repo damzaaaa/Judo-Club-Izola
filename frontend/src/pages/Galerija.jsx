@@ -197,11 +197,11 @@ export default function Galerija() {
                     alt={selectedEvent.photos[currentPhotoIndex].title}
                     className="max-w-[85vw] max-h-[65vh] object-contain"
                   />
-                  <div className="mt-6 text-center">
-                    <h4 className="font-['Outfit'] text-lg font-semibold text-white">
+                  <div className="mt-6 text-center bg-[#0A0A0A] px-6 py-4 rounded">
+                    <h4 className="font-['Outfit'] text-lg font-semibold text-[#D4AF37]">
                       {selectedEvent.photos[currentPhotoIndex].title}
                     </h4>
-                    <p className="font-['Manrope'] text-sm text-gray-400 mt-1">
+                    <p className="font-['Manrope'] text-sm text-gray-300 mt-1">
                       {selectedEvent.photos[currentPhotoIndex].description}
                     </p>
                   </div>
