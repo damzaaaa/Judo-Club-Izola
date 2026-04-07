@@ -27,21 +27,21 @@ export default function Domov() {
             alt="Olimpijska prvakinja Andrea Leški v Judo klubu Izola"
             className="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/70 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/70 pointer-events-none" />
         </div>
 
         {/* Hero Content */}
         <div className="relative z-10 text-center px-6 max-w-5xl mx-auto pointer-events-none">
           <div className="animate-fade-in-up">
-            <span className="inline-block uppercase text-xs tracking-[0.3em] text-[#D4AF37] font-semibold font-['Manrope'] mb-6 border border-[#D4AF37]/30 px-4 py-2 backdrop-blur-sm bg-black/20">
+            <span className="inline-block uppercase text-xs tracking-[0.3em] text-[#D4AF37] font-semibold font-['Manrope'] mb-6 border border-[#D4AF37]/30 px-4 py-2 backdrop-blur-md bg-black/40">
               Dobrodošli
             </span>
           </div>
-          <h1 className="font-['Outfit'] text-5xl sm:text-6xl lg:text-8xl font-bold text-white tracking-tighter leading-none mb-6 animate-fade-in-up animation-delay-100">
+          <h1 className="font-['Outfit'] text-5xl sm:text-6xl lg:text-8xl font-bold text-white tracking-tighter leading-none mb-6 animate-fade-in-up animation-delay-100 drop-shadow-[0_4px_30px_rgba(0,0,0,0.8)]">
             Judo Klub
-            <span className="block text-[#D4AF37] mt-2">Izola</span>
+            <span className="block text-[#D4AF37] mt-2 drop-shadow-[0_4px_20px_rgba(212,175,55,0.3)]">Izola</span>
           </h1>
-          <p className="font-['Manrope'] text-lg lg:text-xl text-white/80 leading-relaxed mb-10 max-w-2xl mx-auto animate-fade-in-up animation-delay-200">
+          <p className="font-['Manrope'] text-lg lg:text-xl text-white leading-relaxed mb-10 max-w-2xl mx-auto animate-fade-in-up animation-delay-200 drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
             Tradicija, disciplina in odličnost v judu
           </p>
           

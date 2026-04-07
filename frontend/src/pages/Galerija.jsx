@@ -22,9 +22,24 @@ const EVENTS = [
         description: "Andrea Leški prikazuje tehniko"
       },
       {
+        url: "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/990d3srx_Demonstracija%20prijema.webp",
+        title: "Demonstracija prijema",
+        description: "Prikaz judo prijema"
+      },
+      {
+        url: "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/nn8ic7xd_Uspe%C5%A1en%20primer%20izravnote%C5%BEenja.webp",
+        title: "Uspešen primer izravnoteženja",
+        description: "Andrea prikazuje izravnoteženje"
+      },
+      {
         url: "https://customer-assets.emergentagent.com/job_ad56f1e8-e5f7-431f-947a-6697b9684b20/artifacts/lhho1c0o_Skupina%20mlaj%C5%A1ih%20judoistov.webp",
         title: "Skupina mlajših judoistov",
         description: "Naši mladi judoisti po treningu"
+      },
+      {
+        url: "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/3by1lev3_NAZDRAVILI%20K%20USPEHU%20NOVEGA%20PROJEKTA%20NAMENJEM%20MLADIM%20%C5%A0PORTNIKOM.webp",
+        title: "Nazdravili k uspehu novega projekta",
+        description: "Praznovanje uspešnega projekta namenjenega mladim športnikom"
       },
     ]
   }

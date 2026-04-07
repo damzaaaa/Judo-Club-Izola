@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 // Image URLs
-const GROUP_IMAGE = "https://customer-assets.emergentagent.com/job_ad56f1e8-e5f7-431f-947a-6697b9684b20/artifacts/lhho1c0o_Skupina%20mlaj%C5%A1ih%20judoistov.webp";
 const LOGO_URL = "https://customer-assets.emergentagent.com/job_ad56f1e8-e5f7-431f-947a-6697b9684b20/artifacts/vvsly6ll_JUDO%20%282%29.jpg";
 
 export default function ONas() {
@@ -61,36 +60,8 @@ export default function ONas() {
         </div>
       </section>
 
-      {/* Team Photo Section */}
-      <section className="py-24 lg:py-32 bg-[#F9F9F9]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="inline-block uppercase text-xs tracking-[0.3em] text-[#D4AF37] font-semibold font-['Manrope'] mb-4">
-              Naši člani
-            </span>
-            <h2 className="font-['Outfit'] text-3xl sm:text-4xl font-bold text-[#0A0A0A] tracking-tight leading-tight">
-              Skupnost judoistov
-            </h2>
-          </div>
-
-          <div className="relative overflow-hidden">
-            <div className="absolute -top-2 -left-2 w-24 h-24 border-l-2 border-t-2 border-[#D4AF37]" />
-            <div className="absolute -bottom-2 -right-2 w-24 h-24 border-r-2 border-b-2 border-[#D4AF37]" />
-            <img
-              src={GROUP_IMAGE}
-              alt="Skupina mlajših judoistov"
-              className="w-full h-auto object-cover"
-            />
-          </div>
-
-          <p className="font-['Manrope'] text-lg text-[#52525B] leading-relaxed text-center mt-12 max-w-3xl mx-auto">
-            Naši mladi judoisti so ponos kluba. Z vsakim treningom rastejo, se učijo in postajajo boljši – tako v judu kot v življenju.
-          </p>
-        </div>
-      </section>
-
       {/* Trainers Section */}
-      <section className="py-24 lg:py-32 bg-white">
+      <section className="py-24 lg:py-32 bg-[#F9F9F9]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="inline-block uppercase text-xs tracking-[0.3em] text-[#D4AF37] font-semibold font-['Manrope'] mb-4">
@@ -101,10 +72,20 @@ export default function ONas() {
             </h2>
           </div>
 
-          <div className="max-w-2xl mx-auto text-center">
-            <p className="font-['Manrope'] text-base text-[#52525B] leading-relaxed">
-              {/* Placeholder for trainer information - will be filled in later */}
-            </p>
+          <div className="max-w-2xl mx-auto">
+            {/* Iztok Babič */}
+            <div className="bg-white p-8 border border-[#E5E7EB] text-center">
+              <div className="w-20 h-1 bg-[#D4AF37] mx-auto mb-6" />
+              <h3 className="font-['Outfit'] text-2xl font-bold text-[#0A0A0A] mb-2">
+                Iztok Babič
+              </h3>
+              <p className="font-['Manrope'] text-sm text-[#D4AF37] uppercase tracking-wider mb-4">
+                Glavni trener
+              </p>
+              <p className="font-['Manrope'] text-base text-[#52525B] leading-relaxed">
+                {/* Placeholder for trainer bio - will be filled in later */}
+              </p>
+            </div>
           </div>
         </div>
       </section>

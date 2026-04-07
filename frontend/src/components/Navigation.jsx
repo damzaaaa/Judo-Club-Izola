@@ -26,7 +26,13 @@ export default function Navigation() {
 
   useEffect(() => {
     setIsMobileMenuOpen(false);
+    // Scroll to top on route change
+    window.scrollTo(0, 0);
   }, [location]);
+
+  const handleNavClick = () => {
+    window.scrollTo(0, 0);
+  };
 
   return (
     <nav
@@ -63,6 +69,7 @@ export default function Navigation() {
               <Link
                 key={link.path}
                 to={link.path}
+                onClick={handleNavClick}
                 data-testid={`nav-link-${link.name.toLowerCase().replace(' ', '-')}`}
                 className={`font-['Manrope'] text-sm font-medium transition-colors relative gold-underline ${
                   location.pathname === link.path
@@ -101,6 +108,7 @@ export default function Navigation() {
                 <Link
                   key={link.path}
                   to={link.path}
+                  onClick={handleNavClick}
                   data-testid={`mobile-nav-link-${link.name.toLowerCase().replace(' ', '-')}`}
                   className={`font-['Manrope'] text-base font-medium px-4 py-2 transition-colors ${
                     location.pathname === link.path
