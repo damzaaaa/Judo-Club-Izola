@@ -21,7 +21,7 @@ const IMG_JUDO_CAMP = "https://customer-assets.emergentagent.com/job_izola-judo-
 const IMG_CAMP_LIVADE_1 = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/cc7rik4a_image.png";
 const IMG_CAMP_LIVADE_2 = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/5lalwqz4_image.png";
 const IMG_OLDER_JUDOISTS = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/o947sh5n_image.png";
-const IMG_ALL_JUDOISTS = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/fxfhv74f_image.png";
+const IMG_ALL_JUDOISTS = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/po5r0q2u_Andreja%20Le%C5%A1ki%20in%20Iztok%20Babi%C4%8D%20v%20judo%20kampu%20Izola.jpg";
 const IMG_BOOK_COMPETITION = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/div7thij_image.png";
 
 // Trainer photos
@@ -368,14 +368,14 @@ export default function ONas() {
               <img
                 src={IMG_OLDER_JUDOISTS}
                 alt="Starejša skupina mladostnikov"
-                className="w-full h-[350px] object-cover object-center border border-[#E5E7EB]"
+                className="w-full h-auto border border-[#E5E7EB]"
               />
             </div>
             <div>
               <img
                 src={IMG_ALL_JUDOISTS}
-                alt="Skupina vseh mlajših in starejših judoistov"
-                className="w-full h-[350px] object-cover object-bottom border border-[#E5E7EB]"
+                alt="Andreja Leški in Iztok Babič v judo kampu Izola"
+                className="w-full h-auto border border-[#E5E7EB]"
               />
             </div>
           </div>
