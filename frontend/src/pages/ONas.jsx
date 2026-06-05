@@ -363,19 +363,19 @@ export default function ONas() {
           </div>
 
           {/* Camp Livade Images - swapped with Judo Danes images, equal sizes */}
-          <div className="grid md:grid-cols-2 gap-8 mb-8 items-end">
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
             <div>
               <img
                 src={IMG_OLDER_JUDOISTS}
                 alt="Starejša skupina mladostnikov"
-                className="w-full h-auto border border-[#E5E7EB]"
+                className="w-full h-[400px] object-cover object-center border border-[#E5E7EB]"
               />
             </div>
             <div>
               <img
                 src={IMG_ALL_JUDOISTS}
                 alt="Andreja Leški in Iztok Babič v judo kampu Izola"
-                className="w-full h-auto border border-[#E5E7EB]"
+                className="w-full h-[400px] object-cover object-center border border-[#E5E7EB]"
               />
             </div>
           </div>
