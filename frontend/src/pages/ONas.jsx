@@ -22,6 +22,7 @@ const IMG_CAMP_LIVADE_1 = "https://customer-assets.emergentagent.com/job_izola-j
 const IMG_CAMP_LIVADE_2 = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/5lalwqz4_image.png";
 const IMG_OLDER_JUDOISTS = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/o947sh5n_image.png";
 const IMG_ALL_JUDOISTS = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/fxfhv74f_image.png";
+const IMG_BOOK_COMPETITION = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/div7thij_image.png";
 
 // Social links
 const FACEBOOK_KLUB = "https://www.facebook.com/profile.php?id=61588576934450";
@@ -63,11 +64,23 @@ export default function ONas() {
               <p>
                 Judo klub Izola, takrat še pod imenom Športno društvo Vitalis, je začel delovati leta 1998. Tega leta so odprli Osnovno šolo z italijanskim učnim jezikom Dante Alighieri, iste jeseni pa so začeli z vpisom novincev v judo.
               </p>
-              <p>Tako se je začela druga šolska sezona, 1999/2000.</p>
             </div>
           </div>
 
+          {/* Book Competition Image */}
+          <div className="mb-12">
+            <img
+              src={IMG_BOOK_COMPETITION}
+              alt="Tekmovanje v mali judo igri na treningu - slike iz knjige"
+              className="w-full h-auto border border-[#E5E7EB]"
+            />
+            <p className="font-['Manrope'] text-sm text-[#52525B] mt-4 italic text-center">
+              Slike iz knjige Judo za mlade, sezona 1999/2000
+            </p>
+          </div>
+
           <div className="prose prose-lg max-w-none font-['Manrope'] text-[#52525B] leading-relaxed space-y-6">
+            <p>Tako se je začela druga šolska sezona, 1999/2000.</p>
             <p>
               Obe zgornji sliki sta bili objavljeni v knjigi Judo za mlade, ki je bila pripravljena že leta 2000, izšla pa leto kasneje, leta 2001. To pomeni, da so bili otroci fotografirani v sezoni 1999/2000, dogajanje pa je potekalo v telovadnici omenjene šole. Na desni strani je trener Iztok Babič – na zgornji sliki v pripravi na predstavitev, na spodnji pa med predstavitvijo klubskega tekmovanja pred prvimi gledalci, to je starši, v prilagojeni judo/sumo borbi za najmlajše.
             </p>
@@ -354,19 +367,19 @@ export default function ONas() {
             </p>
           </div>
 
-          {/* Camp Livade Images */}
+          {/* Camp Livade Images - swapped with Judo Danes images */}
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <div>
               <img
-                src={IMG_CAMP_LIVADE_1}
-                alt="Poletni judo kamp Izola 2023"
+                src={IMG_OLDER_JUDOISTS}
+                alt="Starejša skupina mladostnikov"
                 className="w-full h-auto border border-[#E5E7EB]"
               />
             </div>
             <div>
               <img
-                src={IMG_CAMP_LIVADE_2}
-                alt="Poletni judo kamp Izola 2023 - z olimpijskim prvakom"
+                src={IMG_ALL_JUDOISTS}
+                alt="Skupina vseh mlajših in starejših judoistov"
                 className="w-full h-auto border border-[#E5E7EB]"
               />
             </div>
@@ -389,10 +402,10 @@ export default function ONas() {
             </h2>
           </div>
 
-          {/* Older Judoists Image */}
+          {/* Swapped images - now showing camp livade images */}
           <div className="mb-8">
             <img
-              src={IMG_OLDER_JUDOISTS}
+              src={IMG_CAMP_LIVADE_1}
               alt="Starejša skupina mladostnikov"
               className="w-full h-auto border border-[#E5E7EB]"
             />
@@ -401,10 +414,9 @@ export default function ONas() {
             </p>
           </div>
 
-          {/* All Judoists Image */}
           <div className="mb-8">
             <img
-              src={IMG_ALL_JUDOISTS}
+              src={IMG_CAMP_LIVADE_2}
               alt="Skupina vseh mlajših in starejših judoistov"
               className="w-full h-auto border border-[#E5E7EB]"
             />
