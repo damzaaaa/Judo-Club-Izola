@@ -1,8 +1,11 @@
 import { Link } from 'react-router-dom';
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, MapPin, Phone, Facebook } from 'lucide-react';
 
 const LOGO_URL = "https://customer-assets.emergentagent.com/job_ad56f1e8-e5f7-431f-947a-6697b9684b20/artifacts/vvsly6ll_JUDO%20%282%29.jpg";
 const JUDO_SOLA_LOGO = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/tstr51lv_image.png";
+
+const FACEBOOK_KLUB = "https://www.facebook.com/profile.php?id=61588576934450";
+const FACEBOOK_IZTOK = "https://www.facebook.com/iztok.babic";
 
 const navLinks = [
   { name: 'Domov', path: '/' },
@@ -38,9 +41,32 @@ export default function Footer() {
                 <p className="text-[#D4AF37] text-sm font-['Manrope']">Slovenija</p>
               </div>
             </div>
-            <p className="font-['Manrope'] text-gray-400 text-sm leading-relaxed max-w-md">
+            <p className="font-['Manrope'] text-gray-400 text-sm leading-relaxed max-w-md mb-6">
               Tradicija, disciplina in odličnost v judu. Judo Klub Izola je dom za vse generacije judoistov.
             </p>
+            {/* Facebook Links */}
+            <div className="flex flex-col gap-3">
+              <a
+                href={FACEBOOK_KLUB}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="facebook-klub"
+                className="inline-flex items-center gap-2 text-gray-400 hover:text-[#D4AF37] transition-colors font-['Manrope'] text-sm"
+              >
+                <Facebook className="h-4 w-4" />
+                Judo klub Izola
+              </a>
+              <a
+                href={FACEBOOK_IZTOK}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="facebook-iztok"
+                className="inline-flex items-center gap-2 text-gray-400 hover:text-[#D4AF37] transition-colors font-['Manrope'] text-sm"
+              >
+                <Facebook className="h-4 w-4" />
+                Iztok Babič
+              </a>
+            </div>
           </div>
 
           {/* Navigation */}
