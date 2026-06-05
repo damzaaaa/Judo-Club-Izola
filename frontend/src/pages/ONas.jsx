@@ -151,27 +151,15 @@ export default function ONas() {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div>
-              <img
-                src={IMG_BOOK_CONTENT}
-                alt="Judo za mlade - notranja vsebina"
-                className="w-full h-auto border border-[#E5E7EB]"
-              />
-              <p className="font-['Manrope'] text-sm text-[#52525B] mt-4 italic text-center">
-                Judo za mlade – notranja vsebina.
-              </p>
-            </div>
-            <div>
-              <img
-                src={IMG_BOOK_TABLES}
-                alt="Judo za mlade - tabele"
-                className="w-full h-auto border border-[#E5E7EB]"
-              />
-              <p className="font-['Manrope'] text-sm text-[#52525B] mt-4 italic text-center">
-                Judo za mlade – notranja vsebina, tudi tabele.
-              </p>
-            </div>
+          <div className="mb-12">
+            <img
+              src={IMG_BOOK_TABLES}
+              alt="Judo za mlade - tabele"
+              className="w-full h-auto border border-[#E5E7EB]"
+            />
+            <p className="font-['Manrope'] text-sm text-[#52525B] mt-4 italic text-center">
+              Judo za mlade – notranja vsebina, tudi tabele.
+            </p>
           </div>
 
           <div className="prose prose-lg max-w-none font-['Manrope'] text-[#52525B] leading-relaxed space-y-6">
