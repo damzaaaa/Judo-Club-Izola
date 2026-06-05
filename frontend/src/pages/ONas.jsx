@@ -24,6 +24,12 @@ const IMG_OLDER_JUDOISTS = "https://customer-assets.emergentagent.com/job_izola-
 const IMG_ALL_JUDOISTS = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/fxfhv74f_image.png";
 const IMG_BOOK_COMPETITION = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/div7thij_image.png";
 
+// Trainer photos
+const IMG_TRAINER_IZTOK = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/hxf5pkhr_iztok%20naslovna.jpg";
+const IMG_TRAINER_JASA = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/plesgyns_jasa%20babic.jpg";
+const IMG_TRAINER_MOJMIR = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/uewtg9gb_momir%20kovac.jpg";
+const IMG_TRAINER_OLEKSANDER = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/37s92klc_oleksander.jpg";
+
 // Social links
 const FACEBOOK_KLUB = "https://www.facebook.com/profile.php?id=61588576934450";
 const FACEBOOK_IZTOK = "https://www.facebook.com/iztok.babic";
@@ -67,8 +73,8 @@ export default function ONas() {
             </div>
           </div>
 
-          {/* Book Competition Image */}
-          <div className="mb-12">
+          {/* Book Competition Image - smaller */}
+          <div className="mb-12 max-w-2xl mx-auto">
             <img
               src={IMG_BOOK_COMPETITION}
               alt="Tekmovanje v mali judo igri na treningu - slike iz knjige"
@@ -114,12 +120,12 @@ export default function ONas() {
             </div>
           </div>
 
-          {/* Ministry Letter Image */}
-          <div className="mb-8">
+          {/* Ministry Letter Image - smaller */}
+          <div className="mb-8 max-w-xl mx-auto">
             <img
               src={IMG_MINISTRY_LETTER}
               alt="Odgovor ministrstva"
-              className="w-full max-w-2xl mx-auto h-auto border border-[#E5E7EB] bg-white p-4"
+              className="w-full h-auto border border-[#E5E7EB] bg-white p-4"
             />
             <p className="font-['Manrope'] text-sm text-[#52525B] mt-4 italic text-center">
               Odgovor ministrstva na dopis, s katerim je bilo dovoljeno strokovno delo v okviru Športne šole nacionalnega pomena.
@@ -162,17 +168,6 @@ export default function ONas() {
                 Judo za mlade – notranja vsebina, tudi slike.
               </p>
             </div>
-          </div>
-
-          <div className="mb-12">
-            <img
-              src={IMG_BOOK_TABLES}
-              alt="Judo za mlade - tabele"
-              className="w-full h-auto border border-[#E5E7EB]"
-            />
-            <p className="font-['Manrope'] text-sm text-[#52525B] mt-4 italic text-center">
-              Judo za mlade – notranja vsebina, tudi tabele.
-            </p>
           </div>
 
           <div className="prose prose-lg max-w-none font-['Manrope'] text-[#52525B] leading-relaxed space-y-6">
@@ -281,8 +276,8 @@ export default function ONas() {
             </p>
           </div>
 
-          {/* Prague Ceremony Images */}
-          <div className="grid md:grid-cols-2 gap-8 mt-12">
+          {/* Prague Ceremony Images - second one smaller due to low res */}
+          <div className="grid md:grid-cols-2 gap-8 mt-12 items-start">
             <div>
               <img
                 src={IMG_PRAGUE_CEREMONY}
@@ -290,7 +285,7 @@ export default function ONas() {
                 className="w-full h-auto border border-[#E5E7EB]"
               />
             </div>
-            <div>
+            <div className="max-w-xs mx-auto">
               <img
                 src={IMG_FLAG_HANDOVER}
                 alt="Prevzem zastave v Pragi 2012"
@@ -367,8 +362,8 @@ export default function ONas() {
             </p>
           </div>
 
-          {/* Camp Livade Images - swapped with Judo Danes images */}
-          <div className="grid md:grid-cols-2 gap-8 mb-8">
+          {/* Camp Livade Images - swapped with Judo Danes images, equal sizes */}
+          <div className="grid md:grid-cols-2 gap-8 mb-8 items-start">
             <div>
               <img
                 src={IMG_OLDER_JUDOISTS}
@@ -402,27 +397,28 @@ export default function ONas() {
             </h2>
           </div>
 
-          {/* Swapped images - now showing camp livade images */}
-          <div className="mb-8">
-            <img
-              src={IMG_CAMP_LIVADE_1}
-              alt="Starejša skupina mladostnikov"
-              className="w-full h-auto border border-[#E5E7EB]"
-            />
-            <p className="font-['Manrope'] text-sm text-[#52525B] italic text-center mt-4">
-              Starejša skupina mladostnikov.
-            </p>
-          </div>
-
-          <div className="mb-8">
-            <img
-              src={IMG_CAMP_LIVADE_2}
-              alt="Skupina vseh mlajših in starejših judoistov"
-              className="w-full h-auto border border-[#E5E7EB]"
-            />
-            <p className="font-['Manrope'] text-sm text-[#52525B] italic text-center mt-4">
-              Skupina vseh mlajših in starejših judoistov (manjkajo le naši najmlajši člani).
-            </p>
+          {/* Swapped images - now showing camp livade images - equal sizes */}
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <div>
+              <img
+                src={IMG_CAMP_LIVADE_1}
+                alt="Starejša skupina mladostnikov"
+                className="w-full h-auto border border-[#E5E7EB]"
+              />
+              <p className="font-['Manrope'] text-sm text-[#52525B] italic text-center mt-4">
+                Starejša skupina mladostnikov.
+              </p>
+            </div>
+            <div>
+              <img
+                src={IMG_CAMP_LIVADE_2}
+                alt="Skupina vseh mlajših in starejših judoistov"
+                className="w-full h-auto border border-[#E5E7EB]"
+              />
+              <p className="font-['Manrope'] text-sm text-[#52525B] italic text-center mt-4">
+                Skupina vseh mlajših in starejših judoistov (manjkajo le naši najmlajši člani).
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -484,25 +480,95 @@ export default function ONas() {
             </h2>
           </div>
 
-          <div className="max-w-2xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Iztok Babič */}
-            <div className="bg-white p-8 border border-[#E5E7EB] text-center">
-              <div className="w-20 h-1 bg-[#D4AF37] mx-auto mb-6" />
-              <h3 className="font-['Outfit'] text-2xl font-bold text-[#0A0A0A] mb-2">
+            <div className="bg-white p-8 border border-[#E5E7EB]">
+              <div className="w-16 h-1 bg-[#D4AF37] mb-6" />
+              <div className="mb-6">
+                <img
+                  src={IMG_TRAINER_IZTOK}
+                  alt="Iztok Babič"
+                  className="w-full h-64 object-cover object-top border border-[#E5E7EB]"
+                />
+              </div>
+              <h3 className="font-['Outfit'] text-xl font-bold text-[#0A0A0A] mb-1">
                 Iztok Babič
               </h3>
-              <p className="font-['Manrope'] text-sm text-[#D4AF37] uppercase tracking-wider mb-4">
-                Glavni trener
+              <p className="font-['Manrope'] text-sm text-[#D4AF37] mb-4">
+                profesor športne vzgoje in Mentor športnega treniranja
+              </p>
+              <p className="font-['Manrope'] text-sm text-[#52525B] leading-relaxed">
+                Pedagoški vodja judo športne šole – s klubom ima sklenjeno volontersko pogodbo.
               </p>
               <a
                 href={FACEBOOK_IZTOK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-[#52525B] hover:text-[#D4AF37] transition-colors font-['Manrope'] text-sm"
+                className="inline-flex items-center gap-2 text-[#52525B] hover:text-[#D4AF37] transition-colors font-['Manrope'] text-sm mt-4"
               >
                 <Facebook className="h-4 w-4" />
                 Facebook profil
               </a>
+            </div>
+
+            {/* Jaša Babič */}
+            <div className="bg-white p-8 border border-[#E5E7EB]">
+              <div className="w-16 h-1 bg-[#D4AF37] mb-6" />
+              <div className="mb-6">
+                <img
+                  src={IMG_TRAINER_JASA}
+                  alt="Jaša Babič"
+                  className="w-full h-64 object-cover object-top border border-[#E5E7EB]"
+                />
+              </div>
+              <h3 className="font-['Outfit'] text-xl font-bold text-[#0A0A0A] mb-1">
+                Jaša Babič
+              </h3>
+              <p className="font-['Manrope'] text-sm text-[#D4AF37] mb-4">
+                diplomant športnega treniranja (UN)
+              </p>
+              <p className="font-['Manrope'] text-sm text-[#52525B] leading-relaxed">
+                Glavni trener – pogodbeno zaposlen pri Judo klubu Izola s polnim delavnim časom.
+              </p>
+            </div>
+
+            {/* Mojmir Kovač */}
+            <div className="bg-white p-8 border border-[#E5E7EB]">
+              <div className="w-16 h-1 bg-[#D4AF37] mb-6" />
+              <div className="mb-6">
+                <img
+                  src={IMG_TRAINER_MOJMIR}
+                  alt="Mojmir Kovač"
+                  className="w-full h-64 object-cover object-top border border-[#E5E7EB]"
+                />
+              </div>
+              <h3 className="font-['Outfit'] text-xl font-bold text-[#0A0A0A] mb-1">
+                Mojmir Kovač
+              </h3>
+              <p className="font-['Manrope'] text-sm text-[#D4AF37] mb-4">
+                trener 2. stopnje
+              </p>
+              <p className="font-['Manrope'] text-sm text-[#52525B] leading-relaxed">
+                Zunanji strokovni delavec – s klubom ima sklenjeno volontersko pogodbo.
+              </p>
+            </div>
+
+            {/* Oleksander Makhovsky */}
+            <div className="bg-white p-8 border border-[#E5E7EB]">
+              <div className="w-16 h-1 bg-[#D4AF37] mb-6" />
+              <div className="mb-6">
+                <img
+                  src={IMG_TRAINER_OLEKSANDER}
+                  alt="Oleksander Makhovsky"
+                  className="w-full h-64 object-cover object-top border border-[#E5E7EB]"
+                />
+              </div>
+              <h3 className="font-['Outfit'] text-xl font-bold text-[#0A0A0A] mb-1">
+                Oleksander Makhovsky
+              </h3>
+              <p className="font-['Manrope'] text-sm text-[#D4AF37] mb-4">
+                pomočnik trenerja
+              </p>
             </div>
           </div>
         </div>

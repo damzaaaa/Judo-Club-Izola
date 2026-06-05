@@ -16,7 +16,7 @@ Build a modern, professional and premium-looking website for Judo klub Izola in 
 - High-quality images display
 - Gallery with event-based organization and lightbox
 
-## Implementation Status (Jan 2026)
+## Implementation Status (Dec 2025)
 
 ### Completed
 - [x] Full-screen hero with Andrea Leški training image
@@ -24,36 +24,45 @@ Build a modern, professional and premium-looking website for Judo klub Izola in 
 - [x] News article with full Andrea Leški visit content
 - [x] Gallery page with event cards (click to view all event photos)
 - [x] Navigation with sticky header and mobile menu
-- [x] O nas (About) page - removed "Temelji juda" values section
+- [x] O nas (About) page with extensive club history
 - [x] Kontakt (Contact) page with placeholders
 - [x] Footer with contact info
 - [x] Premium design with animations and hover effects
 - [x] Outfit + Manrope fonts
+- [x] History timeline with 15+ images
+- [x] Facebook social links
+- [x] Emergent watermark removed
+
+### O nas Page Features
+- Club history from 1998
+- Ministry recognition documents
+- Literature section (2 books)
+- Judo kata section with images
+- Education and camps sections
+- "Judo danes" section with side-by-side equal-sized images
+- "Naši trenerji" section with 4 trainers + photos:
+  - Iztok Babič (profesor športne vzgoje)
+  - Jaša Babič (diplomant športnega treniranja)
+  - Mojmir Kovač (trener 2. stopnje)
+  - Oleksander Makhovsky (pomočnik trenerja)
 
 ### Removed Per User Request
 - 4 logos image at bottom of homepage
 - Stats section (10+ years, 100+ articles)
 - "Temelji juda" values section
-
-### Images Used
-1. Hero: Nadzor vadbe (Andrea Leški training supervision)
-2. News: Demonstracija vtopa, Skupina mlajših judoistov
-3. About: Main Judo Klub Izola logo, Youth group photo
+- 5th image in history section
 
 ## Prioritized Backlog
 
 ### P0 (User to provide)
 - Contact details (address, phone, email)
 - Training schedule
-- Additional dinner photos from Andrea Leški event
 
 ### P1 (Future)
 - Add more events to gallery
-- Club history content
-- Trainer profiles
+- Additional photos for sections
 
 ## Architecture
-- Frontend: React + Tailwind CSS
+- Frontend: React + Tailwind CSS + Shadcn/UI
 - Routing: React Router
-- UI Components: Shadcn/UI + custom styling
 - No backend needed (static content)
