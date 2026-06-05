@@ -363,19 +363,19 @@ export default function ONas() {
           </div>
 
           {/* Camp Livade Images - swapped with Judo Danes images, equal sizes */}
-          <div className="grid md:grid-cols-2 gap-8 mb-8 items-start">
+          <div className="grid md:grid-cols-2 gap-8 mb-8 items-end">
             <div>
               <img
                 src={IMG_OLDER_JUDOISTS}
                 alt="Starejša skupina mladostnikov"
-                className="w-full h-auto border border-[#E5E7EB]"
+                className="w-full h-[350px] object-cover object-center border border-[#E5E7EB]"
               />
             </div>
             <div>
               <img
                 src={IMG_ALL_JUDOISTS}
                 alt="Skupina vseh mlajših in starejših judoistov"
-                className="w-full h-auto border border-[#E5E7EB]"
+                className="w-full h-[350px] object-cover object-bottom border border-[#E5E7EB]"
               />
             </div>
           </div>
@@ -488,7 +488,7 @@ export default function ONas() {
                 <img
                   src={IMG_TRAINER_IZTOK}
                   alt="Iztok Babič"
-                  className="w-full h-64 object-cover object-top border border-[#E5E7EB]"
+                  className="w-full h-auto border border-[#E5E7EB]"
                 />
               </div>
               <h3 className="font-['Outfit'] text-xl font-bold text-[#0A0A0A] mb-1">
@@ -518,7 +518,7 @@ export default function ONas() {
                 <img
                   src={IMG_TRAINER_JASA}
                   alt="Jaša Babič"
-                  className="w-full h-64 object-cover object-top border border-[#E5E7EB]"
+                  className="w-full h-auto border border-[#E5E7EB]"
                 />
               </div>
               <h3 className="font-['Outfit'] text-xl font-bold text-[#0A0A0A] mb-1">
@@ -539,7 +539,7 @@ export default function ONas() {
                 <img
                   src={IMG_TRAINER_MOJMIR}
                   alt="Mojmir Kovač"
-                  className="w-full h-64 object-cover object-top border border-[#E5E7EB]"
+                  className="w-full h-auto border border-[#E5E7EB]"
                 />
               </div>
               <h3 className="font-['Outfit'] text-xl font-bold text-[#0A0A0A] mb-1">
@@ -560,7 +560,7 @@ export default function ONas() {
                 <img
                   src={IMG_TRAINER_OLEKSANDER}
                   alt="Oleksander Makhovsky"
-                  className="w-full h-64 object-cover object-top border border-[#E5E7EB]"
+                  className="w-full h-auto border border-[#E5E7EB]"
                 />
               </div>
               <h3 className="font-['Outfit'] text-xl font-bold text-[#0A0A0A] mb-1">
