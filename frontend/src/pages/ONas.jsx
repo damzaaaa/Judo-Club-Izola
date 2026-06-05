@@ -4,9 +4,9 @@ import { ArrowRight, Facebook } from 'lucide-react';
 // Image URLs
 const LOGO_URL = "https://customer-assets.emergentagent.com/job_ad56f1e8-e5f7-431f-947a-6697b9684b20/artifacts/vvsly6ll_JUDO%20%282%29.jpg";
 
-// History images
+// History images - reorganized
+const IMG_MINISTRY_LETTER = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/p4f9o2rb_dokument%20iztok.png";
 const IMG_BOOK_PAGES_1 = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/czuwryzr_image.png";
-const IMG_MINISTRY_LETTER = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/zby9nwpi_image.png";
 const IMG_BOOK_COVER = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/747xdlif_image.png";
 const IMG_BOOK_CONTENT = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/9p6lw5fh_image.png";
 const IMG_BOOK_TABLES = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/jallxasv_image.png";
@@ -40,7 +40,7 @@ export default function ONas() {
               Judo Klub Izola
             </span>
             <h1 className="font-['Outfit'] text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tighter leading-none mb-6">
-              O nas – Predstavitev z zgodovino
+              O nas
             </h1>
             <p className="font-['Manrope'] text-xl text-[#D4AF37] leading-relaxed italic">
               Zgodba predanosti, znanja in razvoja
@@ -65,18 +65,6 @@ export default function ONas() {
               </p>
               <p>Tako se je začela druga šolska sezona, 1999/2000.</p>
             </div>
-          </div>
-
-          {/* First Image */}
-          <div className="mb-12">
-            <img
-              src={IMG_BOOK_PAGES_1}
-              alt="Judo za mlade - slike iz knjige 1999/2000"
-              className="w-full h-auto border border-[#E5E7EB]"
-            />
-            <p className="font-['Manrope'] text-sm text-[#52525B] mt-4 italic text-center">
-              Slike iz knjige Judo za mlade, sezona 1999/2000
-            </p>
           </div>
 
           <div className="prose prose-lg max-w-none font-['Manrope'] text-[#52525B] leading-relaxed space-y-6">
@@ -153,7 +141,7 @@ export default function ONas() {
             </div>
             <div>
               <img
-                src={IMG_BOOK_CONTENT}
+                src={IMG_BOOK_PAGES_1}
                 alt="Judo za mlade - notranja vsebina"
                 className="w-full h-auto border border-[#E5E7EB]"
               />
@@ -163,15 +151,27 @@ export default function ONas() {
             </div>
           </div>
 
-          <div className="mb-12">
-            <img
-              src={IMG_BOOK_TABLES}
-              alt="Judo za mlade - tabele"
-              className="w-full h-auto border border-[#E5E7EB]"
-            />
-            <p className="font-['Manrope'] text-sm text-[#52525B] mt-4 italic text-center">
-              Judo za mlade – notranja vsebina, tudi tabele.
-            </p>
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div>
+              <img
+                src={IMG_BOOK_CONTENT}
+                alt="Judo za mlade - notranja vsebina"
+                className="w-full h-auto border border-[#E5E7EB]"
+              />
+              <p className="font-['Manrope'] text-sm text-[#52525B] mt-4 italic text-center">
+                Judo za mlade – notranja vsebina.
+              </p>
+            </div>
+            <div>
+              <img
+                src={IMG_BOOK_TABLES}
+                alt="Judo za mlade - tabele"
+                className="w-full h-auto border border-[#E5E7EB]"
+              />
+              <p className="font-['Manrope'] text-sm text-[#52525B] mt-4 italic text-center">
+                Judo za mlade – notranja vsebina, tudi tabele.
+              </p>
+            </div>
           </div>
 
           <div className="prose prose-lg max-w-none font-['Manrope'] text-[#52525B] leading-relaxed space-y-6">

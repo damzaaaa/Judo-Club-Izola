@@ -71,7 +71,7 @@ export default function Navigation() {
                 to={link.path}
                 onClick={handleNavClick}
                 data-testid={`nav-link-${link.name.toLowerCase().replace(' ', '-')}`}
-                className={`font-['Manrope'] text-sm font-medium transition-colors relative gold-underline ${
+                className={`font-['Manrope'] text-base font-semibold transition-colors relative gold-underline ${
                   location.pathname === link.path
                     ? 'text-[#D4AF37]'
                     : 'text-[#0A0A0A] hover:text-[#D4AF37]'
