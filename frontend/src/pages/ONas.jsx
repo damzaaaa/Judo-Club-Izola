@@ -10,6 +10,10 @@ const IMG_MINISTRY_LETTER = "https://customer-assets.emergentagent.com/job_izola
 const IMG_BOOK_COVER = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/747xdlif_image.png";
 const IMG_BOOK_CONTENT = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/9p6lw5fh_image.png";
 const IMG_BOOK_TABLES = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/jallxasv_image.png";
+const IMG_SECOND_BOOK = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/5b4e5juv_image.png";
+const IMG_YOUTH_2007 = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/3vn3ftgy_image.png";
+const IMG_KATA_1 = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/hd9cfm81_image.png";
+const IMG_KATA_2 = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/s9gy5ufe_image.png";
 
 // Social links
 const FACEBOOK_KLUB = "https://www.facebook.com/profile.php?id=61588576934450";
@@ -186,23 +190,41 @@ export default function ONas() {
             <h2 className="font-['Outfit'] text-3xl sm:text-4xl font-bold text-[#0A0A0A] tracking-tight leading-tight mb-8">
               Nato je prišla druga knjiga
             </h2>
-            <div className="prose prose-lg max-w-none font-['Manrope'] text-[#52525B] leading-relaxed space-y-6">
-              <p>
-                Druga knjiga, izdana leta 2010, se vsebinsko naslanja na prvo knjigo Judo za mlade, pri čemer skuša na praktičnem prikazu Evropskega kadetskega prvenstva 2009, ki je bilo v Areni Bonifika v Kopru, pokazati nadaljnji razvoj strokovnega dela.
-              </p>
-              <p>
-                Sporočilo je dvojno oziroma lahko rečemo, da sloni na dveh pomembnih stebrih. Prvič: od prijaznih začetnih pedagoških pristopov pri športnih tekmovanjih najmlajših v klubski organizaciji do največjih vrhunskih tekmovanj mladostnikov. Trener je torej evropska tekmovanja pripeljal domov in jih preučeval tako rekoč na lastnem pragu.
-              </p>
-              <p>
-                Drugič: vso strokovno znanost, ki je bila na voljo v knjižnicah, vse strokovne članke z laboratorijskimi raziskavami in njihovimi ugotovitvami, je trener povezal v nov koncept razlage prakse. Poleg tega je razvijal tudi metode, kako na podlagi teh spoznanj vplivati na še učinkovitejši razvoj mladega človeka v športnem treniranju.
-              </p>
-            </div>
           </div>
 
-          {/* Placeholder for more images */}
-          <div className="bg-white border-2 border-dashed border-[#E5E7EB] p-8 text-center mb-8">
-            <p className="font-['Manrope'] text-sm text-[#52525B]">
-              (Dodatne slike bodo dodane)
+          {/* Second Book Image */}
+          <div className="mb-12">
+            <img
+              src={IMG_SECOND_BOOK}
+              alt="Druga knjiga - Evropsko kadetsko prvenstvo 2009"
+              className="w-full h-auto border border-[#E5E7EB]"
+            />
+            <p className="font-['Manrope'] text-sm text-[#52525B] mt-4 italic text-center">
+              Knjiga, izdana leta 2010: zgoraj njena naslovnica in zadnja platnica, spodaj pa njena vsebina.
+            </p>
+          </div>
+
+          <div className="prose prose-lg max-w-none font-['Manrope'] text-[#52525B] leading-relaxed space-y-6">
+            <p>
+              Druga knjiga se vsebinsko naslanja na prvo knjigo Judo za mlade, pri čemer skuša na praktičnem prikazu Evropskega kadetskega prvenstva 2009, ki je bilo v Areni Bonifika v Kopru, pokazati nadaljnji razvoj strokovnega dela.
+            </p>
+            <p>
+              Sporočilo je dvojno oziroma lahko rečemo, da sloni na dveh pomembnih stebrih. Prvič: od prijaznih začetnih pedagoških pristopov pri športnih tekmovanjih najmlajših v klubski organizaciji do največjih vrhunskih tekmovanj mladostnikov. Trener je torej evropska tekmovanja pripeljal domov in jih preučeval tako rekoč na lastnem pragu.
+            </p>
+            <p>
+              Drugič: vso strokovno znanost, ki je bila na voljo v knjižnicah, vse strokovne članke z laboratorijskimi raziskavami in njihovimi ugotovitvami, je trener povezal v nov koncept razlage prakse. Poleg tega je razvijal tudi metode, kako na podlagi teh spoznanj vplivati na še učinkovitejši razvoj mladega človeka v športnem treniranju.
+            </p>
+          </div>
+
+          {/* Youth 2007 Image */}
+          <div className="mt-16">
+            <img
+              src={IMG_YOUTH_2007}
+              alt="Izolski mladostniki 2007"
+              className="w-full h-auto border border-[#E5E7EB]"
+            />
+            <p className="font-['Manrope'] text-sm text-[#52525B] mt-4 italic text-center">
+              Izolski mladostniki 2007: skrajno desno kleče Andreja Leški, za njo stoje pa njena stalna spremljevalka na tekmovanjih Lea Knez.
             </p>
           </div>
         </div>
@@ -218,14 +240,36 @@ export default function ONas() {
             <h2 className="font-['Outfit'] text-3xl sm:text-4xl font-bold text-[#0A0A0A] tracking-tight leading-tight mb-8">
               Andreja Leški in Lea Knez - judo kata nastop l. 2011
             </h2>
-            <div className="prose prose-lg max-w-none font-['Manrope'] text-[#52525B] leading-relaxed space-y-6">
-              <p>
-                Športna šola Iztoka Babiča je na treninge uvajala tudi judo kate. Na tem področju smo bili pionirji razvoja, kar je vključevalo udeležbo na mednarodnih srečanjih in seminarjih, organizacijo mednarodnih tekmovanj, državnih prvenstev in celo dveh evropskih prvenstev, leta 2013 in 2017, na OŠ Koper.
-              </p>
-              <p>
-                Leta 2012 je Igor Albreht, ki je ta program vodil, v Pragi dosegel 3. mesto, trener Iztok Babič pa je prevzel zastavo kot naslednji organizator.
-              </p>
+          </div>
+
+          {/* Kata Images */}
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div>
+              <img
+                src={IMG_KATA_1}
+                alt="Judo kata nastop - Andreja Leški in Lea Knez"
+                className="w-full h-auto border border-[#E5E7EB]"
+              />
             </div>
+            <div>
+              <img
+                src={IMG_KATA_2}
+                alt="Judo kata nastop - Andreja Leški in Lea Knez"
+                className="w-full h-auto border border-[#E5E7EB]"
+              />
+            </div>
+          </div>
+          <p className="font-['Manrope'] text-sm text-[#52525B] italic text-center mb-12">
+            Andreja Leški in Lea Knez - judo kata nastop l. 2011.
+          </p>
+
+          <div className="prose prose-lg max-w-none font-['Manrope'] text-[#52525B] leading-relaxed space-y-6">
+            <p>
+              Športna šola Iztoka Babiča je na treninge uvajala tudi judo kate. Na tem področju smo bili pionirji razvoja, kar je vključevalo udeležbo na mednarodnih srečanjih in seminarjih, organizacijo mednarodnih tekmovanj, državnih prvenstev in celo dveh evropskih prvenstev, leta 2013 in 2017, na OŠ Koper.
+            </p>
+            <p>
+              Leta 2012 je Igor Albreht, ki je ta program vodil, v Pragi dosegel 3. mesto, trener Iztok Babič pa je prevzel zastavo kot naslednji organizator.
+            </p>
           </div>
         </div>
       </section>
