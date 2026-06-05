@@ -14,6 +14,10 @@ const IMG_SECOND_BOOK = "https://customer-assets.emergentagent.com/job_izola-jud
 const IMG_YOUTH_2007 = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/3vn3ftgy_image.png";
 const IMG_KATA_1 = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/hd9cfm81_image.png";
 const IMG_KATA_2 = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/s9gy5ufe_image.png";
+const IMG_PRAGUE_CEREMONY = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/h2pb10i1_image.png";
+const IMG_FLAG_HANDOVER = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/9izyj6b6_image.png";
+const IMG_PREDAVANJA = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/ell6vyn1_image.png";
+const IMG_JUDO_CAMP = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/y0yr019t_image.png";
 
 // Social links
 const FACEBOOK_KLUB = "https://www.facebook.com/profile.php?id=61588576934450";
@@ -271,11 +275,57 @@ export default function ONas() {
               Leta 2012 je Igor Albreht, ki je ta program vodil, v Pragi dosegel 3. mesto, trener Iztok Babič pa je prevzel zastavo kot naslednji organizator.
             </p>
           </div>
+
+          {/* Prague Ceremony Images */}
+          <div className="grid md:grid-cols-2 gap-8 mt-12">
+            <div>
+              <img
+                src={IMG_PRAGUE_CEREMONY}
+                alt="Prevzem zastave v Pragi 2012"
+                className="w-full h-auto border border-[#E5E7EB]"
+              />
+            </div>
+            <div>
+              <img
+                src={IMG_FLAG_HANDOVER}
+                alt="Prevzem zastave v Pragi 2012"
+                className="w-full h-auto border border-[#E5E7EB]"
+              />
+            </div>
+          </div>
+          <p className="font-['Manrope'] text-sm text-[#52525B] italic text-center mt-4">
+            Prevzem zastave v Pragi 2012 na EP judo kat, kot naslednji organizator v l. 2013.
+          </p>
+        </div>
+      </section>
+
+      {/* Redna Predavanja Section */}
+      <section className="py-24 lg:py-32 bg-[#F9F9F9]">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="mb-12">
+            <span className="inline-block uppercase text-xs tracking-[0.3em] text-[#D4AF37] font-semibold font-['Manrope'] mb-6">
+              Izobraževanje
+            </span>
+            <h2 className="font-['Outfit'] text-3xl sm:text-4xl font-bold text-[#0A0A0A] tracking-tight leading-tight mb-8">
+              Redna predavanja
+            </h2>
+          </div>
+
+          <div className="mb-8">
+            <img
+              src={IMG_PREDAVANJA}
+              alt="Redna predavanja za starše in mladostnike"
+              className="w-full h-auto border border-[#E5E7EB]"
+            />
+            <p className="font-['Manrope'] text-sm text-[#52525B] italic text-center mt-4">
+              Redna predavanja za starše in mladostnike so potekala v telovadnici OŠ Dante Alighieri leta 2022.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Judo Camps Section */}
-      <section className="py-24 lg:py-32 bg-[#F9F9F9]">
+      <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-16">
             <span className="inline-block uppercase text-xs tracking-[0.3em] text-[#D4AF37] font-semibold font-['Manrope'] mb-6">
@@ -291,16 +341,31 @@ export default function ONas() {
               <p>
                 Z leti se je razvil tudi redni družinski poletni kamp judoistov iz Dunaja. Od leta 2024 dalje pa poteka še tretji Poletni TC judo kamp Izola v organizaciji Judo kluba Izola.
               </p>
-              <p>
-                V kampih, kjer sodelujejo praktično vse starostne skupine, velja posebej poudariti, da med člani prihajajo tudi najelitnejši judoisti iz vse Evrope, med njimi številni dobitniki olimpijskih medalj, tudi zlatih. Omenimo samo enega – Ilias Iliadisa, ki je osvojil zlate medalje na največjih tekmovanjih. Avgusta 2013 je bil pri nas, konec istega meseca pa je ob izteku kariere osvojil še zadnjo medaljo z velikih tekmovanj, in sicer bronasto medaljo na svetovnem prvenstvu v Riu de Janeiru v Braziliji.
-              </p>
             </div>
+          </div>
+
+          {/* Judo Camp Image */}
+          <div className="mb-12">
+            <img
+              src={IMG_JUDO_CAMP}
+              alt="Poletni TC judo kamp Izola"
+              className="w-full h-auto border border-[#E5E7EB]"
+            />
+            <p className="font-['Manrope'] text-sm text-[#52525B] italic text-center mt-4">
+              Izobraževanje je potekalo v vseh judo kampih v Izoli – slika je s telovadnice OŠ D. Alighieri. Na sliki prvi z desne Slavko Obadov, prvi judoist, ki je za Jugoslavijo osvojil medaljo na OI in sicer l. 1976 v Montreal (Kanada).
+            </p>
+          </div>
+
+          <div className="prose prose-lg max-w-none font-['Manrope'] text-[#52525B] leading-relaxed space-y-6">
+            <p>
+              V kampih, kjer sodelujejo praktično vse starostne skupine, velja posebej poudariti, da med člani prihajajo tudi najelitnejši judoisti iz vse Evrope, med njimi številni dobitniki olimpijskih medalj, tudi zlatih. Omenimo samo enega – Ilias Iliadisa, ki je osvojil zlate medalje na največjih tekmovanjih. Avgusta 2013 je bil pri nas, konec istega meseca pa je ob izteku kariere osvojil še zadnjo medaljo z velikih tekmovanj, in sicer bronasto medaljo na svetovnem prvenstvu v Riu de Janeiru v Braziliji.
+            </p>
           </div>
         </div>
       </section>
 
       {/* Future Section */}
-      <section className="py-24 lg:py-32 bg-white">
+      <section className="py-24 lg:py-32 bg-[#F9F9F9]">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-16">
             <span className="inline-block uppercase text-xs tracking-[0.3em] text-[#D4AF37] font-semibold font-['Manrope'] mb-6">
@@ -345,7 +410,7 @@ export default function ONas() {
       </section>
 
       {/* Trainers Section */}
-      <section className="py-24 lg:py-32 bg-[#F9F9F9]">
+      <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="inline-block uppercase text-xs tracking-[0.3em] text-[#D4AF37] font-semibold font-['Manrope'] mb-4">
