@@ -18,6 +18,10 @@ const IMG_PRAGUE_CEREMONY = "https://customer-assets.emergentagent.com/job_izola
 const IMG_FLAG_HANDOVER = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/9izyj6b6_image.png";
 const IMG_PREDAVANJA = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/ell6vyn1_image.png";
 const IMG_JUDO_CAMP = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/y0yr019t_image.png";
+const IMG_CAMP_LIVADE_1 = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/cc7rik4a_image.png";
+const IMG_CAMP_LIVADE_2 = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/5lalwqz4_image.png";
+const IMG_OLDER_JUDOISTS = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/o947sh5n_image.png";
+const IMG_ALL_JUDOISTS = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/fxfhv74f_image.png";
 
 // Social links
 const FACEBOOK_KLUB = "https://www.facebook.com/profile.php?id=61588576934450";
@@ -356,16 +360,75 @@ export default function ONas() {
             </p>
           </div>
 
-          <div className="prose prose-lg max-w-none font-['Manrope'] text-[#52525B] leading-relaxed space-y-6">
+          <div className="prose prose-lg max-w-none font-['Manrope'] text-[#52525B] leading-relaxed space-y-6 mb-12">
             <p>
               V kampih, kjer sodelujejo praktično vse starostne skupine, velja posebej poudariti, da med člani prihajajo tudi najelitnejši judoisti iz vse Evrope, med njimi številni dobitniki olimpijskih medalj, tudi zlatih. Omenimo samo enega – Ilias Iliadisa, ki je osvojil zlate medalje na največjih tekmovanjih. Avgusta 2013 je bil pri nas, konec istega meseca pa je ob izteku kariere osvojil še zadnjo medaljo z velikih tekmovanj, in sicer bronasto medaljo na svetovnem prvenstvu v Riu de Janeiru v Braziliji.
+            </p>
+          </div>
+
+          {/* Camp Livade Images */}
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <div>
+              <img
+                src={IMG_CAMP_LIVADE_1}
+                alt="Poletni judo kamp Izola 2023"
+                className="w-full h-auto border border-[#E5E7EB]"
+              />
+            </div>
+            <div>
+              <img
+                src={IMG_CAMP_LIVADE_2}
+                alt="Poletni judo kamp Izola 2023 - z olimpijskim prvakom"
+                className="w-full h-auto border border-[#E5E7EB]"
+              />
+            </div>
+          </div>
+          <p className="font-['Manrope'] text-sm text-[#52525B] italic text-center">
+            Poletni judo kamp Izola 2023 v dvorani OŠ Livade, ki so ga redno obiskovali vsi mladi judoisti z Obale. Na drugi sliki pa smo trenirali tudi z olimpijskim prvakom Ilio Iliadisom.
+          </p>
+        </div>
+      </section>
+
+      {/* Judo Danes Section */}
+      <section className="py-24 lg:py-32 bg-[#F9F9F9]">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="mb-12">
+            <span className="inline-block uppercase text-xs tracking-[0.3em] text-[#D4AF37] font-semibold font-['Manrope'] mb-6">
+              Sedanjost
+            </span>
+            <h2 className="font-['Outfit'] text-3xl sm:text-4xl font-bold text-[#0A0A0A] tracking-tight leading-tight mb-8">
+              Judo danes
+            </h2>
+          </div>
+
+          {/* Older Judoists Image */}
+          <div className="mb-8">
+            <img
+              src={IMG_OLDER_JUDOISTS}
+              alt="Starejša skupina mladostnikov"
+              className="w-full h-auto border border-[#E5E7EB]"
+            />
+            <p className="font-['Manrope'] text-sm text-[#52525B] italic text-center mt-4">
+              Starejša skupina mladostnikov.
+            </p>
+          </div>
+
+          {/* All Judoists Image */}
+          <div className="mb-8">
+            <img
+              src={IMG_ALL_JUDOISTS}
+              alt="Skupina vseh mlajših in starejših judoistov"
+              className="w-full h-auto border border-[#E5E7EB]"
+            />
+            <p className="font-['Manrope'] text-sm text-[#52525B] italic text-center mt-4">
+              Skupina vseh mlajših in starejših judoistov (manjkajo le naši najmlajši člani).
             </p>
           </div>
         </div>
       </section>
 
       {/* Future Section */}
-      <section className="py-24 lg:py-32 bg-[#F9F9F9]">
+      <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-16">
             <span className="inline-block uppercase text-xs tracking-[0.3em] text-[#D4AF37] font-semibold font-['Manrope'] mb-6">
@@ -410,7 +473,7 @@ export default function ONas() {
       </section>
 
       {/* Trainers Section */}
-      <section className="py-24 lg:py-32 bg-white">
+      <section className="py-24 lg:py-32 bg-[#F9F9F9]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="inline-block uppercase text-xs tracking-[0.3em] text-[#D4AF37] font-semibold font-['Manrope'] mb-4">
