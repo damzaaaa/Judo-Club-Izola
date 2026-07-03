@@ -30,6 +30,12 @@ const IMG_TRAINER_JASA = "https://customer-assets.emergentagent.com/job_izola-ju
 const IMG_TRAINER_MOJMIR = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/uewtg9gb_momir%20kovac.jpg";
 const IMG_TRAINER_OLEKSANDER = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/37s92klc_oleksander.jpg";
 
+// Recognition/Achievement images
+const IMG_RECOGNITION_1 = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/s9b6p646_iztok%20andrea%201.jpg";
+const IMG_RECOGNITION_2 = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/aol9ef7p_iztok%20andrea%202.jpg";
+const IMG_RECOGNITION_3 = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/s9706w9q_andrea%20iztok%203.jpg";
+const IMG_RECOGNITION_4 = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/gr8d8f8v_plaketa.jpg";
+
 // Social links
 const FACEBOOK_KLUB = "https://www.facebook.com/profile.php?id=61588576934450";
 const FACEBOOK_IZTOK = "https://www.facebook.com/iztok.babic";
@@ -142,7 +148,7 @@ export default function ONas() {
               Literatura
             </span>
             <h2 className="font-['Outfit'] text-3xl sm:text-4xl font-bold text-[#0A0A0A] tracking-tight leading-tight mb-8">
-              Za uspeh je bila potrebna bogata literatura – Izšla je prva knjiga
+              Za uspeh je bila potrebna bogata literatura – Izašla je prva knjiga
             </h2>
           </div>
 
@@ -276,20 +282,20 @@ export default function ONas() {
             </p>
           </div>
 
-          {/* Prague Ceremony Images - second one smaller due to low res */}
-          <div className="grid md:grid-cols-2 gap-8 mt-12 items-start">
+          {/* Prague Ceremony Images - more proportional */}
+          <div className="grid md:grid-cols-2 gap-8 mt-12">
             <div>
               <img
                 src={IMG_PRAGUE_CEREMONY}
                 alt="Prevzem zastave v Pragi 2012"
-                className="w-full h-auto border border-[#E5E7EB]"
+                className="w-full h-[300px] object-cover object-center border border-[#E5E7EB]"
               />
             </div>
-            <div className="max-w-xs mx-auto">
+            <div>
               <img
                 src={IMG_FLAG_HANDOVER}
                 alt="Prevzem zastave v Pragi 2012"
-                className="w-full h-auto border border-[#E5E7EB]"
+                className="w-full h-[300px] object-cover object-center border border-[#E5E7EB]"
               />
             </div>
           </div>
@@ -569,6 +575,71 @@ export default function ONas() {
               <p className="font-['Manrope'] text-sm text-[#D4AF37] mb-4">
                 pomočnik trenerja
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Recognition Section - After Trainers */}
+      <section className="py-24 lg:py-32 bg-white">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="inline-block uppercase text-xs tracking-[0.3em] text-[#D4AF37] font-semibold font-['Manrope'] mb-4">
+              Priznanje
+            </span>
+            <h2 className="font-['Outfit'] text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0A0A0A] tracking-tight leading-tight">
+              Strokovni kader Judo športne šole Iztoka Babiča je pripeljal do izjemne predstavitve in priznanja
+            </h2>
+          </div>
+
+          {/* Recognition Images Grid */}
+          <div className="space-y-12">
+            {/* First Image - Full Width */}
+            <div>
+              <img
+                src={IMG_RECOGNITION_1}
+                alt="Predstavitev na Evropskem kadetskem pokalu Koper 2024"
+                className="w-full h-auto border border-[#E5E7EB]"
+              />
+              <p className="font-['Manrope'] text-sm text-[#52525B] mt-4 italic text-center">
+                Predstavitev na Evropskem kadetskem pokalu Koper 2024: olimpijske prvakinje Andreje Leški in njenega prvega trenerja Iztoka Babiča.
+              </p>
+            </div>
+
+            {/* Second Image - Full Width */}
+            <div>
+              <img
+                src={IMG_RECOGNITION_2}
+                alt="Podelitev šopka rož olimpijski šampionki"
+                className="w-full h-auto border border-[#E5E7EB]"
+              />
+              <p className="font-['Manrope'] text-sm text-[#52525B] mt-4 italic text-center">
+                Mladi člani so olimpijski šampionki Andreji Leški na evropskem pokalu svečano podelili šopek rož.
+              </p>
+            </div>
+
+            {/* Third and Fourth Images - Side by Side */}
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <img
+                  src={IMG_RECOGNITION_3}
+                  alt="Podelitev plakete"
+                  className="w-full h-[400px] object-cover object-center border border-[#E5E7EB]"
+                />
+                <p className="font-['Manrope'] text-sm text-[#52525B] mt-4 italic text-center">
+                  Andreja Leški je svojemu nekdanjemu trenerju Iztoku Babiču podelila plaketo, darilo Evropske judo zveze.
+                </p>
+              </div>
+              <div>
+                <img
+                  src={IMG_RECOGNITION_4}
+                  alt="Plaketa OI Pariz 2024"
+                  className="w-full h-[400px] object-cover object-top border border-[#E5E7EB]"
+                />
+                <p className="font-['Manrope'] text-sm text-[#52525B] mt-4 italic text-center">
+                  Plaketa z vsemi evropskimi imeni dobitnikov medalj, ki so osvojili medaljo na OI Pariz 2024.
+                </p>
+              </div>
             </div>
           </div>
         </div>
