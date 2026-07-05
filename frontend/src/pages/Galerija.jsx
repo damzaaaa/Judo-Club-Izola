@@ -170,20 +170,20 @@ export default function Galerija() {
       {/* Event Gallery Dialog */}
       <DialogPrimitive.Root open={selectedEvent !== null} onOpenChange={closeEvent}>
         <DialogPrimitive.Portal>
-          <DialogPrimitive.Overlay className="fixed inset-0 z-50 bg-[#0A0A0A]/98 backdrop-blur-sm" />
+          <DialogPrimitive.Overlay className="fixed inset-0 z-50 bg-white/95 backdrop-blur-sm" />
           <DialogPrimitive.Content 
             className="fixed inset-0 z-50 flex flex-col"
             data-testid="event-gallery-dialog"
           >
             {/* Header */}
-            <div className="flex items-center justify-between p-6 border-b border-white/10">
+            <div className="flex items-center justify-between p-6 border-b border-black/20 bg-white">
               <div>
                 {selectedEvent && (
                   <>
-                    <h3 className="font-['Outfit'] text-lg font-semibold text-white">
+                    <h3 className="font-['Outfit'] text-lg font-semibold text-[#0A0A0A]">
                       {selectedEvent.title}
                     </h3>
-                    <p className="font-['Manrope'] text-sm text-gray-400 mt-1">
+                    <p className="font-['Manrope'] text-sm text-[#52525B] mt-1">
                       {currentPhotoIndex + 1} / {selectedEvent.photos.length}
                     </p>
                   </>
@@ -191,25 +191,25 @@ export default function Galerija() {
               </div>
               <button
                 onClick={closeEvent}
-                className="p-2 bg-white/10 hover:bg-white/20 rounded-full transition-colors"
+                className="p-2 bg-[#0A0A0A]/10 hover:bg-[#0A0A0A]/20 rounded-full transition-colors"
                 data-testid="gallery-close"
                 aria-label="Zapri"
               >
-                <X className="h-6 w-6 text-white" />
+                <X className="h-6 w-6 text-[#0A0A0A]" />
               </button>
             </div>
 
             {/* Main Image Area */}
-            <div className="flex-1 flex items-center justify-center relative px-16">
+            <div className="flex-1 flex items-center justify-center relative px-20 py-8 bg-[#F5F5F5]">
               {/* Previous Button */}
               {selectedEvent && selectedEvent.photos.length > 1 && (
                 <button
                   onClick={goToPrevious}
-                  className="absolute left-4 z-50 p-3 bg-white/10 hover:bg-[#D4AF37] hover:text-[#0A0A0A] rounded-full transition-all text-white"
+                  className="absolute left-6 z-50 p-4 bg-white shadow-lg hover:bg-[#D4AF37] hover:text-white rounded-full transition-all text-[#0A0A0A] border border-[#E5E7EB]"
                   data-testid="gallery-prev"
                   aria-label="Prejšnja"
                 >
-                  <ChevronLeft className="h-6 w-6" />
+                  <ChevronLeft className="h-8 w-8" />
                 </button>
               )}
 
@@ -219,13 +219,13 @@ export default function Galerija() {
                   <img
                     src={selectedEvent.photos[currentPhotoIndex].url}
                     alt={selectedEvent.photos[currentPhotoIndex].title}
-                    className="max-w-[85vw] max-h-[65vh] object-contain"
+                    className="max-w-[90vw] max-h-[75vh] object-contain shadow-2xl"
                   />
-                  <div className="mt-6 text-center bg-[#0A0A0A] px-6 py-4 rounded">
-                    <h4 className="font-['Outfit'] text-lg font-semibold text-[#D4AF37]">
+                  <div className="mt-6 text-center bg-white px-8 py-4 rounded shadow-md border border-[#E5E7EB]">
+                    <h4 className="font-['Outfit'] text-lg font-semibold text-[#0A0A0A]">
                       {selectedEvent.photos[currentPhotoIndex].title}
                     </h4>
-                    <p className="font-['Manrope'] text-sm text-gray-300 mt-1">
+                    <p className="font-['Manrope'] text-sm text-[#52525B] mt-1">
                       {selectedEvent.photos[currentPhotoIndex].description}
                     </p>
                   </div>
@@ -236,27 +236,27 @@ export default function Galerija() {
               {selectedEvent && selectedEvent.photos.length > 1 && (
                 <button
                   onClick={goToNext}
-                  className="absolute right-4 z-50 p-3 bg-white/10 hover:bg-[#D4AF37] hover:text-[#0A0A0A] rounded-full transition-all text-white"
+                  className="absolute right-6 z-50 p-4 bg-white shadow-lg hover:bg-[#D4AF37] hover:text-white rounded-full transition-all text-[#0A0A0A] border border-[#E5E7EB]"
                   data-testid="gallery-next"
                   aria-label="Naslednja"
                 >
-                  <ChevronRight className="h-6 w-6" />
+                  <ChevronRight className="h-8 w-8" />
                 </button>
               )}
             </div>
 
             {/* Thumbnails */}
             {selectedEvent && selectedEvent.photos.length > 1 && (
-              <div className="p-6 border-t border-white/10">
+              <div className="p-6 border-t border-[#E5E7EB] bg-white">
                 <div className="flex gap-3 justify-center overflow-x-auto pb-2">
                   {selectedEvent.photos.map((photo, index) => (
                     <button
                       key={index}
                       onClick={() => setCurrentPhotoIndex(index)}
-                      className={`flex-shrink-0 w-20 h-14 overflow-hidden transition-all ${
+                      className={`flex-shrink-0 w-24 h-16 overflow-hidden transition-all rounded ${
                         index === currentPhotoIndex 
                           ? 'ring-2 ring-[#D4AF37] opacity-100' 
-                          : 'opacity-50 hover:opacity-80'
+                          : 'opacity-60 hover:opacity-100'
                       }`}
                       data-testid={`thumbnail-${index}`}
                     >
