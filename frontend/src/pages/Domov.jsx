@@ -8,6 +8,11 @@ const GROUP_IMAGE = "https://customer-assets.emergentagent.com/job_ad56f1e8-e5f7
 const MAIN_LOGO = "https://customer-assets.emergentagent.com/job_ad56f1e8-e5f7-431f-947a-6697b9684b20/artifacts/vvsly6ll_JUDO%20%282%29.jpg";
 const JUDO_SOLA_LOGO = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/tstr51lv_image.png";
 
+// Bežigrad Cup images
+const BEZIGRAD_IMG_1 = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/zuprkk1x_image.png";
+const BEZIGRAD_IMG_2 = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/zrkl7xcq_image.png";
+const BEZIGRAD_IMG_3 = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/ojg8ckaj_image.png";
+
 export default function Domov() {
   const scrollToNews = () => {
     document.getElementById('novice')?.scrollIntoView({ behavior: 'smooth' });
@@ -145,6 +150,96 @@ export default function Domov() {
               <Link
                 to="/galerija"
                 data-testid="news-cta-galerija"
+                className="inline-flex items-center gap-3 text-[#0A0A0A] font-['Manrope'] font-medium text-sm hover:text-[#D4AF37] transition-colors group"
+              >
+                <span className="border-b-2 border-[#D4AF37] pb-1">Oglej si vse fotografije</span>
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      {/* News Section - Pokal Bežigrad */}
+      <section className="py-32 lg:py-40 bg-[#F9F9F9]">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          {/* Section Header */}
+          <div className="text-center mb-20">
+            <span className="inline-block uppercase text-xs tracking-[0.3em] text-[#D4AF37] font-semibold font-['Manrope'] mb-4">
+              Novice
+            </span>
+            <div className="w-16 h-px bg-[#D4AF37] mx-auto" />
+          </div>
+
+          {/* Article */}
+          <article className="max-w-4xl mx-auto">
+            <header className="mb-12">
+              <h2 className="font-['Outfit'] text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A0A0A] tracking-tight leading-tight text-center">
+                Na Pokalu Bežigrad smo bili srebrni
+              </h2>
+            </header>
+
+            {/* Featured Images */}
+            <div className="grid md:grid-cols-2 gap-6 mb-12">
+              <div className="overflow-hidden group">
+                <img
+                  src={BEZIGRAD_IMG_1}
+                  alt="Diana in Jora na podelitvi medalj"
+                  className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+              <div className="overflow-hidden group">
+                <img
+                  src={BEZIGRAD_IMG_2}
+                  alt="Podelitev medalj na Pokalu Bežigrad"
+                  className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+            </div>
+
+            {/* Article Content */}
+            <div className="prose prose-lg max-w-none">
+              <p className="font-['Manrope'] text-lg text-[#52525B] leading-relaxed mb-6 first-letter:text-5xl first-letter:font-['Outfit'] first-letter:font-bold first-letter:text-[#D4AF37] first-letter:float-left first-letter:mr-3 first-letter:mt-1">
+                Obe naši državni prvakinji v kategoriji mlajših deklic sta osvojili odlično drugo mesto: Jora Kuci in Diana Černec.
+              </p>
+
+              <p className="font-['Manrope'] text-lg text-[#52525B] leading-relaxed mb-6">
+                Velik uspeh naše judo športne šole je pri mlajših kadetih dopolnil tudi Luka Angelini, ki je prav tako osvojil drugo mesto. Trenutno je na točkovnem mestu vseh tekmovanj pri ml. kadetih, si Luka skupaj z Galom Purnatom deli drugo mesto. Tudi Gal je na isti tekmi dosegel drugo mesto, zato oba ostajata v samem vrhu in si še naprej delita vodilni položaj.
+              </p>
+
+              <p className="font-['Manrope'] text-lg text-[#52525B] leading-relaxed mb-6">
+                Ostali zasledovalci niso bili tako uspešni, zato sta se Luka in Gal točkovno od njih še nekoliko oddaljila. To pomeni, da imata ob koncu rang lestvice lepo možnost, da dosežeta najmanj tisti cilj, ki smo si ga zadali — uvrstitev vsaj na drugo mesto.
+              </p>
+
+              <blockquote className="border-l-4 border-[#D4AF37] pl-6 my-10 italic">
+                <p className="font-['Manrope'] text-xl text-[#0A0A0A] leading-relaxed">
+                  "To je dober veter, morda za zdaj še rahla sapica, ki pa kaže, da se naša judo športna šola ponovno dviga in da znova dosegamo rezultate, kakršne smo nekoč že ustvarjali."
+                </p>
+              </blockquote>
+
+              <p className="font-['Manrope'] text-lg text-[#52525B] leading-relaxed mb-6">
+                Vsem tekmovalcem, ki so dosegli lepe uvrstitve, iskreno čestitamo za njihov uspeh.
+              </p>
+            </div>
+
+            {/* Third Image - Jora in battle */}
+            <div className="mt-12">
+              <div className="overflow-hidden group">
+                <img
+                  src={BEZIGRAD_IMG_3}
+                  alt="Jora v borbi z nasprotnico"
+                  className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+              <p className="font-['Manrope'] text-sm text-[#52525B] mt-4 italic text-center">
+                Na slikah: Diana in Jora na podelitvi medalj - medalje je podeljevala OI šampionka Andreja Leški. Tretja slika: Jora v borbi z nasprotnico.
+              </p>
+            </div>
+
+            {/* Gallery CTA */}
+            <div className="mt-16 text-center">
+              <Link
+                to="/galerija"
                 className="inline-flex items-center gap-3 text-[#0A0A0A] font-['Manrope'] font-medium text-sm hover:text-[#D4AF37] transition-colors group"
               >
                 <span className="border-b-2 border-[#D4AF37] pb-1">Oglej si vse fotografije</span>

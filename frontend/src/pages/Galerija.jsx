@@ -5,6 +5,30 @@ import * as DialogPrimitive from '@radix-ui/react-dialog';
 // Events with photos
 const EVENTS = [
   {
+    id: 'pokal-bezigrad-2024',
+    title: 'Pokal Bežigrad 2024 - Srebrni uspeh',
+    date: '2024',
+    coverImage: "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/zuprkk1x_image.png",
+    description: 'Na Pokalu Bežigrad smo bili srebrni. Naše državne prvakinje in mladi kadeti so dosegli odlične rezultate.',
+    photos: [
+      {
+        url: "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/zuprkk1x_image.png",
+        title: "Podelitev medalj",
+        description: "Diana in Jora na podelitvi medalj - medalje je podeljevala OI šampionka Andreja Leški"
+      },
+      {
+        url: "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/zrkl7xcq_image.png",
+        title: "Zmagovalke na odru",
+        description: "Naši mladi judoisti na zmagovalnem odru"
+      },
+      {
+        url: "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/ojg8ckaj_image.png",
+        title: "Jora v borbi",
+        description: "Jora Kuci v borbi z nasprotnico"
+      }
+    ]
+  },
+  {
     id: 'andrea-leski-2024',
     title: 'Olimpijska prvakinja Andrea Leški v Judo klubu Izola',
     date: '2024',

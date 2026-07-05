@@ -634,7 +634,7 @@ export default function ONas() {
                 <img
                   src={IMG_RECOGNITION_4}
                   alt="Plaketa OI Pariz 2024"
-                  className="w-full h-[400px] object-cover object-top border border-[#E5E7EB]"
+                  className="w-full h-auto border border-[#E5E7EB]"
                 />
                 <p className="font-['Manrope'] text-sm text-[#52525B] mt-4 italic text-center">
                   Plaketa z vsemi evropskimi imeni dobitnikov medalj, ki so osvojili medaljo na OI Pariz 2024.
