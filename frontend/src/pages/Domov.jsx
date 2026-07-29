@@ -36,35 +36,6 @@ export default function Domov() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/70 pointer-events-none" />
         </div>
 
-        {/* Project Info Box - Top Right Corner */}
-        <div className="absolute top-24 right-6 z-20 max-w-sm pointer-events-auto hidden lg:block">
-          <div className="bg-white/95 backdrop-blur-md p-6 shadow-2xl border-l-4 border-[#D4AF37]">
-            <h3 className="font-['Outfit'] text-xs font-bold text-[#D4AF37] uppercase tracking-wider mb-3">
-              Judo klub Izola izvaja sledeči projekt:
-            </h3>
-            <h4 className="font-['Outfit'] text-lg font-bold text-[#0A0A0A] mb-3">
-              Projekt Fit in vključeni
-            </h4>
-            <p className="font-['Manrope'] text-xs text-[#52525B] leading-relaxed mb-3">
-              Sofinanciran v okviru Javnega razpisa za razvoj in profesionalizacijo NVO in prostovoljstva 2025. Financira se iz Sklada za razvoj nevladnih organizacij.
-            </p>
-            <div className="font-['Manrope'] text-xs text-[#52525B] mb-3">
-              <p className="font-semibold text-[#0A0A0A] mb-1">V okviru projekta izvajamo:</p>
-              <ul className="list-disc list-inside space-y-0.5 text-[11px]">
-                <li>redno vadbo otrok in mladih</li>
-                <li>promocijo juda na osnovnih šolah</li>
-                <li>vključevanje otrok priseljencev</li>
-                <li>individualno mentorstvo</li>
-                <li>strokovni razvoj trenerjev</li>
-                <li>promocijo zdravega življenjskega sloga</li>
-              </ul>
-            </div>
-            <p className="font-['Manrope'] text-[10px] text-[#52525B] leading-relaxed italic">
-              S projektom povečujemo dostopnost športa in prispevamo k razvoju kakovostnih športnih programov.
-            </p>
-          </div>
-        </div>
-
         {/* Hero Content */}
         <div className="relative z-10 text-center px-6 max-w-5xl mx-auto pointer-events-none">
           <div className="animate-fade-in-up">
@@ -104,6 +75,61 @@ export default function Domov() {
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
           <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center pt-2">
             <div className="w-1 h-3 bg-[#D4AF37] rounded-full animate-pulse" />
+          </div>
+        </div>
+      </section>
+
+      {/* Project Section - Fit in vključeni */}
+      <section className="py-16 bg-[#0A0A0A]">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+            {/* Left - Title */}
+            <div className="lg:w-1/3 text-center lg:text-left">
+              <span className="inline-block uppercase text-xs tracking-[0.3em] text-[#D4AF37] font-semibold font-['Manrope'] mb-3">
+                Aktualni projekt
+              </span>
+              <h2 className="font-['Outfit'] text-2xl lg:text-3xl font-bold text-white leading-tight">
+                Projekt Fit in vključeni
+              </h2>
+            </div>
+
+            {/* Right - Content */}
+            <div className="lg:w-2/3">
+              <p className="font-['Manrope'] text-sm text-gray-300 leading-relaxed mb-4">
+                Judo klub Izola sodeluje kot partner v projektu <span className="text-[#D4AF37] font-semibold">Fit in vključeni</span>, ki je sofinanciran v okviru Javnega razpisa za razvoj in profesionalizacijo NVO in prostovoljstva 2025. Projekt se financira iz Sklada za razvoj nevladnih organizacij.
+              </p>
+              
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-4">
+                <div className="flex items-center gap-2 text-gray-300">
+                  <div className="w-1.5 h-1.5 bg-[#D4AF37] rounded-full flex-shrink-0" />
+                  <span className="font-['Manrope'] text-xs">Redna vadba otrok in mladih</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-300">
+                  <div className="w-1.5 h-1.5 bg-[#D4AF37] rounded-full flex-shrink-0" />
+                  <span className="font-['Manrope'] text-xs">Promocija juda na OŠ</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-300">
+                  <div className="w-1.5 h-1.5 bg-[#D4AF37] rounded-full flex-shrink-0" />
+                  <span className="font-['Manrope'] text-xs">Vključevanje otrok priseljencev</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-300">
+                  <div className="w-1.5 h-1.5 bg-[#D4AF37] rounded-full flex-shrink-0" />
+                  <span className="font-['Manrope'] text-xs">Individualno mentorstvo</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-300">
+                  <div className="w-1.5 h-1.5 bg-[#D4AF37] rounded-full flex-shrink-0" />
+                  <span className="font-['Manrope'] text-xs">Strokovni razvoj trenerjev</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-300">
+                  <div className="w-1.5 h-1.5 bg-[#D4AF37] rounded-full flex-shrink-0" />
+                  <span className="font-['Manrope'] text-xs">Zdrav življenjski slog</span>
+                </div>
+              </div>
+
+              <p className="font-['Manrope'] text-xs text-gray-400 italic">
+                S projektom povečujemo dostopnost športa, spodbujamo vključevanje otrok ter prispevamo k razvoju kakovostnih športnih programov v lokalnem okolju.
+              </p>
+            </div>
           </div>
         </div>
       </section>
