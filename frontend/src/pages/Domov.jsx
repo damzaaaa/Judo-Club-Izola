@@ -36,6 +36,35 @@ export default function Domov() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/70 pointer-events-none" />
         </div>
 
+        {/* Project Info Box - Top Right Corner */}
+        <div className="absolute top-24 right-6 z-20 max-w-sm pointer-events-auto hidden lg:block">
+          <div className="bg-white/95 backdrop-blur-md p-6 shadow-2xl border-l-4 border-[#D4AF37]">
+            <h3 className="font-['Outfit'] text-xs font-bold text-[#D4AF37] uppercase tracking-wider mb-3">
+              Judo klub Izola izvaja sledeči projekt:
+            </h3>
+            <h4 className="font-['Outfit'] text-lg font-bold text-[#0A0A0A] mb-3">
+              Projekt Fit in vključeni
+            </h4>
+            <p className="font-['Manrope'] text-xs text-[#52525B] leading-relaxed mb-3">
+              Sofinanciran v okviru Javnega razpisa za razvoj in profesionalizacijo NVO in prostovoljstva 2025. Financira se iz Sklada za razvoj nevladnih organizacij.
+            </p>
+            <div className="font-['Manrope'] text-xs text-[#52525B] mb-3">
+              <p className="font-semibold text-[#0A0A0A] mb-1">V okviru projekta izvajamo:</p>
+              <ul className="list-disc list-inside space-y-0.5 text-[11px]">
+                <li>redno vadbo otrok in mladih</li>
+                <li>promocijo juda na osnovnih šolah</li>
+                <li>vključevanje otrok priseljencev</li>
+                <li>individualno mentorstvo</li>
+                <li>strokovni razvoj trenerjev</li>
+                <li>promocijo zdravega življenjskega sloga</li>
+              </ul>
+            </div>
+            <p className="font-['Manrope'] text-[10px] text-[#52525B] leading-relaxed italic">
+              S projektom povečujemo dostopnost športa in prispevamo k razvoju kakovostnih športnih programov.
+            </p>
+          </div>
+        </div>
+
         {/* Hero Content */}
         <div className="relative z-10 text-center px-6 max-w-5xl mx-auto pointer-events-none">
           <div className="animate-fade-in-up">
