@@ -66,3 +66,10 @@ Build a modern, professional and premium-looking website for Judo klub Izola in 
 - Frontend: React + Tailwind CSS + Shadcn/UI
 - Routing: React Router
 - No backend needed (static content)
+
+## Update (fork session, 2026-06)
+- Added new "Poletje na tatamiju" themed section on O nas page (after "Judo kampi" section, warm cream #FBF8F1 background):
+  - Full 30+ years judo camps story with 11 subsections (Prvi kamp, Znanje generacij, Prijateljstvo, Olimpijske medalje, Drugi kamp, Nina Jajic, 16 dni juda, Obala, Evropski mladinski pokal, Otroci)
+  - 3 new photos: group photo with Andreja Leski, master belt exam, Nina Jajic diploma (1. DAN)
+  - Gold-bordered highlight quotes for key messages
+- Verified via screenshots: section header, images, and following sections render correctly.

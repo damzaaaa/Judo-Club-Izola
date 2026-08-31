@@ -30,6 +30,11 @@ const IMG_TRAINER_JASA = "https://customer-assets.emergentagent.com/job_izola-ju
 const IMG_TRAINER_MOJMIR = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/uewtg9gb_momir%20kovac.jpg";
 const IMG_TRAINER_OLEKSANDER = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/37s92klc_oleksander.jpg";
 
+// Poletje na tatamiju images
+const IMG_NINA_DIPLOMA = "https://customer-assets-7cd3h4nn.emergentagent.net/job_izola-judo-club/artifacts/9gzrrkwa_Trener%20Ja%C5%A1a%20in%20Nina%20z%20diplomo%201.%20dan.webp";
+const IMG_MOJSTRSKI_IZPIT = "https://customer-assets-7cd3h4nn.emergentagent.net/job_izola-judo-club/artifacts/o5lpkeom_Polaganje%20mojstrskega%20pasu%20pred%20komisijo.webp";
+const IMG_LESKI_SKUPINSKA = "https://customer-assets-7cd3h4nn.emergentagent.net/job_izola-judo-club/artifacts/r1tewi1y_Slika%20%C5%A1e%20s%20Andrejo%20le%C5%A1ki%20in%20predsednikom%20kluba.webp";
+
 // Recognition/Achievement images
 const IMG_RECOGNITION_1 = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/s9b6p646_iztok%20andrea%201.jpg";
 const IMG_RECOGNITION_2 = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/aol9ef7p_iztok%20andrea%202.jpg";
@@ -388,6 +393,357 @@ export default function ONas() {
           <p className="font-['Manrope'] text-sm text-[#52525B] italic text-center">
             Poletni judo kamp Izola 2023 v dvorani OŠ Livade, ki so ga redno obiskovali vsi mladi judoisti z Obale. Na drugi sliki pa smo trenirali tudi z olimpijskim prvakom Ilio Iliadisom.
           </p>
+        </div>
+      </section>
+
+      {/* Poletje na tatamiju Section */}
+      <section data-testid="poletje-na-tatamiju-section" className="py-24 lg:py-32 bg-[#FBF8F1] border-y border-[#EDE5D0]">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="mb-16">
+            <span className="inline-block uppercase text-xs tracking-[0.3em] text-[#D4AF37] font-semibold font-['Manrope'] mb-6">
+              Poletje na tatamiju
+            </span>
+            <h2 className="font-['Outfit'] text-3xl sm:text-4xl font-bold text-[#0A0A0A] tracking-tight leading-tight mb-8">
+              Izola – več kot 30 let judo kampov, izobraževanja, prijateljstva in vrhunskega športa
+            </h2>
+            <div className="prose prose-lg max-w-none font-['Manrope'] text-[#52525B] leading-relaxed space-y-6">
+              <p>
+                Letošnje poletje je znova potrdilo pomembno mesto Izole na zemljevidu slovenskega in mednarodnega juda. Z dvema zaporednima judo kampoma smo ustvarili kar 16 dni intenzivnega športnega treniranja, izobraževanja, druženja in mednarodnega povezovanja.
+              </p>
+              <p>
+                Toda zgodba izoljskih judo kampov je veliko daljša. Nastajala je več kot tri desetletja in skozi čas prerasla okvir običajnih športnih priprav. Kampi so postali tudi pomemben prostor izobraževanja, kjer se znanje in izkušnje prenašajo med trenerji, tekmovalci in generacijami.
+              </p>
+              <p>
+                Mladi se tukaj ne učijo samo tehnik in borbe. Učijo se ob starejših in izkušenejših, spoznavajo različne načine treniranja, pridobivajo nove izkušnje ter znanje postopoma nadgrajujejo. Hkrati se izobražujejo tudi trenerji, saj mednarodno okolje omogoča izmenjavo strokovnih pogledov, metod dela in dobrih praks.
+              </p>
+              <p>
+                Prav izobraževanje in neprekinjen prenos znanja sta bila skozi več kot trideset let pomembna gradnika razvoja mladih športnikov. Nadarjeni in vztrajni so postopoma napredovali od mlajših kategorij do mladinskega in članskega juda, nekateri pa vse do evropskih, svetovnih in olimpijskih medalj.
+              </p>
+              <p>
+                Zato naših kampov ne razumemo samo kot športne priprave. So prostor športnega treniranja in izobraževanja, medgeneracijskega prenosa znanja, prijateljstva ter mednarodnega povezovanja. Prav preplet vseh teh dejavnosti je ustvaril okolje, v katerem so lahko mladi skozi leta napredovali in dosegali tudi najvišje športne cilje.
+              </p>
+            </div>
+          </div>
+
+          {/* Prvi kamp */}
+          <div className="mb-16">
+            <h3 className="font-['Outfit'] text-2xl font-bold text-[#0A0A0A] tracking-tight mb-6">
+              Prvi kamp – več kot 30 let tradicije in mednarodnega povezovanja
+            </h3>
+            <div className="prose prose-lg max-w-none font-['Manrope'] text-[#52525B] leading-relaxed space-y-6">
+              <p>
+                Prvi mednarodni judo kamp skupaj vodita Judo klub Izola in Judo klub Impol. Njegova posebnost je več kot tridesetletna tradicija, v kateri so pomembno vlogo odigrali tudi številni tuji klubi. Nekateri se v Izolo vračajo že več kot tri desetletja.
+              </p>
+              <p>
+                Pri razvoju te zgodbe je pomembno vlogo odigral domači Judo klub Izola, ki je skozi leta skrbel, da se znanje in izkušnje starejših trenerjev in tekmovalcev niso izgubili, temveč so se prenašali na nove generacije.
+              </p>
+              <p>
+                Mladi so trenirali ob starejših in uspešnejših tekmovalcih, jih opazovali, se od njih učili ter jih sčasoma skušali dohiteti in tudi preseči. Najbolj nadarjeni, vztrajni in uspešni so napredovali v mladinske in članske kategorije, nekateri pa vse do največjih mednarodnih tekmovanj.
+              </p>
+              <p>
+                Tako je kamp skozi desetletja postal pomemben gradnik športnega treniranja in izobraževanja mladih.
+              </p>
+            </div>
+          </div>
+
+          {/* Znanje generacij */}
+          <div className="mb-16">
+            <h3 className="font-['Outfit'] text-2xl font-bold text-[#0A0A0A] tracking-tight mb-6">
+              Znanje prve generacije se ne izgubi – nova ga prevzema in nadgrajuje
+            </h3>
+            <div className="prose prose-lg max-w-none font-['Manrope'] text-[#52525B] leading-relaxed space-y-6">
+              <p>
+                Posebna vrednost več kot tridesetletne tradicije je prav v tem, da se pridobljeno znanje s prihodom novih generacij ne izgubi.
+              </p>
+              <p>
+                Prve generacije trenerjev in tekmovalcev so skozi dolgoletno delo pridobivale izkušnje, razvijale načine treniranja in svoje znanje prenašale na mlajše. Ti so ga prevzemali, bogatili z lastnimi izkušnjami in novimi strokovnimi spoznanji ter ga nato predajali naprej.
+              </p>
+              <p>
+                Tako se je oblikovala neprekinjena razvojna veriga: ena generacija postavlja temelje, naslednja jih prevzame, nadgradi in razvija naprej.
+              </p>
+              <p>
+                Mladi, ki so se nekoč na kampih učili od starejših, so pozneje sami postajali vrhunski tekmovalci, trenerji in vzorniki naslednjim generacijam.
+              </p>
+            </div>
+            <div className="border-l-4 border-[#D4AF37] pl-6 py-2 mt-8">
+              <p className="font-['Manrope'] text-[#0A0A0A] font-semibold leading-relaxed">
+                Prav v tem vidimo eno največjih vrednosti našega sistema: novo ne izniči starega, ampak iz njega raste in ga nadgrajuje.
+              </p>
+            </div>
+          </div>
+
+          {/* Prijateljstvo */}
+          <div className="mb-16">
+            <h3 className="font-['Outfit'] text-2xl font-bold text-[#0A0A0A] tracking-tight mb-6">
+              Prijateljstvo in mednarodna izmenjava znanja
+            </h3>
+            <div className="prose prose-lg max-w-none font-['Manrope'] text-[#52525B] leading-relaxed space-y-6">
+              <p>
+                Kampi pa skozi desetletja niso povezovali samo generacij, ampak tudi ljudi iz različnih držav.
+              </p>
+              <p>
+                V Izoli so skupaj trenirali športniki iz Slovenije, Italije, Kosova, Poljske in številnih drugih okolij. Trenerji so izmenjevali strokovna spoznanja, metode dela in dobre prakse, tekmovalci pa so dobivali nove partnerje ter spoznavali različne načine juda.
+              </p>
+              <p>
+                Ob tem so nastajala prijateljstva, ki so pogosto trajala veliko dlje od posameznega kampa. Prav dejstvo, da se nekateri tuji klubi v Izolo vračajo že več kot trideset let, najbolje kaže, da se je iz športnega sodelovanja razvila prava mednarodna skupnost.
+              </p>
+              <p>
+                Znanja nismo zadrževali zase. Izmenjevali smo ga, se učili drug od drugega in si mednarodno pomagali napredovati.
+              </p>
+              <p>
+                Tudi zaradi tega je izolski kamp skozi desetletja postal prepoznaven v širšem evropskem judo prostoru.
+              </p>
+            </div>
+          </div>
+
+          {/* Olimpijske medalje */}
+          <div className="mb-16">
+            <h3 className="font-['Outfit'] text-2xl font-bold text-[#0A0A0A] tracking-tight mb-6">
+              Od mladih udeležencev do olimpijskih medalj
+            </h3>
+            <div className="prose prose-lg max-w-none font-['Manrope'] text-[#52525B] leading-relaxed space-y-6">
+              <p>Rezultati takšnega dela se ne pokažejo čez noč.</p>
+              <p>
+                Za vrhunskim športnikom stojijo leta dela v matičnem klubu, trenerji, reprezentančni programi, tekmovanja in številni drugi dejavniki. Kamp pa je lahko pomemben del tega procesa, saj športniku ponudi drugačne partnerje, nova znanja, nove izkušnje in primerjavo z najboljšimi.
+              </p>
+              <p>
+                V več kot treh desetletjih so številni športniki, ki so se izpopolnjevali tudi na naših kampih, pozneje osvajali medalje na evropskih in svetovnih prvenstvih ter olimpijskih igrah.
+              </p>
+              <p>
+                Še posebej smo ponosni na našo obalno olimpijsko prvakinjo Andrejo Leški, ki je leta 2024 v Parizu osvojila zlato olimpijsko medaljo.
+              </p>
+              <p>
+                Njena pot ima za naše mlade posebno sporočilo: kaže jim, da lahko otrok, ki danes stopi na tatami na slovenski Obali, s talentom, vztrajnostjo, kakovostnim treningom in pravim strokovnim okoljem nekoč pride tudi do največjih športnih dosežkov.
+              </p>
+            </div>
+          </div>
+
+          {/* Drugi kamp */}
+          <div className="mb-16">
+            <h3 className="font-['Outfit'] text-2xl font-bold text-[#0A0A0A] tracking-tight mb-6">
+              Drugi kamp – nova generacija nadaljuje zgodbo
+            </h3>
+            <div className="prose prose-lg max-w-none font-['Manrope'] text-[#52525B] leading-relaxed space-y-6">
+              <p>
+                To kontinuiteto je lepo pokazal tudi drugi letošnji kamp, ki ga je organizirala Judo zveza Slovenije.
+              </p>
+              <p>
+                Program je zajemal članske in mladinske borbene treninge, delo z mlajšimi starostnimi kategorijami ter učenje kat in priprave na izpite za mojstrske stopnje.
+              </p>
+              <p>
+                Tudi tukaj se je pokazalo, kako pomembno je povezovanje generacij. Mladi danes pridobivajo znanje od vrhunskih tekmovalcev in trenerjev, ti pa nadaljujejo proces, ki so ga pred desetletji začele prejšnje generacije. Tako se izkušnje preteklosti povezujejo s sodobnimi pristopi športnega treniranja.
+              </p>
+              <p>
+                Prva dva dneva je mlajše judoiste vodila Kaja Kajzer, dvakratna evropska podprvakinja, v nadaljevanju pa olimpijska prvakinja Andreja Leški.
+              </p>
+              <p>
+                Na kampu so aktivno sodelovali tudi naši mladi člani Judo kluba Izola. Zanje je bila to dragocena športna in izobraževalna izkušnja, saj so lahko neposredno trenirali ob vrhunskih športnicah, jih opazovali, poslušali njihove nasvete ter pridobivali nova znanja.
+              </p>
+              <p>
+                Poseben trenutek je bilo srečanje z Andrejo Leški, s katero so se naši mladi člani tudi fotografirali.
+              </p>
+            </div>
+
+            <div className="mt-10 max-w-2xl mx-auto">
+              <img
+                src={IMG_LESKI_SKUPINSKA}
+                alt="Mladi člani Judo kluba Izola z Andrejo Leški in predsednikom kluba"
+                className="w-full h-auto border border-[#E5E7EB]"
+              />
+              <p className="font-['Manrope'] text-sm text-[#52525B] mt-4 italic text-center">
+                Naši mladi člani z olimpijsko prvakinjo Andrejo Leški.
+              </p>
+            </div>
+
+            <div className="prose prose-lg max-w-none font-['Manrope'] text-[#52525B] leading-relaxed mt-10">
+              <p>
+                Ta fotografija lepo simbolizira bistvo naših kampov: danes se mladi učijo od olimpijske prvakinje, jutri pa bodo morda prav oni svoje znanje in izkušnje predajali naslednji generaciji.
+              </p>
+            </div>
+          </div>
+
+          {/* Nina Jajić */}
+          <div className="mb-16">
+            <h3 className="font-['Outfit'] text-2xl font-bold text-[#0A0A0A] tracking-tight mb-6">
+              Pomemben uspeh Nine Jajić
+            </h3>
+            <div className="prose prose-lg max-w-none font-['Manrope'] text-[#52525B] leading-relaxed space-y-6">
+              <p>
+                Pomemben izobraževalni del kampa so predstavljale tudi priprave na izpite za mojstrske stopnje.
+              </p>
+              <p>
+                Poseben uspeh je dosegla Nina Jajić, ki je uspešno opravila izpit za 1. DAN – črni pas ter tako iz šolskih prestopila v mojstrske stopnje juda.
+              </p>
+              <p className="font-semibold text-[#0A0A0A]">
+                S tem je postala prva ženska mojstrica juda v našem klubu.
+              </p>
+            </div>
+
+            <div className="border-l-4 border-[#D4AF37] pl-6 py-2 mt-8 mb-10">
+              <p className="font-['Outfit'] text-xl text-[#0A0A0A] font-bold">
+                Nina, iskrene čestitke!
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <img
+                  src={IMG_MOJSTRSKI_IZPIT}
+                  alt="Polaganje mojstrskega pasu pred komisijo"
+                  className="w-full h-[420px] object-cover object-center border border-[#E5E7EB]"
+                />
+                <p className="font-['Manrope'] text-sm text-[#52525B] mt-4 italic text-center">
+                  Polaganje izpita za mojstrsko stopnjo pred komisijo.
+                </p>
+              </div>
+              <div>
+                <img
+                  src={IMG_NINA_DIPLOMA}
+                  alt="Trener Jaša Babič in Nina Jajić z diplomo za 1. DAN"
+                  className="w-full h-[420px] object-cover object-top border border-[#E5E7EB]"
+                />
+                <p className="font-['Manrope'] text-sm text-[#52525B] mt-4 italic text-center">
+                  Trener Jaša Babič in Nina Jajić z diplomo za 1. DAN – črni pas.
+                </p>
+              </div>
+            </div>
+
+            <div className="prose prose-lg max-w-none font-['Manrope'] text-[#52525B] leading-relaxed mt-10">
+              <p>
+                Tudi njen uspeh potrjuje, da judo kamp ni samo prostor borbenega treninga, ampak tudi prostor širšega judo izobraževanja, tehničnega izpopolnjevanja in osebnega razvoja.
+              </p>
+            </div>
+          </div>
+
+          {/* 16 dni juda */}
+          <div className="mb-16">
+            <h3 className="font-['Outfit'] text-2xl font-bold text-[#0A0A0A] tracking-tight mb-6">
+              16 dni juda in potreba po nadaljnjem razvoju
+            </h3>
+            <div className="prose prose-lg max-w-none font-['Manrope'] text-[#52525B] leading-relaxed space-y-6">
+              <p>
+                Z letošnjima kampoma se je obdobje organiziranih poletnih judo aktivnosti v Izoli z nekdanjih enajstih povečalo na kar 16 dni.
+              </p>
+              <p>
+                Več udeležencev, več treningov in več mednarodnega sodelovanja pa pomeni tudi potrebo po boljših pogojih.
+              </p>
+              <p>
+                Zato smo se povezani klubi odločili za vlaganje v novo opremo in dodatne tatamije. Sedanjih približno 700 kvadratnih metrov vadbene površine želimo povečati na približno 1.000 kvadratnih metrov.
+              </p>
+              <p>
+                Del sredstev smo že zbrali sami, pri nadaljnjem razvoju pa želimo k sodelovanju povabiti tudi širšo javnost in vse, ki prepoznavajo pomen vlaganja v šport in mladino.
+              </p>
+              <p className="font-semibold text-[#0A0A0A]">
+                To ni samo naložba v nove blazine. Je naložba v več prostora za otroke, več kakovostnega treninga, več izobraževanja, več mednarodnih povezav in več možnosti za prihodnje generacije.
+              </p>
+            </div>
+          </div>
+
+          {/* Obala */}
+          <div className="mb-16">
+            <h3 className="font-['Outfit'] text-2xl font-bold text-[#0A0A0A] tracking-tight mb-6">
+              Znanje širimo na celotno slovensko Obalo
+            </h3>
+            <div className="prose prose-lg max-w-none font-['Manrope'] text-[#52525B] leading-relaxed space-y-6">
+              <p>
+                Naše delo želimo v prihodnje še bolj razširiti in povezati celotno slovensko Obalo.
+              </p>
+              <p>
+                Sodelovanje in delo Judo kluba Izola in Judo kluba Ankaran omogočata, da znanje in izkušnje, ki so nastajali skozi desetletja, prenašamo tudi v druga okolja.
+              </p>
+              <p>
+                Naš cilj ni zapirati znanja znotraj posameznega kluba. Nasprotno – želimo ga širiti, oplemenititi in ustvarjati možnosti za otroke v Izoli, Ankaranu, Kopru in drugod na Obali.
+              </p>
+              <p>
+                Koper že ima olimpijsko prvakinjo Andrejo Leški. Naša želja pa je, da bi z dobrim strokovnim delom in sodelovanjem ustvarjali pogoje, da bi v prihodnosti vrhunski športniki lahko prihajali tudi iz Izole, Ankarana in drugih obalnih okolij.
+              </p>
+              <p>
+                Ne gre za tekmovanje med občinami, katera bo dobila naslednjega olimpijskega prvaka. Gre za nekaj pomembnejšega: da celotna Obala postane okolje, v katerem imajo mladi možnost razviti svoj talent do najvišje ravni.
+              </p>
+              <p>
+                Vsaka prihodnja evropska, svetovna ali olimpijska medalja z naše Obale bo zato uspeh širšega okolja, ki je mlademu športniku omogočilo razvoj.
+              </p>
+            </div>
+          </div>
+
+          {/* Evropski mladinski pokal */}
+          <div className="mb-16">
+            <h3 className="font-['Outfit'] text-2xl font-bold text-[#0A0A0A] tracking-tight mb-6">
+              Po kampih nas čaka še evropski mladinski pokal
+            </h3>
+            <div className="prose prose-lg max-w-none font-['Manrope'] text-[#52525B] leading-relaxed space-y-6">
+              <p>
+                Z zaključkom poletnih kampov pa naše skupno delo še zdaleč ni končano.
+              </p>
+              <p>Čaka nas še en lep in pomemben del letošnje judo zgodbe.</p>
+              <p>
+                Judo klub Izola in Judo klub Impol bosta konec novembra skupaj sodelovala pri organizaciji evropskega mladinskega judo pokala v Areni Bonifika v Kopru.
+              </p>
+              <p>
+                To je pomembno tudi zato, ker ponovno kaže moč sodelovanja obeh klubov. Sodelovanje, ki ga gradimo na kampih, se nadaljuje pri organizaciji velikega mednarodnega tekmovanja.
+              </p>
+              <p>
+                Od dela z otroki in mladimi, preko kampov in izobraževanja tako prihajamo do evropskega tekmovalnega prostora.
+              </p>
+              <p>
+                Posebno simboliko ima tudi prizorišče. Prav v tem okolju je trenirala Andreja Leški. Borilnica, v kateri se je pripravljala aktualna olimpijska prvakinja, bo ob evropskem pokalu ponovno del športnega dogajanja. Mladi tekmovalci se bodo tam pripravljali in ogrevali, nato pa stopili na tekmovalni prostor Arene Bonifika.
+              </p>
+              <p>Ob fotografiji tega prostora lahko zato upravičeno zapišemo:</p>
+            </div>
+            <div className="border-l-4 border-[#D4AF37] pl-6 py-2 mt-8">
+              <p className="font-['Manrope'] text-[#0A0A0A] font-semibold italic leading-relaxed">
+                »V tej borilnici je trenirala aktualna olimpijska prvakinja Andreja Leški.«
+              </p>
+            </div>
+            <div className="prose prose-lg max-w-none font-['Manrope'] text-[#52525B] leading-relaxed space-y-6 mt-8">
+              <p>
+                Za mladega športnika je to lahko močno sporočilo. Na istem prostoru, kjer se danes pripravlja na svojo borbo, je nekoč trenirala športnica, ki je pozneje osvojila olimpijsko zlato.
+              </p>
+              <p>
+                Tudi evropski mladinski pokal bo zato nadaljevanje tistega, kar že več kot tri desetletja gradimo na naših kampih: izobraževanje, športno treniranje, mednarodno sodelovanje, prijateljstvo in prenos znanja na mlade.
+              </p>
+            </div>
+          </div>
+
+          {/* Otroci in prihodnje generacije */}
+          <div>
+            <h3 className="font-['Outfit'] text-2xl font-bold text-[#0A0A0A] tracking-tight mb-6">
+              Najpomembnejši ostajajo otroci in prihodnje generacije
+            </h3>
+            <div className="prose prose-lg max-w-none font-['Manrope'] text-[#52525B] leading-relaxed space-y-6">
+              <p>
+                Ko govorimo o olimpijskih medaljah, velikih mednarodnih tekmovanjih, 1.000 kvadratnih metrih tatamija in več kot tridesetletni tradiciji, ne smemo pozabiti, zaradi koga vse to počnemo.
+              </p>
+              <p className="font-semibold text-[#0A0A0A]">Zaradi otrok in mladih.</p>
+              <p>
+                Na fotografijah letošnjih kampov vidimo otroke, ki danes šele začenjajo svojo športno pot. Ob njih stojijo starejši tekmovalci, trenerji, evropski dobitniki medalj in olimpijska prvakinja.
+              </p>
+              <p>
+                Pred desetletji so bili na njihovem mestu neki drugi otroci. Nekateri so pozneje postali vrhunski športniki in osvojili evropske, svetovne in olimpijske medalje.
+              </p>
+              <p>Danes je pred nami nova generacija.</p>
+              <p>
+                Naša odgovornost je, da ji zagotovimo znanje, kakovosten trening, izobraževanje, dobre pogoje, mednarodne izkušnje, prijateljstvo in možnost napredovanja.
+              </p>
+              <p>
+                Zato povezujemo klube, generacije in občine. Zato širimo prostor za trening. Zato organiziramo kampe in mednarodna tekmovanja. In zato znanje, ki smo ga pridobivali več kot trideset let, predajamo naprej.
+              </p>
+              <p>
+                Ne moremo vedeti, kateri otrok bo nekoč postal vrhunski športnik. Lahko pa ustvarimo okolje, v katerem bo vsak dobil možnost razviti svoje sposobnosti.
+              </p>
+              <p>
+                Morda je prav med otroki, ki danes trenirajo na naših blazinah in se fotografirajo z olimpijsko prvakinjo, nekdo, ki bo nekoč osvojil naslednjo evropsko, svetovno ali olimpijsko medaljo.
+              </p>
+              <p>
+                Takrat to ne bo samo uspeh enega športnika, enega kluba ali ene občine. To bo uspeh vseh, ki smo znanje ohranjali, ga razvijali, delili in prenašali iz generacije v generacijo.
+              </p>
+            </div>
+            <div className="border-l-4 border-[#D4AF37] pl-6 py-2 mt-8">
+              <p className="font-['Manrope'] text-[#0A0A0A] font-semibold leading-relaxed">
+                To je zgodba naših judo kampov – zgodba več kot tridesetih let znanja, izobraževanja, prijateljstva in sodelovanja ter hkrati zgodba prihodnosti juda na celotni slovenski Obali.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
