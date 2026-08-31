@@ -99,6 +99,16 @@ const sl = {
           { title: 'Nina Jajić – 1. DAN', description: 'Trener Jaša Babič in Nina Jajić z diplomo za črni pas – prva ženska mojstrica juda v našem klubu' },
         ],
       },
+      'andreja-in-ekipa-2026': {
+        title: 'Andreja Leški in naša ekipa',
+        description: 'Utrinki z olimpijsko prvakinjo Andrejo Leški in našo ekipo s poletnega judo kampa v Areni Bonifika.',
+        photos: [
+          { title: 'Andreja in naša ekipa', description: 'Naši najmlajši člani z olimpijsko prvakinjo Andrejo Leški' },
+          { title: 'Diana in Andreja pri demonstraciji', description: 'Naša Diana kot partnerka olimpijske prvakinje pri prikazu tehnike' },
+          { title: 'Poletni judo kamp Izola', description: 'Skupni pozdrav udeležencev kampa v Areni Bonifika' },
+          { title: 'Jaka pri fizioterapiji', description: 'Jaka je v kampu potreboval fizioterapevtsko oskrbo – tudi za to je poskrbljeno' },
+        ],
+      },
       'pokal-bezigrad-2024': {
         title: 'Pokal Bežigrad 2024 - Srebrni uspeh',
         description: 'Na Pokalu Bežigrad smo bili srebrni. Naše državne prvakinje in mladi kadeti so dosegli odlične rezultate.',
@@ -130,8 +140,8 @@ const sl = {
     },
     infoTitle: 'Kontaktni podatki',
     address: { title: 'Naslov', value: 'Izola, Slovenija', note: '(Natančen naslov bo dodan)' },
-    phone: { title: 'Telefon', value: '+386 XX XXX XXX', note: '(Številka bo dodana)' },
-    email: { title: 'E-pošta', value: 'info@judoklubizola.si', note: '(E-naslov bo potrjen)' },
+    phone: { title: 'Telefon', value: '+386 31 625 170', note: 'Iztok Babič' },
+    email: { title: 'E-pošta', value: 'iztok.babic8@gmail.com', note: 'Iztok Babič' },
     hours: { title: 'Urnik treningov', value: '(Urnik bo dodan)' },
     locationsTitle: 'Naše lokacije',
     locationNote: 'Podrobnosti bodo dodane',

@@ -20,6 +20,17 @@ const EVENTS_META = [
     ],
   },
   {
+    id: 'andreja-in-ekipa-2026',
+    date: '2026',
+    coverImage: "https://customer-assets-7cd3h4nn.emergentagent.net/job_izola-judo-club/artifacts/wg3a10zd_Andreja%20in%20na%C5%A1a%20ekipa.webp",
+    photoUrls: [
+      "https://customer-assets-7cd3h4nn.emergentagent.net/job_izola-judo-club/artifacts/wg3a10zd_Andreja%20in%20na%C5%A1a%20ekipa.webp",
+      "https://customer-assets-7cd3h4nn.emergentagent.net/job_izola-judo-club/artifacts/3dfocqey_Diana%20in%20Andreja%20pri%20demonstraciji.webp",
+      "https://customer-assets-7cd3h4nn.emergentagent.net/job_izola-judo-club/artifacts/loai83ri_POLETNI%20JUDO%20KAMP%20IZOLA.webp",
+      "https://customer-assets-7cd3h4nn.emergentagent.net/job_izola-judo-club/artifacts/lynsuwk0_Jaka%20je%20v%20kampu%20potreboval%20fizioterapijo.webp",
+    ],
+  },
+  {
     id: 'pokal-bezigrad-2024',
     date: '2024',
     coverImage: "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/zuprkk1x_image.png",

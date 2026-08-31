@@ -97,15 +97,15 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-[#D4AF37] flex-shrink-0" />
-                <span className="font-['Manrope'] text-sm text-gray-400">
-                  +386 XX XXX XXX
-                </span>
+                <a href="tel:+38631625170" data-testid="footer-phone" className="font-['Manrope'] text-sm text-gray-400 hover:text-[#D4AF37] transition-colors">
+                  +386 31 625 170
+                </a>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-[#D4AF37] flex-shrink-0" />
-                <span className="font-['Manrope'] text-sm text-gray-400">
-                  info@judoklubizola.si
-                </span>
+                <a href="mailto:iztok.babic8@gmail.com" data-testid="footer-email" className="font-['Manrope'] text-sm text-gray-400 hover:text-[#D4AF37] transition-colors">
+                  iztok.babic8@gmail.com
+                </a>
               </div>
             </div>
           </div>

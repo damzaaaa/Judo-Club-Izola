@@ -99,6 +99,16 @@ const it = {
           { title: 'Nina Jajić – 1° DAN', description: 'L\'allenatore Jaša Babič e Nina Jajić con il diploma di cintura nera – la prima maestra di judo del nostro club' },
         ],
       },
+      'andreja-in-ekipa-2026': {
+        title: 'Andreja Leški e la nostra squadra',
+        description: 'Momenti con la campionessa olimpica Andreja Leški e la nostra squadra al campo estivo di judo all\'Arena Bonifika.',
+        photos: [
+          { title: 'Andreja e la nostra squadra', description: 'I nostri soci più piccoli con la campionessa olimpica Andreja Leški' },
+          { title: 'Diana e Andreja durante la dimostrazione', description: 'La nostra Diana come partner della campionessa olimpica durante la dimostrazione di una tecnica' },
+          { title: 'Campo estivo di judo di Isola', description: 'Il saluto comune dei partecipanti al campo all\'Arena Bonifika' },
+          { title: 'Jaka dalla fisioterapista', description: 'Al campo Jaka ha avuto bisogno di cure fisioterapiche – anche a questo si pensa' },
+        ],
+      },
       'pokal-bezigrad-2024': {
         title: 'Coppa Bežigrad 2024 - Successo d\'argento',
         description: 'Alla Coppa Bežigrad abbiamo conquistato l\'argento. Le nostre campionesse nazionali e i giovani cadetti hanno ottenuto risultati eccellenti.',
@@ -130,8 +140,8 @@ const it = {
     },
     infoTitle: 'Dati di contatto',
     address: { title: 'Indirizzo', value: 'Isola, Slovenia', note: '(L\'indirizzo esatto sarà aggiunto)' },
-    phone: { title: 'Telefono', value: '+386 XX XXX XXX', note: '(Il numero sarà aggiunto)' },
-    email: { title: 'E-mail', value: 'info@judoklubizola.si', note: '(L\'indirizzo e-mail sarà confermato)' },
+    phone: { title: 'Telefono', value: '+386 31 625 170', note: 'Iztok Babič' },
+    email: { title: 'E-mail', value: 'iztok.babic8@gmail.com', note: 'Iztok Babič' },
     hours: { title: 'Orario degli allenamenti', value: '(L\'orario sarà aggiunto)' },
     locationsTitle: 'Le nostre sedi',
     locationNote: 'I dettagli saranno aggiunti',

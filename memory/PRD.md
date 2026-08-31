@@ -81,3 +81,9 @@ Build a modern, professional and premium-looking website for Judo klub Izola in 
 - New Galerija event 'Poletje na tatamiju – 16 dni juda v Izoli' (2026, 7 photos) added as first event; text translated in all 3 langs. Gallery data = EVENTS_META (image URLs) merged with translated t.galerija.events.
 - Lightbox layout reworked to flex-1 min-h-0 + object-contain so image+caption+thumbnails always fit viewport (fixed HIGH bug: thumbnails were off-screen). Added DialogTitle for a11y, translated aria-labels.
 - Verified via testing_agent (iteration_4) + screenshots: SL default, EN/IT on all routes, persistence, all 3 gallery events + lightbox nav, mobile switcher, lightbox thumbnails clickable at 1920x1080.
+
+## Update (fork session 2b, 2026-06)
+- New gallery event 'Andreja Leški in naša ekipa' (id andreja-in-ekipa-2026, 4 photos: group with kids [cover], Diana & Andreja demonstration, camp bow lineup, Jaka physiotherapy). Translated SL/EN/IT. Placed 2nd, after Poletje na tatamiju.
+- Kontakt real data filled: phone +386 31 625 170, email iztok.babic8@gmail.com (note 'Iztok Babič') in all 3 languages; Footer now has clickable tel:/mailto: links.
+- NOTE: club street ADDRESS still placeholder ('Natančen naslov bo dodan') - user has not provided it yet. Training schedule also still placeholder.
+- Verified via screenshots: 4 event cards, new lightbox works (thumbnails clickable), Kontakt shows real phone/email.
