@@ -1,0 +1,77 @@
+{
+  "summary": "Frontend-only E2E testing of the Judo Klub Izola site (no backend calls). Verified Slovenian-by-default rendering, the 3-language flag switcher on all 4 routes, localStorage persistence, full translation coverage of every page (incl. the long O nas / 'Poletje na tatamiju' history section), the new 7-photo gallery event, the lightbox (prev/next/thumbnails/close), the two existing gallery events, mobile 390px behaviour, image loading and console errors. Also ran a programmatic key-parity diff of sl/en/it dictionaries (100% parity, no untranslated long strings). 1 HIGH functional/layout bug found: the lightbox thumbnail strip renders outside the viewport on desktop, making thumbnails unreachable for the 7-photo event.",
+  "backend_issues": { "critical": [], "minor": [] },
+  "frontend_issues": {
+    "ui_bugs": [
+      {
+        "component": "Galerija lightbox (DialogPrimitive.Content, Galerija.jsx L162-260)",
+        "issue": "Dialog content overflows the viewport and cannot scroll, so the thumbnail strip is pushed below the fold. Measured: dialog scrollHeight 1194px vs viewport 1080px @1920x1080 (thumbnail-0 top=1098px => entire strip off-screen); 964px vs 768px @1366x768. Playwright normal click on thumbnail-6 of the 7-photo event times out ('element is outside of the viewport'). For the 3-photo event the strip is only half visible (top=1045, bottom=1109) so it clicks by luck. Root cause: fixed inset-0 flex column = header (~90px) + image max-h-[75vh] + caption card (~90px) + thumbnail row (~112px) > 100vh. Suggested fix: give the image area 'flex-1 min-h-0' with the img at 'max-h-full h-full object-contain' (drop max-h-[75vh]) and/or reduce to max-h-[55vh] and tighten the caption padding.",
+        "selector": "[data-testid=\"thumbnail-6\"] / [data-testid=\"event-gallery-dialog\"]",
+        "priority": "HIGH"
+      },
+      {
+        "component": "Navigation LanguageSwitcher",
+        "issue": "Duplicate data-testid values in the DOM: the switcher is rendered twice (desktop hidden md:flex + mobile flex md:hidden), so data-testid=\"language-switcher\" and lang-sl/lang-it/lang-en each resolve to 2 elements. On mobile the FIRST match is the hidden desktop one, so a plain page.click('[data-testid=\"lang-it\"]') fails with 'element is not visible'. Recommend distinct ids (e.g. lang-it-mobile) or rendering a single switcher.",
+        "selector": "[data-testid=\"lang-it\"]",
+        "priority": "MEDIUM"
+      },
+      {
+        "component": "Galerija lightbox a11y",
+        "issue": "Radix logs a console error on every lightbox open: '`DialogContent` requires a `DialogTitle` for the component to be accessible for screen reader users.' (8 occurrences during the run). Wrap the existing <h3> in DialogPrimitive.Title or add a VisuallyHidden title.",
+        "selector": "[data-testid=\"event-gallery-dialog\"]",
+        "priority": "LOW"
+      },
+      {
+        "component": "i18n coverage of attributes",
+        "issue": "Hardcoded Slovenian in non-visible text that is not translated: aria-label=\"Zapri\"/\"Prejsnja\"/\"Naslednja\" (Galerija.jsx L184/198/229) and all img alt texts in Domov.jsx (L37,147,154,228,235,271), Footer.jsx, Navigation.jsx. Also <html lang> is never updated when the language changes (SEO/screen readers).",
+        "selector": "[data-testid=\"gallery-close\"]",
+        "priority": "LOW"
+      }
+    ],
+    "integration_issues": [],
+    "design_issues": [
+      {
+        "screen": "Galerija lightbox - desktop 1920x1080 & 1366x768",
+        "issues": [
+          "Thumbnail strip completely off-screen (7-photo event) / clipped in half (3-photo event) - see HIGH bug above.",
+          "No scrolling possible inside the full-screen dialog, so the clipped content is unrecoverable for the user."
+        ]
+      },
+      {
+        "screen": "Galerija lightbox - mobile 390x844",
+        "issues": [
+          "The px-20 horizontal padding leaves only ~351px for the photo while the prev/next round buttons are absolutely positioned on top of the image, overlapping the photo content.",
+          "Large empty grey area above the photo (image area is vertically centered but the caption block pushes it up), looks unbalanced."
+        ]
+      }
+    ]
+  },
+  "test_report_links": [
+    "/app/tests/frontend_i18n_gallery_test.md",
+    "/app/tests/i18n_keys_check.js"
+  ],
+  "action_items": [
+    "HIGH: Fix Galerija lightbox vertical layout so the thumbnail strip is always visible/clickable at 1366x768 and 1920x1080 (use flex-1 min-h-0 + object-contain instead of max-h-[75vh], or reduce image max height).",
+    "MEDIUM: Make the language-switcher data-testids unique between the desktop and mobile instances (duplicate ids break automated clicks on mobile).",
+    "LOW: Add DialogPrimitive.Title (or VisuallyHidden) to the lightbox to silence the Radix a11y console error.",
+    "LOW: Translate aria-labels / img alt texts and set document.documentElement.lang on language change."
+  ],
+  "critical_code_review_comments": [
+    "Galerija.jsx: events are derived with `g.events[meta.id]` and `text.photos[i]` with no guard - a missing id or a photo-count mismatch between EVENTS_META.photoUrls and a dictionary's photos array will throw and white-screen the page. Verified today that sl/en/it are in perfect parity (script /app/tests/i18n_keys_check.js), but add a fallback (`text?.photos?.[i] ?? {}`) to make it resilient.",
+    "LanguageContext.jsx: localStorage value is not validated against LANGS - a stale/invalid 'jki-lang' falls back to sl for `t` but `lang` state keeps the invalid code, leaving no flag highlighted. Sanitize the initial value.",
+    "LanguageProvider does not update <html lang> nor document.title per language.",
+    "Nav link `data-testid` is derived from the path (nav-link-o-nas) which is good and stable across languages - keep it that way."
+  ],
+  "updated_files": [
+    "/app/tests/i18n_keys_check.js (new - dictionary key parity checker)",
+    "/app/tests/frontend_i18n_gallery_test.md (new - regression checklist)",
+    "/app/test_reports/iteration_4.json"
+  ],
+  "success_rate": { "backend": "N/A (not tested - static site, no API calls)", "frontend": "94% (33/35 checks passed; 1 HIGH layout bug, 1 duplicate-testid issue)" },
+  "seed_data_creation": "None - static content site, no auth, no DB",
+  "should_call_test_agent_after_fix": true,
+  "should_main_agent_self_test": false,
+  "test_credentials": "None required (no auth). /app/memory/test_credentials.md not needed for this app.",
+  "context_for_next_testing_agent": "Static React site, no backend. Preview URL from /app/frontend/.env. Gotchas for future scripts: (1) hero badge 'Dobrodosli' is uppercased by CSS, use case-insensitive assertions or inner_text lowercasing; (2) lang-sl/it/en exist TWICE in the DOM (desktop + mobile switchers) - on mobile use page.locator('[data-testid=\"lang-it\"]').nth(1); (3) reset language between cases with page.evaluate(\"localStorage.setItem('jki-lang','sl')\") + reload; (4) Radix DialogTitle console error is a known low-priority noise, filter it when asserting console errors. Already verified: SL default, EN/IT on all 4 routes, persistence, all 3 gallery events + lightbox nav, mobile menu, no broken images, i18n key parity. Re-verify the lightbox thumbnail visibility fix at 1366x768 and 1920x1080 by CLICKING thumbnail-0..6 (not just counting them).",
+  "rca_of_the_issue": "Lightbox bug RCA: DialogPrimitive.Content uses 'fixed inset-0 flex flex-col' (height locked to 100vh, overflow not scrollable). Its children sum to more than 100vh because the middle area is 'flex-1 ... py-8' but the image inside is capped at max-h-[75vh] (=810px @1080) plus a caption card (~90px), on top of an ~90px header and an ~112px thumbnail footer -> 1194px total. Because flex-1 cannot shrink below its content, the thumbnail footer is laid out below the visible area and, with no overflow scroll, becomes permanently unreachable. Reproduction: open /galerija at 1920x1080 -> click event-card-poletje-na-tatamiju-2026 -> thumbnail-0 boundingBox().top = 1098 (> innerHeight 1080); page.click('[data-testid=\"thumbnail-6\"]') times out with 'element is outside of the viewport'. Mitigation: replace max-h-[75vh] with 'min-h-0' on the flex-1 container + 'max-h-full object-contain' on the img so the image shrinks to the leftover space."
+}

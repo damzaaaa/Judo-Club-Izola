@@ -73,3 +73,11 @@ Build a modern, professional and premium-looking website for Judo klub Izola in 
   - 3 new photos: group photo with Andreja Leski, master belt exam, Nina Jajic diploma (1. DAN)
   - Gold-bordered highlight quotes for key messages
 - Verified via screenshots: section header, images, and following sections render correctly.
+
+## Update (fork session 2, 2026-06)
+- Multilingual support added: Slovenian (default) + Italian + English, full content translation of ALL pages.
+  - i18n system: /app/frontend/src/i18n/{LanguageContext.jsx, sl.js, en.js, it.js}. App wrapped in LanguageProvider. useLang() hook -> {lang, changeLang, t}. Persists to localStorage 'jki-lang', sanitized against LANGS, sets <html lang>.
+  - Flag switcher (rounded-rect flags via flagcdn) in Navigation, desktop + mobile (mobile testids suffixed '-mobile' to avoid duplicates).
+- New Galerija event 'Poletje na tatamiju – 16 dni juda v Izoli' (2026, 7 photos) added as first event; text translated in all 3 langs. Gallery data = EVENTS_META (image URLs) merged with translated t.galerija.events.
+- Lightbox layout reworked to flex-1 min-h-0 + object-contain so image+caption+thumbnails always fit viewport (fixed HIGH bug: thumbnails were off-screen). Added DialogTitle for a11y, translated aria-labels.
+- Verified via testing_agent (iteration_4) + screenshots: SL default, EN/IT on all routes, persistence, all 3 gallery events + lightbox nav, mobile switcher, lightbox thumbnails clickable at 1920x1080.

@@ -1,6 +1,17 @@
 import { Mail, MapPin, Phone, Clock } from 'lucide-react';
+import { useLang } from '../i18n/LanguageContext';
 
 export default function Kontakt() {
+  const { t } = useLang();
+  const k = t.kontakt;
+
+  const infoItems = [
+    { icon: MapPin, ...k.address },
+    { icon: Phone, ...k.phone },
+    { icon: Mail, ...k.email },
+    { icon: Clock, ...k.hours },
+  ];
+
   return (
     <div data-testid="kontakt-page" className="min-h-screen pt-20">
       {/* Hero Section */}
@@ -10,13 +21,13 @@ export default function Kontakt() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
             <span className="inline-block uppercase text-xs tracking-[0.3em] text-[#D4AF37] font-semibold font-['Manrope'] mb-6">
-              Kontakt
+              {k.hero.label}
             </span>
             <h1 className="font-['Outfit'] text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tighter leading-none mb-6">
-              Stopite v stik
+              {k.hero.title}
             </h1>
             <p className="font-['Manrope'] text-lg text-gray-400 leading-relaxed">
-              Imate vprašanja? Želite izvedeti več o članstvu? Kontaktirajte nas.
+              {k.hero.sub}
             </p>
           </div>
         </div>
@@ -29,89 +40,41 @@ export default function Kontakt() {
             {/* Contact Info */}
             <div>
               <h2 className="font-['Outfit'] text-3xl sm:text-4xl font-bold text-[#0A0A0A] tracking-tight mb-12">
-                Kontaktni podatki
+                {k.infoTitle}
               </h2>
 
               <div className="space-y-10">
-                {/* Address */}
-                <div className="flex gap-6 group">
-                  <div className="flex-shrink-0 w-14 h-14 bg-[#0A0A0A] flex items-center justify-center group-hover:bg-[#D4AF37] transition-colors">
-                    <MapPin className="h-6 w-6 text-[#D4AF37] group-hover:text-[#0A0A0A] transition-colors" />
+                {infoItems.map((item, i) => (
+                  <div key={i} className="flex gap-6 group">
+                    <div className="flex-shrink-0 w-14 h-14 bg-[#0A0A0A] flex items-center justify-center group-hover:bg-[#D4AF37] transition-colors">
+                      <item.icon className="h-6 w-6 text-[#D4AF37] group-hover:text-[#0A0A0A] transition-colors" />
+                    </div>
+                    <div>
+                      <h3 className="font-['Outfit'] text-lg font-semibold text-[#0A0A0A] mb-2">
+                        {item.title}
+                      </h3>
+                      <p className="font-['Manrope'] text-base text-[#52525B]">
+                        {item.value}
+                      </p>
+                      {item.note && (
+                        <p className="font-['Manrope'] text-sm text-[#52525B]/60 mt-1">
+                          {item.note}
+                        </p>
+                      )}
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-['Outfit'] text-lg font-semibold text-[#0A0A0A] mb-2">
-                      Naslov
-                    </h3>
-                    <p className="font-['Manrope'] text-base text-[#52525B]">
-                      Izola, Slovenija
-                    </p>
-                    <p className="font-['Manrope'] text-sm text-[#52525B]/60 mt-1">
-                      (Natančen naslov bo dodan)
-                    </p>
-                  </div>
-                </div>
-
-                {/* Phone */}
-                <div className="flex gap-6 group">
-                  <div className="flex-shrink-0 w-14 h-14 bg-[#0A0A0A] flex items-center justify-center group-hover:bg-[#D4AF37] transition-colors">
-                    <Phone className="h-6 w-6 text-[#D4AF37] group-hover:text-[#0A0A0A] transition-colors" />
-                  </div>
-                  <div>
-                    <h3 className="font-['Outfit'] text-lg font-semibold text-[#0A0A0A] mb-2">
-                      Telefon
-                    </h3>
-                    <p className="font-['Manrope'] text-base text-[#52525B]">
-                      +386 XX XXX XXX
-                    </p>
-                    <p className="font-['Manrope'] text-sm text-[#52525B]/60 mt-1">
-                      (Številka bo dodana)
-                    </p>
-                  </div>
-                </div>
-
-                {/* Email */}
-                <div className="flex gap-6 group">
-                  <div className="flex-shrink-0 w-14 h-14 bg-[#0A0A0A] flex items-center justify-center group-hover:bg-[#D4AF37] transition-colors">
-                    <Mail className="h-6 w-6 text-[#D4AF37] group-hover:text-[#0A0A0A] transition-colors" />
-                  </div>
-                  <div>
-                    <h3 className="font-['Outfit'] text-lg font-semibold text-[#0A0A0A] mb-2">
-                      E-pošta
-                    </h3>
-                    <p className="font-['Manrope'] text-base text-[#52525B]">
-                      info@judoklubizola.si
-                    </p>
-                    <p className="font-['Manrope'] text-sm text-[#52525B]/60 mt-1">
-                      (E-naslov bo potrjen)
-                    </p>
-                  </div>
-                </div>
-
-                {/* Training Hours */}
-                <div className="flex gap-6 group">
-                  <div className="flex-shrink-0 w-14 h-14 bg-[#0A0A0A] flex items-center justify-center group-hover:bg-[#D4AF37] transition-colors">
-                    <Clock className="h-6 w-6 text-[#D4AF37] group-hover:text-[#0A0A0A] transition-colors" />
-                  </div>
-                  <div>
-                    <h3 className="font-['Outfit'] text-lg font-semibold text-[#0A0A0A] mb-2">
-                      Urnik treningov
-                    </h3>
-                    <p className="font-['Manrope'] text-base text-[#52525B]">
-                      (Urnik bo dodan)
-                    </p>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
 
             {/* Locations */}
             <div>
               <h2 className="font-['Outfit'] text-3xl sm:text-4xl font-bold text-[#0A0A0A] tracking-tight mb-12">
-                Naše lokacije
+                {k.locationsTitle}
               </h2>
               
               <div className="space-y-6">
-                {['Izola', 'Koper', 'Ankaran'].map((location, index) => (
+                {['Izola', 'Koper', 'Ankaran'].map((location) => (
                   <div
                     key={location}
                     className="group border-l-4 border-[#0A0A0A] hover:border-[#D4AF37] pl-6 py-4 transition-colors"
@@ -120,7 +83,7 @@ export default function Kontakt() {
                       {location}
                     </h3>
                     <p className="font-['Manrope'] text-sm text-[#52525B]">
-                      Podrobnosti bodo dodane
+                      {k.locationNote}
                     </p>
                   </div>
                 ))}
@@ -131,10 +94,10 @@ export default function Kontakt() {
                 <div className="text-center p-8">
                   <MapPin className="h-12 w-12 text-[#D4AF37] mx-auto mb-4" />
                   <p className="font-['Outfit'] text-lg font-semibold text-[#0A0A0A] mb-2">
-                    Zemljevid
+                    {k.map.title}
                   </p>
                   <p className="font-['Manrope'] text-sm text-[#52525B]">
-                    Zemljevid bo dodan ko prejmemo natančen naslov.
+                    {k.map.text}
                   </p>
                 </div>
               </div>
@@ -151,13 +114,13 @@ export default function Kontakt() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <span className="inline-block uppercase text-xs tracking-[0.3em] text-[#D4AF37] font-semibold font-['Manrope'] mb-6">
-              Judo šola
+              {k.school.label}
             </span>
             <h2 className="font-['Outfit'] text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight mb-8">
-              Judo šola Iztoka Babiča
+              {k.school.title}
             </h2>
             <p className="font-['Manrope'] text-lg text-gray-400 leading-relaxed">
-              Naša šola deluje v treh lokacijah: Izola, Koper in Ankaran. Povezujemo tri klube z isto vizijo odličnosti in tradicijo vrhunskega juda.
+              {k.school.text}
             </p>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import { ArrowRight, ArrowDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useLang } from '../i18n/LanguageContext';
 
 // Image URLs
 const HERO_IMAGE = "https://customer-assets.emergentagent.com/job_ad56f1e8-e5f7-431f-947a-6697b9684b20/artifacts/kbs2nshy_Nadzor%20vadbe.webp";
@@ -14,6 +15,9 @@ const BEZIGRAD_IMG_2 = "https://customer-assets.emergentagent.com/job_izola-judo
 const BEZIGRAD_IMG_3 = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/ojg8ckaj_image.png";
 
 export default function Domov() {
+  const { t } = useLang();
+  const d = t.domov;
+
   const scrollToNews = () => {
     document.getElementById('novice')?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -40,7 +44,7 @@ export default function Domov() {
         <div className="relative z-10 text-center px-6 max-w-5xl mx-auto pointer-events-none">
           <div className="animate-fade-in-up">
             <span className="inline-block uppercase text-xs tracking-[0.3em] text-[#D4AF37] font-semibold font-['Manrope'] mb-6 border border-[#D4AF37]/30 px-4 py-2 backdrop-blur-md bg-black/40">
-              Dobrodošli
+              {d.hero.badge}
             </span>
           </div>
           <h1 className="font-['Outfit'] text-5xl sm:text-6xl lg:text-8xl font-bold text-white tracking-tighter leading-none mb-6 animate-fade-in-up animation-delay-100 drop-shadow-[0_4px_30px_rgba(0,0,0,0.8)]">
@@ -48,7 +52,7 @@ export default function Domov() {
             <span className="block text-[#D4AF37] mt-2 drop-shadow-[0_4px_20px_rgba(212,175,55,0.3)]">Izola</span>
           </h1>
           <p className="font-['Manrope'] text-lg lg:text-xl text-white leading-relaxed mb-10 max-w-2xl mx-auto animate-fade-in-up animation-delay-200 drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
-            Tradicija, ustvarjalnost in odličnost v judu
+            {d.hero.sub}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animation-delay-300 pointer-events-auto">
@@ -57,7 +61,7 @@ export default function Domov() {
               data-testid="hero-cta-kontakt"
               className="inline-flex items-center justify-center gap-2 bg-[#D4AF37] text-[#0A0A0A] px-10 py-4 font-['Manrope'] font-semibold text-sm hover:bg-white transition-all duration-300 tracking-wide"
             >
-              Pridruži se nam
+              {d.hero.ctaJoin}
               <ArrowRight className="h-4 w-4" />
             </Link>
             <button
@@ -65,7 +69,7 @@ export default function Domov() {
               data-testid="hero-scroll-news"
               className="inline-flex items-center justify-center gap-2 bg-transparent border-2 border-white/50 text-white px-10 py-4 font-['Manrope'] font-medium text-sm hover:bg-white hover:text-[#0A0A0A] transition-all duration-300 tracking-wide backdrop-blur-sm"
             >
-              Preberi novice
+              {d.hero.ctaNews}
               <ArrowDown className="h-4 w-4" />
             </button>
           </div>
@@ -86,48 +90,30 @@ export default function Domov() {
             {/* Left - Title */}
             <div className="lg:w-1/3 text-center lg:text-left">
               <span className="inline-block uppercase text-xs tracking-[0.3em] text-[#D4AF37] font-semibold font-['Manrope'] mb-3">
-                Aktualni projekt
+                {d.project.label}
               </span>
               <h2 className="font-['Outfit'] text-2xl lg:text-3xl font-bold text-white leading-tight">
-                Projekt Fit in vključeni
+                {d.project.title}
               </h2>
             </div>
 
             {/* Right - Content */}
             <div className="lg:w-2/3">
               <p className="font-['Manrope'] text-sm text-gray-300 leading-relaxed mb-4">
-                Judo klub Izola sodeluje kot partner v projektu <span className="text-[#D4AF37] font-semibold">Fit in vključeni</span>, ki je sofinanciran v okviru Javnega razpisa za razvoj in profesionalizacijo NVO in prostovoljstva 2025. Projekt se financira iz Sklada za razvoj nevladnih organizacij.
+                {d.project.introBefore}<span className="text-[#D4AF37] font-semibold">{d.project.introHighlight}</span>{d.project.introAfter}
               </p>
               
               <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-4">
-                <div className="flex items-center gap-2 text-gray-300">
-                  <div className="w-1.5 h-1.5 bg-[#D4AF37] rounded-full flex-shrink-0" />
-                  <span className="font-['Manrope'] text-xs">Redna vadba otrok in mladih</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-300">
-                  <div className="w-1.5 h-1.5 bg-[#D4AF37] rounded-full flex-shrink-0" />
-                  <span className="font-['Manrope'] text-xs">Promocija juda na OŠ</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-300">
-                  <div className="w-1.5 h-1.5 bg-[#D4AF37] rounded-full flex-shrink-0" />
-                  <span className="font-['Manrope'] text-xs">Vključevanje otrok priseljencev</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-300">
-                  <div className="w-1.5 h-1.5 bg-[#D4AF37] rounded-full flex-shrink-0" />
-                  <span className="font-['Manrope'] text-xs">Individualno mentorstvo</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-300">
-                  <div className="w-1.5 h-1.5 bg-[#D4AF37] rounded-full flex-shrink-0" />
-                  <span className="font-['Manrope'] text-xs">Strokovni razvoj trenerjev</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-300">
-                  <div className="w-1.5 h-1.5 bg-[#D4AF37] rounded-full flex-shrink-0" />
-                  <span className="font-['Manrope'] text-xs">Zdrav življenjski slog</span>
-                </div>
+                {d.project.bullets.map((bullet, i) => (
+                  <div key={i} className="flex items-center gap-2 text-gray-300">
+                    <div className="w-1.5 h-1.5 bg-[#D4AF37] rounded-full flex-shrink-0" />
+                    <span className="font-['Manrope'] text-xs">{bullet}</span>
+                  </div>
+                ))}
               </div>
 
               <p className="font-['Manrope'] text-xs text-gray-400 italic">
-                S projektom povečujemo dostopnost športa, spodbujamo vključevanje otrok ter prispevamo k razvoju kakovostnih športnih programov v lokalnem okolju.
+                {d.project.note}
               </p>
             </div>
           </div>
@@ -140,7 +126,7 @@ export default function Domov() {
           {/* Section Header */}
           <div className="text-center mb-20">
             <span className="inline-block uppercase text-xs tracking-[0.3em] text-[#D4AF37] font-semibold font-['Manrope'] mb-4">
-              Novice
+              {d.newsLabel}
             </span>
             <div className="w-16 h-px bg-[#D4AF37] mx-auto" />
           </div>
@@ -149,7 +135,7 @@ export default function Domov() {
           <article className="max-w-4xl mx-auto">
             <header className="mb-12">
               <h2 className="font-['Outfit'] text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A0A0A] tracking-tight leading-tight text-center">
-                Olimpijska prvakinja Andrea Leški v Judo klubu Izola – Trening, ki ga ne pozabiš!
+                {d.news1.title}
               </h2>
             </header>
 
@@ -174,29 +160,29 @@ export default function Domov() {
             {/* Article Content */}
             <div className="prose prose-lg max-w-none">
               <p className="font-['Manrope'] text-lg text-[#52525B] leading-relaxed mb-6 first-letter:text-5xl first-letter:font-['Outfit'] first-letter:font-bold first-letter:text-[#D4AF37] first-letter:float-left first-letter:mr-3 first-letter:mt-1">
-                V Judo klubu Izola smo doživeli izjemen športni trenutek: obiskala nas je olimpijska prvakinja Andrea Leški in vodila poseben trening za naše člane. Trening je bil energičen, motivacijski in poln vrhunskih nasvetov iz prve roke – še posebej so ga z navdušenjem doživeli mladostniki, ki so dobili priložnost trenirati z najboljšo in izkusiti, kako razmišlja ter deluje olimpijska zmagovalka.
+                {d.news1.p1}
               </p>
 
               <p className="font-['Manrope'] text-lg text-[#52525B] leading-relaxed mb-6">
-                Po treningu smo se z Andreo še skupinsko in individualno fotografirali, klub pa je doživel še prav posebno čast: Andrea je prinesla tudi olimpijsko medaljo, ki so jo naši člani lahko prijeli, si jo ogledali od blizu in se z njo fotografirali. To je bil trenutek ponosa, navdiha in dodatne motivacije za vse generacije.
+                {d.news1.p2}
               </p>
 
               <blockquote className="border-l-4 border-[#D4AF37] pl-6 my-10 italic">
                 <p className="font-['Manrope'] text-xl text-[#0A0A0A] leading-relaxed">
-                  "To je bil trenutek ponosa, navdiha in dodatne motivacije za vse generacije."
+                  {d.news1.quote}
                 </p>
               </blockquote>
 
               <p className="font-['Manrope'] text-lg text-[#52525B] leading-relaxed mb-6">
-                Ob tem pomembnem obisku pa klub praznuje tudi velik razvojni uspeh. Na javnem razpisu smo bili uspešni in podpisali novo pogodbo, s katero smo pridobili projekt, namenjen mladim, njihovim staršem ter širši javnosti. Gre za pomemben korak naprej, ki bo okrepil naše delo v lokalnem okolju in ustvaril nove priložnosti za športno udejstvovanje, povezovanje in zdrav življenjski slog.
+                {d.news1.p3}
               </p>
 
               <p className="font-['Manrope'] text-lg text-[#52525B] leading-relaxed mb-6">
-                Zvečer smo izvedli še delovni sestanek projektne ekipe, kjer smo začrtali nadaljnje korake in simbolično nazdravili uspešni prihodnosti kluba ter trenerju, ki bo projekt vodil. Vsi člani kluba mu bomo pri izvedbi stali ob strani, pomagali in poskrbeli, da bo projekt dosegel svoj namen.
+                {d.news1.p4}
               </p>
 
               <p className="font-['Manrope'] text-xl text-[#0A0A0A] leading-relaxed font-medium mt-10 text-center">
-                Hvala, Andrea, za obisk, znanje in navdih – takšni dnevi gradijo prihodnost našega kluba!
+                {d.news1.closing}
               </p>
             </div>
 
@@ -207,7 +193,7 @@ export default function Domov() {
                 data-testid="news-cta-galerija"
                 className="inline-flex items-center gap-3 text-[#0A0A0A] font-['Manrope'] font-medium text-sm hover:text-[#D4AF37] transition-colors group"
               >
-                <span className="border-b-2 border-[#D4AF37] pb-1">Oglej si vse fotografije</span>
+                <span className="border-b-2 border-[#D4AF37] pb-1">{d.news1.cta}</span>
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </div>
@@ -221,7 +207,7 @@ export default function Domov() {
           {/* Section Header */}
           <div className="text-center mb-20">
             <span className="inline-block uppercase text-xs tracking-[0.3em] text-[#D4AF37] font-semibold font-['Manrope'] mb-4">
-              Novice
+              {d.newsLabel}
             </span>
             <div className="w-16 h-px bg-[#D4AF37] mx-auto" />
           </div>
@@ -230,7 +216,7 @@ export default function Domov() {
           <article className="max-w-4xl mx-auto">
             <header className="mb-12">
               <h2 className="font-['Outfit'] text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A0A0A] tracking-tight leading-tight text-center">
-                Na Pokalu Bežigrad smo bili srebrni
+                {d.news2.title}
               </h2>
             </header>
 
@@ -255,25 +241,25 @@ export default function Domov() {
             {/* Article Content */}
             <div className="prose prose-lg max-w-none">
               <p className="font-['Manrope'] text-lg text-[#52525B] leading-relaxed mb-6 first-letter:text-5xl first-letter:font-['Outfit'] first-letter:font-bold first-letter:text-[#D4AF37] first-letter:float-left first-letter:mr-3 first-letter:mt-1">
-                Obe naši državni prvakinji v kategoriji mlajših deklic sta osvojili odlično drugo mesto: Jora Kuci in Diana Černec.
+                {d.news2.p1}
               </p>
 
               <p className="font-['Manrope'] text-lg text-[#52525B] leading-relaxed mb-6">
-                Velik uspeh naše judo športne šole je pri mlajših kadetih dopolnil tudi Luka Angelini, ki je prav tako osvojil drugo mesto. Trenutno je na točkovnem mestu vseh tekmovanj pri ml. kadetih, si Luka skupaj z Galom Purnatom deli drugo mesto. Tudi Gal je na isti tekmi dosegel drugo mesto, zato oba ostajata v samem vrhu in si še naprej delita vodilni položaj.
+                {d.news2.p2}
               </p>
 
               <p className="font-['Manrope'] text-lg text-[#52525B] leading-relaxed mb-6">
-                Ostali zasledovalci niso bili tako uspešni, zato sta se Luka in Gal točkovno od njih še nekoliko oddaljila. To pomeni, da imata ob koncu rang lestvice lepo možnost, da dosežeta najmanj tisti cilj, ki smo si ga zadali — uvrstitev vsaj na drugo mesto.
+                {d.news2.p3}
               </p>
 
               <blockquote className="border-l-4 border-[#D4AF37] pl-6 my-10 italic">
                 <p className="font-['Manrope'] text-xl text-[#0A0A0A] leading-relaxed">
-                  "To je dober veter, morda za zdaj še rahla sapica, ki pa kaže, da se naša judo športna šola ponovno dviga in da znova dosegamo rezultate, kakršne smo nekoč že ustvarjali."
+                  {d.news2.quote}
                 </p>
               </blockquote>
 
               <p className="font-['Manrope'] text-lg text-[#52525B] leading-relaxed mb-6">
-                Vsem tekmovalcem, ki so dosegli lepe uvrstitve, iskreno čestitamo za njihov uspeh.
+                {d.news2.p4}
               </p>
             </div>
 
@@ -287,7 +273,7 @@ export default function Domov() {
                 />
               </div>
               <p className="font-['Manrope'] text-sm text-[#52525B] mt-4 italic text-center">
-                Na slikah: Diana in Jora na podelitvi medalj - medalje je podeljevala OI šampionka Andreja Leški. Tretja slika: Jora v borbi z nasprotnico.
+                {d.news2.caption}
               </p>
             </div>
 
@@ -297,7 +283,7 @@ export default function Domov() {
                 to="/galerija"
                 className="inline-flex items-center gap-3 text-[#0A0A0A] font-['Manrope'] font-medium text-sm hover:text-[#D4AF37] transition-colors group"
               >
-                <span className="border-b-2 border-[#D4AF37] pb-1">Oglej si vse fotografije</span>
+                <span className="border-b-2 border-[#D4AF37] pb-1">{d.news2.cta}</span>
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </div>
@@ -337,21 +323,21 @@ export default function Domov() {
             {/* Content */}
             <div className="order-1 lg:order-2">
               <span className="inline-block uppercase text-xs tracking-[0.3em] text-[#D4AF37] font-semibold font-['Manrope'] mb-6">
-                O klubu
+                {d.about.label}
               </span>
               <h2 className="font-['Outfit'] text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight mb-8">
-                Judo šola<br />
-                <span className="text-[#D4AF37]">Iztoka Babiča</span>
+                {d.about.titleTop}<br />
+                <span className="text-[#D4AF37]">{d.about.titleGold}</span>
               </h2>
               <p className="font-['Manrope'] text-lg text-gray-400 leading-relaxed mb-8">
-                Naša šola zajema delo v Izoli, Kopru in Ankaranu – povezujemo tri klube z isto vizijo odličnosti. Tradicija, disciplina in prijateljstvo so temelji našega dela.
+                {d.about.text}
               </p>
               <Link
                 to="/o-nas"
                 data-testid="about-cta"
                 className="inline-flex items-center justify-center gap-2 bg-transparent border-2 border-[#D4AF37] text-[#D4AF37] px-8 py-4 font-['Manrope'] font-medium text-sm hover:bg-[#D4AF37] hover:text-[#0A0A0A] transition-all duration-300"
               >
-                Več o nas
+                {d.about.cta}
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
@@ -365,17 +351,17 @@ export default function Domov() {
         
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center relative z-10">
           <h2 className="font-['Outfit'] text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A0A0A] tracking-tighter mb-6">
-            Postani del naše zgodbe
+            {d.cta.title}
           </h2>
           <p className="font-['Manrope'] text-lg text-[#52525B] leading-relaxed mb-10 max-w-2xl mx-auto">
-            Pridruži se našemu klubu in začni svojo pot v svetu juda. Sprejemamo člane vseh starosti in izkušenj.
+            {d.cta.text}
           </p>
           <Link
             to="/kontakt"
             data-testid="cta-kontakt"
             className="inline-flex items-center justify-center gap-2 bg-[#0A0A0A] text-white px-12 py-5 font-['Manrope'] font-semibold text-sm hover:bg-[#D4AF37] hover:text-[#0A0A0A] transition-all duration-300 tracking-wide"
           >
-            Kontaktiraj nas
+            {d.cta.button}
             <ArrowRight className="h-4 w-4" />
           </Link>
         </div>

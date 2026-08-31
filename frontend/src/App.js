@@ -1,5 +1,6 @@
 import "@/App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { LanguageProvider } from "./i18n/LanguageContext";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import Domov from "./pages/Domov";
@@ -10,18 +11,20 @@ import Kontakt from "./pages/Kontakt";
 function App() {
   return (
     <div className="App min-h-screen flex flex-col">
-      <BrowserRouter>
-        <Navigation />
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Domov />} />
-            <Route path="/o-nas" element={<ONas />} />
-            <Route path="/galerija" element={<Galerija />} />
-            <Route path="/kontakt" element={<Kontakt />} />
-          </Routes>
-        </main>
-        <Footer />
-      </BrowserRouter>
+      <LanguageProvider>
+        <BrowserRouter>
+          <Navigation />
+          <main className="flex-grow">
+            <Routes>
+              <Route path="/" element={<Domov />} />
+              <Route path="/o-nas" element={<ONas />} />
+              <Route path="/galerija" element={<Galerija />} />
+              <Route path="/kontakt" element={<Kontakt />} />
+            </Routes>
+          </main>
+          <Footer />
+        </BrowserRouter>
+      </LanguageProvider>
     </div>
   );
 }

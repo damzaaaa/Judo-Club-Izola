@@ -1,75 +1,63 @@
 import { useState } from 'react';
 import { X, ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import * as DialogPrimitive from '@radix-ui/react-dialog';
+import { useLang } from '../i18n/LanguageContext';
 
-// Events with photos
-const EVENTS = [
+// Shared event metadata (images), text comes from translations
+const EVENTS_META = [
+  {
+    id: 'poletje-na-tatamiju-2026',
+    date: '2026',
+    coverImage: "https://customer-assets-7cd3h4nn.emergentagent.net/job_izola-judo-club/artifacts/sgl8eclb_20260805_184011.webp",
+    photoUrls: [
+      "https://customer-assets-7cd3h4nn.emergentagent.net/job_izola-judo-club/artifacts/sgl8eclb_20260805_184011.webp",
+      "https://customer-assets-7cd3h4nn.emergentagent.net/job_izola-judo-club/artifacts/3flfkg3w_20260807_085212.webp",
+      "https://customer-assets-7cd3h4nn.emergentagent.net/job_izola-judo-club/artifacts/6i5mcsgo_20260806_173858.webp",
+      "https://customer-assets-7cd3h4nn.emergentagent.net/job_izola-judo-club/artifacts/t2fowaqk_20260806_173844.webp",
+      "https://customer-assets-7cd3h4nn.emergentagent.net/job_izola-judo-club/artifacts/r1tewi1y_Slika%20%C5%A1e%20s%20Andrejo%20le%C5%A1ki%20in%20predsednikom%20kluba.webp",
+      "https://customer-assets-7cd3h4nn.emergentagent.net/job_izola-judo-club/artifacts/o5lpkeom_Polaganje%20mojstrskega%20pasu%20pred%20komisijo.webp",
+      "https://customer-assets-7cd3h4nn.emergentagent.net/job_izola-judo-club/artifacts/9gzrrkwa_Trener%20Ja%C5%A1a%20in%20Nina%20z%20diplomo%201.%20dan.webp",
+    ],
+  },
   {
     id: 'pokal-bezigrad-2024',
-    title: 'Pokal Bežigrad 2024 - Srebrni uspeh',
     date: '2024',
     coverImage: "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/zuprkk1x_image.png",
-    description: 'Na Pokalu Bežigrad smo bili srebrni. Naše državne prvakinje in mladi kadeti so dosegli odlične rezultate.',
-    photos: [
-      {
-        url: "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/zuprkk1x_image.png",
-        title: "Podelitev medalj",
-        description: "Diana in Jora na podelitvi medalj - medalje je podeljevala OI šampionka Andreja Leški"
-      },
-      {
-        url: "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/zrkl7xcq_image.png",
-        title: "Zmagovalke na odru",
-        description: "Naši mladi judoisti na zmagovalnem odru"
-      },
-      {
-        url: "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/ojg8ckaj_image.png",
-        title: "Jora v borbi",
-        description: "Jora Kuci v borbi z nasprotnico"
-      }
-    ]
+    photoUrls: [
+      "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/zuprkk1x_image.png",
+      "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/zrkl7xcq_image.png",
+      "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/ojg8ckaj_image.png",
+    ],
   },
   {
     id: 'andrea-leski-2024',
-    title: 'Olimpijska prvakinja Andrea Leški v Judo klubu Izola',
     date: '2024',
     coverImage: "https://customer-assets.emergentagent.com/job_ad56f1e8-e5f7-431f-947a-6697b9684b20/artifacts/kbs2nshy_Nadzor%20vadbe.webp",
-    description: 'Trening, ki ga ne pozabiš! Olimpijska prvakinja Andrea Leški je obiskala naš klub.',
-    photos: [
-      {
-        url: "https://customer-assets.emergentagent.com/job_ad56f1e8-e5f7-431f-947a-6697b9684b20/artifacts/kbs2nshy_Nadzor%20vadbe.webp",
-        title: "Nadzor vadbe",
-        description: "Andrea Leški nadzoruje vadbo članov"
-      },
-      {
-        url: "https://customer-assets.emergentagent.com/job_ad56f1e8-e5f7-431f-947a-6697b9684b20/artifacts/lm6c8pu4_Demonstracija%20vtopa%20z%20izravnote%C5%BEenjem.webp",
-        title: "Demonstracija vtopa z izravnoteženjem",
-        description: "Andrea Leški prikazuje tehniko"
-      },
-      {
-        url: "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/990d3srx_Demonstracija%20prijema.webp",
-        title: "Demonstracija prijema",
-        description: "Prikaz judo prijema"
-      },
-      {
-        url: "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/nn8ic7xd_Uspe%C5%A1en%20primer%20izravnote%C5%BEenja.webp",
-        title: "Uspešen primer izravnoteženja",
-        description: "Andrea prikazuje izravnoteženje"
-      },
-      {
-        url: "https://customer-assets.emergentagent.com/job_ad56f1e8-e5f7-431f-947a-6697b9684b20/artifacts/lhho1c0o_Skupina%20mlaj%C5%A1ih%20judoistov.webp",
-        title: "Skupina mlajših judoistov",
-        description: "Naši mladi judoisti po treningu"
-      },
-      {
-        url: "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/3by1lev3_NAZDRAVILI%20K%20USPEHU%20NOVEGA%20PROJEKTA%20NAMENJEM%20MLADIM%20%C5%A0PORTNIKOM.webp",
-        title: "Nazdravili k uspehu novega projekta",
-        description: "Praznovanje uspešnega projekta namenjenega mladim športnikom"
-      },
-    ]
-  }
+    photoUrls: [
+      "https://customer-assets.emergentagent.com/job_ad56f1e8-e5f7-431f-947a-6697b9684b20/artifacts/kbs2nshy_Nadzor%20vadbe.webp",
+      "https://customer-assets.emergentagent.com/job_ad56f1e8-e5f7-431f-947a-6697b9684b20/artifacts/lm6c8pu4_Demonstracija%20vtopa%20z%20izravnote%C5%BEenjem.webp",
+      "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/990d3srx_Demonstracija%20prijema.webp",
+      "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/nn8ic7xd_Uspe%C5%A1en%20primer%20izravnote%C5%BEenja.webp",
+      "https://customer-assets.emergentagent.com/job_ad56f1e8-e5f7-431f-947a-6697b9684b20/artifacts/lhho1c0o_Skupina%20mlaj%C5%A1ih%20judoistov.webp",
+      "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/3by1lev3_NAZDRAVILI%20K%20USPEHU%20NOVEGA%20PROJEKTA%20NAMENJEM%20MLADIM%20%C5%A0PORTNIKOM.webp",
+    ],
+  },
 ];
 
 export default function Galerija() {
+  const { t } = useLang();
+  const g = t.galerija;
+
+  const events = EVENTS_META.map((meta) => {
+    const text = g.events[meta.id] || { title: '', description: '', photos: [] };
+    return {
+      ...meta,
+      title: text.title,
+      description: text.description,
+      photos: meta.photoUrls.map((url, i) => ({ url, ...(text.photos?.[i] || {}) })),
+    };
+  });
+
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
 
@@ -104,13 +92,13 @@ export default function Galerija() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
             <span className="inline-block uppercase text-xs tracking-[0.3em] text-[#D4AF37] font-semibold font-['Manrope'] mb-6">
-              Galerija
+              {g.hero.label}
             </span>
             <h1 className="font-['Outfit'] text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tighter leading-none mb-6">
-              Foto utrinki
+              {g.hero.title}
             </h1>
             <p className="font-['Manrope'] text-lg text-gray-400 leading-relaxed">
-              Trenutki, ki jih hranimo. Treningi, tekmovanja in dogodki, ki gradijo našo zgodbo.
+              {g.hero.sub}
             </p>
           </div>
         </div>
@@ -120,7 +108,7 @@ export default function Galerija() {
       <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-            {EVENTS.map((event) => (
+            {events.map((event) => (
               <div
                 key={event.id}
                 className="group cursor-pointer"
@@ -138,7 +126,7 @@ export default function Galerija() {
                   {/* Event Info Overlay */}
                   <div className="absolute bottom-0 left-0 right-0 p-8">
                     <span className="inline-block text-[#D4AF37] text-xs font-['Manrope'] font-semibold tracking-wider uppercase mb-2">
-                      {event.date} • {event.photos.length} fotografij
+                      {event.date} • {event.photos.length} {g.photosWord}
                     </span>
                     <h3 className="font-['Outfit'] text-xl lg:text-2xl font-bold text-white leading-tight mb-3">
                       {event.title}
@@ -147,7 +135,7 @@ export default function Galerija() {
                       {event.description}
                     </p>
                     <div className="flex items-center gap-2 text-[#D4AF37] font-['Manrope'] text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-                      <span>Odpri galerijo</span>
+                      <span>{g.open}</span>
                       <ArrowRight className="h-4 w-4" />
                     </div>
                   </div>
@@ -160,7 +148,7 @@ export default function Galerija() {
           <div className="mt-20 text-center">
             <div className="inline-block border border-[#E5E7EB] px-8 py-6">
               <p className="font-['Manrope'] text-sm text-[#52525B]">
-                Več dogodkov kmalu...
+                {g.moreSoon}
               </p>
             </div>
           </div>
@@ -176,13 +164,15 @@ export default function Galerija() {
             data-testid="event-gallery-dialog"
           >
             {/* Header */}
-            <div className="flex items-center justify-between p-6 border-b border-black/20 bg-white">
+            <div className="flex items-center justify-between p-4 md:p-6 border-b border-black/20 bg-white flex-shrink-0">
               <div>
                 {selectedEvent && (
                   <>
-                    <h3 className="font-['Outfit'] text-lg font-semibold text-[#0A0A0A]">
-                      {selectedEvent.title}
-                    </h3>
+                    <DialogPrimitive.Title asChild>
+                      <h3 className="font-['Outfit'] text-base md:text-lg font-semibold text-[#0A0A0A]">
+                        {selectedEvent.title}
+                      </h3>
+                    </DialogPrimitive.Title>
                     <p className="font-['Manrope'] text-sm text-[#52525B] mt-1">
                       {currentPhotoIndex + 1} / {selectedEvent.photos.length}
                     </p>
@@ -193,39 +183,39 @@ export default function Galerija() {
                 onClick={closeEvent}
                 className="p-2 bg-[#0A0A0A]/10 hover:bg-[#0A0A0A]/20 rounded-full transition-colors"
                 data-testid="gallery-close"
-                aria-label="Zapri"
+                aria-label={g.close}
               >
                 <X className="h-6 w-6 text-[#0A0A0A]" />
               </button>
             </div>
 
             {/* Main Image Area */}
-            <div className="flex-1 flex items-center justify-center relative px-20 py-8 bg-[#F5F5F5]">
+            <div className="flex-1 min-h-0 flex items-center justify-center relative px-14 md:px-20 py-4 md:py-6 bg-[#F5F5F5]">
               {/* Previous Button */}
               {selectedEvent && selectedEvent.photos.length > 1 && (
                 <button
                   onClick={goToPrevious}
-                  className="absolute left-6 z-50 p-4 bg-white shadow-lg hover:bg-[#D4AF37] hover:text-white rounded-full transition-all text-[#0A0A0A] border border-[#E5E7EB]"
+                  className="absolute left-2 md:left-6 z-50 p-2 md:p-4 bg-white shadow-lg hover:bg-[#D4AF37] hover:text-white rounded-full transition-all text-[#0A0A0A] border border-[#E5E7EB]"
                   data-testid="gallery-prev"
-                  aria-label="Prejšnja"
+                  aria-label={g.prev}
                 >
-                  <ChevronLeft className="h-8 w-8" />
+                  <ChevronLeft className="h-6 w-6 md:h-8 md:w-8" />
                 </button>
               )}
 
               {/* Image */}
               {selectedEvent && (
-                <div className="flex flex-col items-center justify-center max-h-full">
+                <div className="flex flex-col items-center justify-center h-full w-full min-h-0">
                   <img
                     src={selectedEvent.photos[currentPhotoIndex].url}
                     alt={selectedEvent.photos[currentPhotoIndex].title}
-                    className="max-w-[90vw] max-h-[75vh] object-contain shadow-2xl"
+                    className="max-w-full flex-1 min-h-0 object-contain shadow-2xl"
                   />
-                  <div className="mt-6 text-center bg-white px-8 py-4 rounded shadow-md border border-[#E5E7EB]">
-                    <h4 className="font-['Outfit'] text-lg font-semibold text-[#0A0A0A]">
+                  <div className="mt-3 md:mt-4 text-center bg-white px-4 md:px-8 py-2 md:py-3 rounded shadow-md border border-[#E5E7EB] flex-shrink-0 max-w-full">
+                    <h4 className="font-['Outfit'] text-sm md:text-base font-semibold text-[#0A0A0A]">
                       {selectedEvent.photos[currentPhotoIndex].title}
                     </h4>
-                    <p className="font-['Manrope'] text-sm text-[#52525B] mt-1">
+                    <p className="font-['Manrope'] text-xs md:text-sm text-[#52525B] mt-0.5">
                       {selectedEvent.photos[currentPhotoIndex].description}
                     </p>
                   </div>
@@ -236,24 +226,24 @@ export default function Galerija() {
               {selectedEvent && selectedEvent.photos.length > 1 && (
                 <button
                   onClick={goToNext}
-                  className="absolute right-6 z-50 p-4 bg-white shadow-lg hover:bg-[#D4AF37] hover:text-white rounded-full transition-all text-[#0A0A0A] border border-[#E5E7EB]"
+                  className="absolute right-2 md:right-6 z-50 p-2 md:p-4 bg-white shadow-lg hover:bg-[#D4AF37] hover:text-white rounded-full transition-all text-[#0A0A0A] border border-[#E5E7EB]"
                   data-testid="gallery-next"
-                  aria-label="Naslednja"
+                  aria-label={g.next}
                 >
-                  <ChevronRight className="h-8 w-8" />
+                  <ChevronRight className="h-6 w-6 md:h-8 md:w-8" />
                 </button>
               )}
             </div>
 
             {/* Thumbnails */}
             {selectedEvent && selectedEvent.photos.length > 1 && (
-              <div className="p-6 border-t border-[#E5E7EB] bg-white">
-                <div className="flex gap-3 justify-center overflow-x-auto pb-2">
+              <div className="p-3 md:p-4 border-t border-[#E5E7EB] bg-white flex-shrink-0">
+                <div className="flex gap-3 justify-start md:justify-center overflow-x-auto pb-1">
                   {selectedEvent.photos.map((photo, index) => (
                     <button
                       key={index}
                       onClick={() => setCurrentPhotoIndex(index)}
-                      className={`flex-shrink-0 w-24 h-16 overflow-hidden transition-all rounded ${
+                      className={`flex-shrink-0 w-20 h-14 md:w-24 md:h-16 overflow-hidden transition-all rounded ${
                         index === currentPhotoIndex 
                           ? 'ring-2 ring-[#D4AF37] opacity-100' 
                           : 'opacity-60 hover:opacity-100'

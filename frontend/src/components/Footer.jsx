@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Mail, MapPin, Phone, Facebook } from 'lucide-react';
+import { useLang } from '../i18n/LanguageContext';
 
 const LOGO_URL = "https://customer-assets.emergentagent.com/job_ad56f1e8-e5f7-431f-947a-6697b9684b20/artifacts/vvsly6ll_JUDO%20%282%29.jpg";
 const JUDO_SOLA_LOGO = "https://customer-assets.emergentagent.com/job_izola-judo-club/artifacts/tstr51lv_image.png";
@@ -7,15 +8,9 @@ const JUDO_SOLA_LOGO = "https://customer-assets.emergentagent.com/job_izola-judo
 const FACEBOOK_KLUB = "https://www.facebook.com/profile.php?id=61588576934450";
 const FACEBOOK_IZTOK = "https://www.facebook.com/iztok.babic";
 
-const navLinks = [
-  { name: 'Domov', path: '/' },
-  { name: 'O nas', path: '/o-nas' },
-  { name: 'Galerija', path: '/galerija' },
-  { name: 'Kontakt', path: '/kontakt' },
-];
-
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const { t } = useLang();
 
   return (
     <footer data-testid="footer" className="bg-[#0A0A0A] text-white">
@@ -38,11 +33,11 @@ export default function Footer() {
                 <h3 className="font-['Outfit'] font-bold text-xl tracking-tight">
                   Judo Klub Izola
                 </h3>
-                <p className="text-[#D4AF37] text-sm font-['Manrope']">Slovenija</p>
+                <p className="text-[#D4AF37] text-sm font-['Manrope']">{t.footer.country}</p>
               </div>
             </div>
             <p className="font-['Manrope'] text-gray-400 text-sm leading-relaxed max-w-md mb-6">
-              Tradicija, disciplina in odličnost v judu. Judo Klub Izola je dom za vse generacije judoistov.
+              {t.footer.desc}
             </p>
             {/* Facebook Links */}
             <div className="flex flex-col gap-3">
@@ -72,14 +67,14 @@ export default function Footer() {
           {/* Navigation */}
           <div>
             <h4 className="font-['Outfit'] font-semibold text-lg mb-6 text-[#D4AF37]">
-              Navigacija
+              {t.footer.navTitle}
             </h4>
             <nav className="flex flex-col gap-3">
-              {navLinks.map((link) => (
+              {t.nav.links.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
-                  data-testid={`footer-link-${link.name.toLowerCase().replace(' ', '-')}`}
+                  data-testid={`footer-link-${link.path === '/' ? 'domov' : link.path.replace('/', '')}`}
                   className="font-['Manrope'] text-sm text-gray-400 hover:text-[#D4AF37] transition-colors"
                 >
                   {link.name}
@@ -91,13 +86,13 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h4 className="font-['Outfit'] font-semibold text-lg mb-6 text-[#D4AF37]">
-              Kontakt
+              {t.footer.contactTitle}
             </h4>
             <div className="flex flex-col gap-4">
               <div className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-[#D4AF37] flex-shrink-0 mt-0.5" />
                 <span className="font-['Manrope'] text-sm text-gray-400">
-                  Izola, Slovenija
+                  {t.footer.address}
                 </span>
               </div>
               <div className="flex items-center gap-3">
@@ -120,10 +115,10 @@ export default function Footer() {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="font-['Manrope'] text-sm text-gray-500">
-              © {currentYear} Judo Klub Izola. Vse pravice pridržane.
+              © {currentYear} Judo Klub Izola. {t.footer.rights}
             </p>
             <p className="font-['Manrope'] text-xs text-gray-600">
-              Judo šola Iztoka Babiča
+              {t.footer.school}
             </p>
           </div>
         </div>
