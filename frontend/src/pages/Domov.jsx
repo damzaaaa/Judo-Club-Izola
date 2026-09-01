@@ -180,6 +180,7 @@ export default function Domov() {
                 <img
                   src={DEMO_IMAGE}
                   alt="Demonstracija vtopa z izravnoteženjem"
+                  style={{ objectPosition: '50% 28%' }}
                   className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </div>

@@ -1,0 +1,22 @@
+{
+  "summary": "Frontend-only visual verification of the Andrea Le\u0161ki news image crop fix on homepage '/' at 1920x1080, plus regression of the enrollment teaser CTA flow. All 3 requested checks PASS. Image 1 (alt='Demonstracija vtopa z izravnote\u017eenjem') has inline objectPosition '50% 32%' (computed '50% 32%', object-fit: cover) and the region screenshot confirms the two standing judoka (full upper bodies + heads) are visible instead of feet/empty mat. Both news images render side-by-side (top=380.25 for both, left 512 vs 972), each 436x320 (h-80), grid scrollWidth==clientWidth (896) and scrollHeight==clientHeight (320) => no overflow/distortion. Enroll teaser renders; CTA navigates to /kontakt#vpis, kontakt-enroll-section (id='vpis') visible and scrolled to viewport top (offset 79.75px, below fixed header). No console errors, 0 error elements.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": [
+      {"screen": "Homepage news images", "issues": ["Minor/cosmetic only: the judoka's heads sit near the very top edge of the 320px crop band (~30px of headroom). Crop is acceptable and matches the fix intent; a slightly smaller offset (e.g. 50% 28%) would add breathing room but is not required."]}
+    ]
+  },
+  "test_report_links": ["/root/.emergent/automation_output/20260901_021647/test_script.py"],
+  "action_items": [],
+  "critical_code_review_comments": [],
+  "updated_files": [],
+  "success_rate": {"backend": "N/A (no backend tested)", "frontend": "100% (3/3 requested checks passed)"},
+  "seed_data_creation": "None",
+  "should_call_test_agent_after_fix": false,
+  "should_main_agent_self_test": false,
+  "test_credentials": "None required - public site",
+  "context_for_next_testing_agent": "Homepage news section id='novice'; first image locator: img[alt=\"Demonstracija vtopa z izravnote\u017eenjem\"], expects inline style objectPosition '50% 32%'. Both news images share the same natural dimensions (3768x8160) per naturalWidth/Height readings. Enroll flow selectors verified: enroll-teaser, enroll-teaser-cta -> /kontakt#vpis -> kontakt-enroll-section.",
+  "rca_of_the_issue": "Original bug: 3768x8160 portrait source in a fixed h-80 landscape container with object-cover centered the crop on the mat/feet. Fix (object-position 50% 32%) shifts the visible band upward onto the judoka; verified visually and via computed style."
+}
