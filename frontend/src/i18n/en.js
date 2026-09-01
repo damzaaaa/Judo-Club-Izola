@@ -178,6 +178,12 @@ const en = {
       { name: 'Ankaran', note: 'Details will be added' },
     ],
     map: { title: 'Map', text: 'Dante Alighieri Primary School, Izola' },
+    google: {
+      label: 'Google',
+      title: 'Find us on Google',
+      text: 'Look up Judo Club Izola on Google Maps, check the location and leave us a review. Your feedback means a lot to us.',
+      cta: 'Open in Google',
+    },
     enroll: {
       label: 'Enrolment 2026–2027',
       title: 'Judo sports school for boys and girls',

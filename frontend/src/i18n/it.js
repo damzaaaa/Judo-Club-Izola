@@ -178,6 +178,12 @@ const it = {
       { name: 'Ancarano', note: 'I dettagli saranno aggiunti' },
     ],
     map: { title: 'Mappa', text: 'Scuola elementare Dante Alighieri, Isola' },
+    google: {
+      label: 'Google',
+      title: 'Trovaci su Google',
+      text: 'Cerca il Judo Club Isola su Google Maps, guarda la posizione e lasciaci una recensione. La tua opinione è molto importante per noi.',
+      cta: 'Apri in Google',
+    },
     enroll: {
       label: 'Iscrizioni 2026–2027',
       title: 'Scuola sportiva di judo per bambini e bambine',

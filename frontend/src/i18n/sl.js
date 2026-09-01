@@ -178,6 +178,12 @@ const sl = {
       { name: 'Ankaran', note: 'Podrobnosti bodo dodane' },
     ],
     map: { title: 'Zemljevid', text: 'Osnovna šola Dante Alighieri, Izola' },
+    google: {
+      label: 'Google',
+      title: 'Najdete nas na Googlu',
+      text: 'Poiščite Judo klub Izola na Google Zemljevidih, si oglejte lokacijo in nam pustite oceno. Vaše mnenje nam veliko pomeni.',
+      cta: 'Odpri v Googlu',
+    },
     enroll: {
       label: 'Vpis 2026–2027',
       title: 'Judo športna šola za dečke in deklice',

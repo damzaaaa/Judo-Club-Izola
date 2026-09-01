@@ -102,3 +102,8 @@ Build a modern, professional and premium-looking website for Judo klub Izola in 
   - react-helmet-async added (index.js wrapped in HelmetProvider). New component src/components/SEO.jsx sets per-page title/description/keywords/canonical/OG. Applied to Domov, ONas, Galerija, Kontakt. Per-page SEO strings in i18n .seo.{domov,onas,galerija,kontakt} for all 3 langs.
   - public/robots.txt (allow all + sitemap) and public/sitemap.xml (4 routes) created.
 - IMPORTANT: canonical/OG/sitemap URLs currently use preview domain (izola-judo-club.preview.emergentagent.com). MUST update to the real custom domain after deployment.
+
+## Update (fork session 3b, 2026-06)
+- Kontakt: removed the "Urnik treningov" contact-info item (schedule 16.30–20.00 / 16.30–17.30) and the Clock import; contact info now shows only Naslov, Telefon, E-pošta.
+- Kontakt: added "Find us on Google" block (data-testid google-block / google-cta) with 5 gold stars + CTA linking to Google Maps search for the club (GOOGLE_URL constant). Translations kontakt.google in sl/en/it. NOTE: uses a Maps search URL — swap to a direct write-review link (search.google.com/local/writereview?placeid=...) once the club shares its Google Business Profile / Place ID.
+- Italian nav "Home": confirmed correct/idiomatic Italian usage; left unchanged.
