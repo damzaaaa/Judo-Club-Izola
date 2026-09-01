@@ -74,33 +74,86 @@ export default function Kontakt() {
               </h2>
               
               <div className="space-y-6">
-                {['Izola', 'Koper', 'Ankaran'].map((location) => (
+                {k.locations.map((location) => (
                   <div
-                    key={location}
+                    key={location.name}
                     className="group border-l-4 border-[#0A0A0A] hover:border-[#D4AF37] pl-6 py-4 transition-colors"
                   >
                     <h3 className="font-['Outfit'] text-xl font-semibold text-[#0A0A0A] mb-2">
-                      {location}
+                      {location.name}
                     </h3>
                     <p className="font-['Manrope'] text-sm text-[#52525B]">
-                      {k.locationNote}
+                      {location.note}
                     </p>
                   </div>
                 ))}
               </div>
 
-              {/* Map Placeholder */}
-              <div className="mt-12 aspect-video bg-[#F9F9F9] border border-[#E5E7EB] flex items-center justify-center">
-                <div className="text-center p-8">
-                  <MapPin className="h-12 w-12 text-[#D4AF37] mx-auto mb-4" />
-                  <p className="font-['Outfit'] text-lg font-semibold text-[#0A0A0A] mb-2">
-                    {k.map.title}
-                  </p>
-                  <p className="font-['Manrope'] text-sm text-[#52525B]">
-                    {k.map.text}
-                  </p>
-                </div>
+              {/* Map */}
+              <div className="mt-12 aspect-video border border-[#E5E7EB] overflow-hidden">
+                <iframe
+                  title={k.map.title}
+                  src="https://www.google.com/maps?q=Osnovna+%C5%A1ola+Dante+Alighieri+Izola&output=embed"
+                  className="w-full h-full"
+                  style={{ border: 0 }}
+                  loading="lazy"
+                  allowFullScreen
+                  referrerPolicy="no-referrer-when-downgrade"
+                  data-testid="kontakt-map"
+                />
               </div>
+              <p className="font-['Manrope'] text-sm text-[#52525B] mt-3 italic text-center">
+                {k.map.text}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Enrolment & Schedule Section */}
+      <section data-testid="kontakt-enroll-section" className="py-24 lg:py-32 bg-[#F9F9F9]">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Poster */}
+            <div className="max-w-md mx-auto lg:mx-0 w-full">
+              <img
+                src="https://customer-assets-7cd3h4nn.emergentagent.net/job_izola-judo-club/artifacts/qmh70ujo_IZOLA%20Vpis%20za%20vse%20skupine.png"
+                alt={k.enroll.posterAlt}
+                data-testid="enroll-poster"
+                className="w-full h-auto border border-[#E5E7EB] shadow-xl"
+              />
+            </div>
+
+            {/* Schedule */}
+            <div>
+              <span className="inline-block uppercase text-xs tracking-[0.3em] text-[#D4AF37] font-semibold font-['Manrope'] mb-6">
+                {k.enroll.label}
+              </span>
+              <h2 className="font-['Outfit'] text-3xl sm:text-4xl font-bold text-[#0A0A0A] tracking-tight leading-tight mb-6">
+                {k.enroll.title}
+              </h2>
+              <p className="font-['Manrope'] text-base text-[#52525B] leading-relaxed mb-10">
+                {k.enroll.intro}
+              </p>
+
+              <div className="space-y-4 mb-8">
+                {k.enroll.rows.map((row) => (
+                  <div
+                    key={row.group}
+                    className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 bg-white border border-[#E5E7EB] border-l-4 border-l-[#D4AF37] px-6 py-4"
+                  >
+                    <div>
+                      <p className="font-['Outfit'] text-base font-semibold text-[#0A0A0A]">{row.group}</p>
+                      <p className="font-['Manrope'] text-sm text-[#52525B]">{row.days}</p>
+                    </div>
+                    <p className="font-['Outfit'] text-lg font-bold text-[#D4AF37] whitespace-nowrap">{row.time}</p>
+                  </div>
+                ))}
+              </div>
+
+              <p className="font-['Manrope'] text-sm text-[#52525B] italic">
+                {k.enroll.note}
+              </p>
             </div>
           </div>
         </div>

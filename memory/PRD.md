@@ -87,3 +87,8 @@ Build a modern, professional and premium-looking website for Judo klub Izola in 
 - Kontakt real data filled: phone +386 31 625 170, email iztok.babic8@gmail.com (note 'Iztok Babič') in all 3 languages; Footer now has clickable tel:/mailto: links.
 - NOTE: club street ADDRESS still placeholder ('Natančen naslov bo dodan') - user has not provided it yet. Training schedule also still placeholder.
 - Verified via screenshots: 4 event cards, new lightbox works (thumbnails clickable), Kontakt shows real phone/email.
+
+## Update (fork session 2c, 2026-06)
+- Kontakt completed: address 'Osnovna šola Dante Alighieri, Izola' (translated in 3 langs), live Google Maps embed (keyless ?output=embed) pinned on the school, per-location notes (Izola = telovadnica OŠ Dante Alighieri).
+- New enrolment section on Kontakt (data-testid kontakt-enroll-section): enrollment poster image (asset qmh70ujo_IZOLA Vpis za vse skupine.png) + translated schedule cards: 1-2 r. OŠ tor/čet 16.30-18.00, 3-5 r. OŠ tor/čet 18.00-20.00, Judo vrtec sre/pet 16.30-17.30 + note about alternative times. Hours field in contact info filled with real schedule.
+- Footer address updated in all 3 languages. Verified via screenshots (map + poster + schedule render correctly in SL).
