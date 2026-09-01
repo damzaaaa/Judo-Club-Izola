@@ -1,4 +1,26 @@
 const sl = {
+  seo: {
+    domov: {
+      title: 'Judo klub Izola | Judo Obala – Izola, Koper, Ankaran, Portorož',
+      description: 'Judo klub Izola – Judo šola Iztoka Babiča. Judo za otroke in mlade na slovenski Obali: Izola, Koper, Ankaran, Portorož. Več kot 30 let tradicije in olimpijska prvakinja Andreja Leški.',
+      keywords: 'judo obala, judo koper, judo portorož, judo ankaran, judo izola, judo klub izola, judo šola, judo za otroke, Iztok Babič, Andreja Leški',
+    },
+    onas: {
+      title: 'O nas | Judo klub Izola – Judo šola Iztoka Babiča',
+      description: 'Zgodba Judo kluba Izola: več kot 30 let juda na Obali, judo kampi, literatura in pot do olimpijske zlate medalje Andreje Leški v Parizu 2024.',
+      keywords: 'judo izola zgodovina, judo šola Iztoka Babiča, judo kampi izola, Andreja Leški, judo obala, judo koper',
+    },
+    galerija: {
+      title: 'Galerija | Judo klub Izola',
+      description: 'Foto utrinki Judo kluba Izola: treningi, tekmovanja, judo kampi in dogodki z olimpijsko prvakinjo Andrejo Leški.',
+      keywords: 'judo izola galerija, judo kampi, judo obala foto, Andreja Leški',
+    },
+    kontakt: {
+      title: 'Kontakt in vpis 2026–2027 | Judo klub Izola',
+      description: 'Kontakt Judo kluba Izola in vpis 2026–2027. Treningi v telovadnici OŠ Dante Alighieri v Izoli. Judo za dečke in deklice na Obali.',
+      keywords: 'judo izola vpis, judo obala kontakt, judo koper, judo ankaran, judo portorož, vpis judo 2026',
+    },
+  },
   nav: {
     links: [
       { name: 'Domov', path: '/' },
@@ -66,6 +88,12 @@ const sl = {
       titleGold: 'Iztoka Babiča',
       text: 'Naša šola zajema delo v Izoli, Kopru in Ankaranu – povezujemo tri klube z isto vizijo odličnosti. Tradicija, disciplina in prijateljstvo so temelji našega dela.',
       cta: 'Več o nas',
+    },
+    enrollTeaser: {
+      label: 'Vpis 2026–2027',
+      title: 'Vpiši svojega otroka v judo',
+      text: 'Odpiramo vpis v judo športno šolo za dečke in deklice. Preveri urnik treningov in se nam pridruži v telovadnici OŠ Dante Alighieri v Izoli.',
+      cta: 'Poglej urnik in vpis',
     },
     cta: {
       title: 'Postani del naše zgodbe',

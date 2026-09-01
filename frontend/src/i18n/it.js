@@ -1,4 +1,26 @@
 const it = {
+  seo: {
+    domov: {
+      title: 'Judo Club Isola | Judo Litorale – Isola, Capodistria, Ancarano, Portorose',
+      description: 'Judo Club Isola – Scuola di judo di Iztok Babič. Judo per bambini e giovani sul Litorale sloveno: Isola, Capodistria, Ancarano, Portorose. Oltre 30 anni di tradizione e la campionessa olimpica Andreja Leški.',
+      keywords: 'judo obala, judo capodistria, judo portorose, judo ancarano, judo isola, judo club isola, scuola di judo, judo per bambini, Iztok Babič, Andreja Leški',
+    },
+    onas: {
+      title: 'Chi siamo | Judo Club Isola – Scuola di judo di Iztok Babič',
+      description: 'La storia del Judo Club Isola: oltre 30 anni di judo sul Litorale, campi di judo, letteratura e il percorso verso l\'oro olimpico di Andreja Leški a Parigi 2024.',
+      keywords: 'judo isola storia, scuola di judo Iztok Babič, campi di judo isola, Andreja Leški, judo litorale, judo capodistria',
+    },
+    galerija: {
+      title: 'Galleria | Judo Club Isola',
+      description: 'Momenti in foto del Judo Club Isola: allenamenti, competizioni, campi di judo ed eventi con la campionessa olimpica Andreja Leški.',
+      keywords: 'judo isola galleria, campi di judo, judo litorale foto, Andreja Leški',
+    },
+    kontakt: {
+      title: 'Contatti e iscrizioni 2026–2027 | Judo Club Isola',
+      description: 'Contatta il Judo Club Isola e iscriviti per il 2026–2027. Allenamenti nella palestra della Scuola elementare Dante Alighieri a Isola. Judo per bambini e bambine sul Litorale.',
+      keywords: 'judo isola iscrizioni, judo litorale contatti, judo capodistria, judo ancarano, judo portorose, iscrizioni judo 2026',
+    },
+  },
   nav: {
     links: [
       { name: 'Home', path: '/' },
@@ -66,6 +88,12 @@ const it = {
       titleGold: 'Iztok Babič',
       text: 'La nostra scuola opera a Isola, Capodistria e Ancarano – colleghiamo tre club con la stessa visione di eccellenza. Tradizione, disciplina e amicizia sono le fondamenta del nostro lavoro.',
       cta: 'Scopri di più',
+    },
+    enrollTeaser: {
+      label: 'Iscrizioni 2026–2027',
+      title: 'Iscrivi tuo figlio al judo',
+      text: 'Apriamo le iscrizioni alla scuola sportiva di judo per bambini e bambine. Controlla l\'orario degli allenamenti e unisciti a noi nella palestra della Scuola elementare Dante Alighieri a Isola.',
+      cta: 'Vedi orario e iscrizioni',
     },
     cta: {
       title: 'Diventa parte della nostra storia',

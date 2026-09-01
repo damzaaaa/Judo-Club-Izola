@@ -92,3 +92,13 @@ Build a modern, professional and premium-looking website for Judo klub Izola in 
 - Kontakt completed: address 'Osnovna šola Dante Alighieri, Izola' (translated in 3 langs), live Google Maps embed (keyless ?output=embed) pinned on the school, per-location notes (Izola = telovadnica OŠ Dante Alighieri).
 - New enrolment section on Kontakt (data-testid kontakt-enroll-section): enrollment poster image (asset qmh70ujo_IZOLA Vpis za vse skupine.png) + translated schedule cards: 1-2 r. OŠ tor/čet 16.30-18.00, 3-5 r. OŠ tor/čet 18.00-20.00, Judo vrtec sre/pet 16.30-17.30 + note about alternative times. Hours field in contact info filled with real schedule.
 - Footer address updated in all 3 languages. Verified via screenshots (map + poster + schedule render correctly in SL).
+
+## Update (fork session 3, 2026-06) — SEO, favicon, watermark, enrolment teaser
+- Enrolment teaser added on homepage (Domov.jsx, data-testid enroll-teaser + enroll-teaser-cta), dark gold-accent band linking to /kontakt#vpis. Kontakt enrol section given id="vpis" + scroll-mt-20; Kontakt.jsx uses useLocation to smooth-scroll to #vpis on load. Translations: domov.enrollTeaser in sl/en/it. VERIFIED: clicking CTA lands on and scrolls to vpis section.
+- Emergent watermark REMOVED: deleted emergent-main.js badge script (and posthog + hiding CSS) from public/index.html. grep count of emergent-main.js = 0.
+- Favicon = club logo: downloaded club logo, generated public/{favicon.ico, logo192.png, logo512.png, apple-touch-icon.png} via PIL. Linked in index.html + manifest.json. Served 200.
+- SEO overhaul:
+  - public/index.html: <html lang=sl>, rich Slovenian title/description, keywords (judo obala, judo koper, judo portorož, judo ankaran, judo izola, judo klub izola, ...), OpenGraph + Twitter cards, geo meta, hreflang alternates, JSON-LD SportsClub (address OŠ Dante Alighieri Izola, geo, areaServed Izola/Koper/Ankaran/Portorož, phone, email, foundingDate 1998).
+  - react-helmet-async added (index.js wrapped in HelmetProvider). New component src/components/SEO.jsx sets per-page title/description/keywords/canonical/OG. Applied to Domov, ONas, Galerija, Kontakt. Per-page SEO strings in i18n .seo.{domov,onas,galerija,kontakt} for all 3 langs.
+  - public/robots.txt (allow all + sitemap) and public/sitemap.xml (4 routes) created.
+- IMPORTANT: canonical/OG/sitemap URLs currently use preview domain (izola-judo-club.preview.emergentagent.com). MUST update to the real custom domain after deployment.

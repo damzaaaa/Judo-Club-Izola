@@ -1,4 +1,26 @@
 const en = {
+  seo: {
+    domov: {
+      title: 'Judo Club Izola | Judo Obala – Izola, Koper, Ankaran, Portorož',
+      description: 'Judo Club Izola – Iztok Babič Judo School. Judo for children and youth on the Slovenian Coast: Izola, Koper, Ankaran, Portorož. Over 30 years of tradition and Olympic champion Andreja Leški.',
+      keywords: 'judo obala, judo koper, judo portoroz, judo ankaran, judo izola, judo club izola, judo school, judo for kids, Iztok Babič, Andreja Leški',
+    },
+    onas: {
+      title: 'About us | Judo Club Izola – Iztok Babič Judo School',
+      description: 'The story of Judo Club Izola: over 30 years of judo on the Coast, judo camps, literature and the road to Andreja Leški\'s Olympic gold in Paris 2024.',
+      keywords: 'judo izola history, Iztok Babič judo school, judo camps izola, Andreja Leški, judo obala, judo koper',
+    },
+    galerija: {
+      title: 'Gallery | Judo Club Izola',
+      description: 'Photo moments of Judo Club Izola: training, competitions, judo camps and events with Olympic champion Andreja Leški.',
+      keywords: 'judo izola gallery, judo camps, judo obala photos, Andreja Leški',
+    },
+    kontakt: {
+      title: 'Contact & enrolment 2026–2027 | Judo Club Izola',
+      description: 'Contact Judo Club Izola and enrol for 2026–2027. Training in the Dante Alighieri Primary School gym in Izola. Judo for boys and girls on the Coast.',
+      keywords: 'judo izola enrolment, judo obala contact, judo koper, judo ankaran, judo portoroz, judo enrolment 2026',
+    },
+  },
   nav: {
     links: [
       { name: 'Home', path: '/' },
@@ -66,6 +88,12 @@ const en = {
       titleGold: 'Iztok Babič',
       text: 'Our school covers Izola, Koper and Ankaran – we connect three clubs with the same vision of excellence. Tradition, discipline and friendship are the foundations of our work.',
       cta: 'More about us',
+    },
+    enrollTeaser: {
+      label: 'Enrolment 2026–2027',
+      title: 'Enrol your child in judo',
+      text: 'We are opening enrolment in our judo sports school for boys and girls. Check the training schedule and join us in the Dante Alighieri Primary School gym in Izola.',
+      cta: 'See schedule & enrol',
     },
     cta: {
       title: 'Become part of our story',

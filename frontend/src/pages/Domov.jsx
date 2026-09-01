@@ -1,6 +1,7 @@
-import { ArrowRight, ArrowDown } from 'lucide-react';
+import { ArrowRight, ArrowDown, CalendarClock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLang } from '../i18n/LanguageContext';
+import SEO from '../components/SEO';
 
 // Image URLs
 const HERO_IMAGE = "https://customer-assets.emergentagent.com/job_ad56f1e8-e5f7-431f-947a-6697b9684b20/artifacts/kbs2nshy_Nadzor%20vadbe.webp";
@@ -24,6 +25,7 @@ export default function Domov() {
 
   return (
     <div data-testid="domov-page" className="min-h-screen">
+      <SEO title={t.seo.domov.title} description={t.seo.domov.description} keywords={t.seo.domov.keywords} path="/" />
       {/* Hero Section - Full Screen */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image - Clickable */}
@@ -115,6 +117,39 @@ export default function Domov() {
               <p className="font-['Manrope'] text-xs text-gray-400 italic">
                 {d.project.note}
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Enrollment Teaser */}
+      <section data-testid="enroll-teaser" className="bg-white border-b border-[#EDEDED]">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8 py-14 lg:py-16">
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 bg-[#0A0A0A] px-8 py-10 lg:px-14 lg:py-12 relative overflow-hidden">
+            <div className="absolute -top-16 -right-16 w-56 h-56 bg-[#D4AF37]/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="flex-shrink-0 w-16 h-16 border border-[#D4AF37]/40 flex items-center justify-center relative z-10">
+              <CalendarClock className="h-7 w-7 text-[#D4AF37]" />
+            </div>
+            <div className="flex-1 text-center md:text-left relative z-10">
+              <span className="inline-block uppercase text-xs tracking-[0.3em] text-[#D4AF37] font-semibold font-['Manrope'] mb-3">
+                {d.enrollTeaser.label}
+              </span>
+              <h2 className="font-['Outfit'] text-2xl lg:text-3xl font-bold text-white leading-tight mb-3">
+                {d.enrollTeaser.title}
+              </h2>
+              <p className="font-['Manrope'] text-sm lg:text-base text-gray-400 leading-relaxed max-w-2xl">
+                {d.enrollTeaser.text}
+              </p>
+            </div>
+            <div className="flex-shrink-0 relative z-10">
+              <Link
+                to="/kontakt#vpis"
+                data-testid="enroll-teaser-cta"
+                className="inline-flex items-center justify-center gap-2 bg-[#D4AF37] text-[#0A0A0A] px-8 py-4 font-['Manrope'] font-semibold text-sm hover:bg-white transition-all duration-300 tracking-wide whitespace-nowrap"
+              >
+                {d.enrollTeaser.cta}
+                <ArrowRight className="h-4 w-4" />
+              </Link>
             </div>
           </div>
         </div>
