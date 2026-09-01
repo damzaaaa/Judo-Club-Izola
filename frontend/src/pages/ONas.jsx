@@ -324,7 +324,7 @@ export default function ONas() {
             <SubTitle>{tm.s5.title}</SubTitle>
             <Prose>{tm.s5.p.map((p, i) => <p key={i}>{p}</p>)}</Prose>
 
-            <div className="mt-10 max-w-2xl mx-auto">
+            <div className="mt-10 max-w-xs mx-auto">
               <img src={IMG_LESKI_SKUPINSKA} alt={tm.s5.imgCaption} className="w-full h-auto border border-[#E5E7EB]" />
               <p className="font-['Manrope'] text-sm text-[#52525B] mt-4 italic text-center">{tm.s5.imgCaption}</p>
             </div>
