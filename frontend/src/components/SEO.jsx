@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { useLang } from '../i18n/LanguageContext';
 
-const SITE_URL = 'https://izola-judo-club.preview.emergentagent.com';
+const SITE_URL = 'https://www.judoclubizola.com';
 const OG_IMAGE = `${SITE_URL}/logo512.png`;
 const LOCALE_MAP = { sl: 'sl_SI', en: 'en_US', it: 'it_IT' };
 
