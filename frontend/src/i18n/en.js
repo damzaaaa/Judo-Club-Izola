@@ -49,6 +49,7 @@ const en = {
     address: 'Dante Alighieri Primary School, Izola',
     rights: 'All rights reserved.',
     school: 'Iztok Babič Judo School',
+    areas: 'Judo for children and youth on the Slovenian Coast – Izola, Koper, Ankaran and Portorož.',
   },
   domov: {
     hero: {

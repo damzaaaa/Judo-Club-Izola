@@ -49,6 +49,7 @@ const it = {
     address: 'Scuola elementare Dante Alighieri, Isola',
     rights: 'Tutti i diritti riservati.',
     school: 'Scuola di judo di Iztok Babič',
+    areas: 'Judo per bambini e giovani sul Litorale sloveno – Isola, Capodistria, Ancarano e Portorose.',
   },
   domov: {
     hero: {

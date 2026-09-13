@@ -121,6 +121,9 @@ export default function Footer() {
               {t.footer.school}
             </p>
           </div>
+          <p data-testid="footer-areas" className="font-['Manrope'] text-xs text-gray-600 mt-4 text-center md:text-left">
+            {t.footer.areas}
+          </p>
         </div>
       </div>
     </footer>

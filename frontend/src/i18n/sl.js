@@ -49,6 +49,7 @@ const sl = {
     address: 'OŠ Dante Alighieri, Izola',
     rights: 'Vse pravice pridržane.',
     school: 'Judo šola Iztoka Babiča',
+    areas: 'Judo za otroke in mlade na slovenski Obali – Izola, Koper, Ankaran in Portorož.',
   },
   domov: {
     hero: {
