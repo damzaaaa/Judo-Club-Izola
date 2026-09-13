@@ -16,9 +16,19 @@ const sl = {
       keywords: 'judo izola galerija, judo kampi, judo obala foto, Andreja Leški',
     },
     kontakt: {
-      title: 'Kontakt in vpis 2026–2027 | Judo klub Izola',
-      description: 'Kontakt Judo kluba Izola in vpis 2026–2027. Treningi v telovadnici OŠ Dante Alighieri v Izoli. Judo za dečke in deklice na Obali.',
-      keywords: 'judo izola vpis, judo obala kontakt, judo koper, judo ankaran, judo portorož, vpis judo 2026',
+      title: 'Urnik in kontakt | Judo klub Izola',
+      description: 'Urnik treningov in kontakt Judo kluba Izola. Treningi v telovadnici OŠ Dante Alighieri v Izoli. Judo za dečke in deklice na Obali.',
+      keywords: 'judo izola urnik, judo izola kontakt, judo obala, judo koper, judo ankaran, judo portorož, vpis judo 2026',
+    },
+    strokovna: {
+      title: 'Strokovna znanja | Judo klub Izola',
+      description: 'Predavanja, strokovni članki in zgodovinski pogledi trenerja Iztoka Babiča o judu, tekmovalni filozofiji športa in olimpijski tradiciji.',
+      keywords: 'judo strokovna znanja, Iztok Babič predavanje, judo teorija, zgodovina športa, olimpijske igre, judo obala',
+    },
+    kampi: {
+      title: 'Kampi in prireditve | Judo klub Izola',
+      description: 'Poletni judo kampi v Izoli, mednarodno povezovanje in Evropski mladinski judo pokal v Areni Bonifika. Judo klub Izola.',
+      keywords: 'judo kampi izola, poletni judo kamp, evropski mladinski pokal, Arena Bonifika, judo obala, judo koper',
     },
   },
   nav: {
@@ -26,7 +36,9 @@ const sl = {
       { name: 'Domov', path: '/' },
       { name: 'O nas', path: '/o-nas' },
       { name: 'Galerija', path: '/galerija' },
-      { name: 'Kontakt', path: '/kontakt' },
+      { name: 'Strokovna znanja', path: '/strokovna-znanja' },
+      { name: 'Kampi in prireditve', path: '/kampi-in-prireditve' },
+      { name: 'Urnik in kontakt', path: '/kontakt' },
     ],
   },
   footer: {
@@ -184,6 +196,12 @@ const sl = {
       text: 'Poiščite Judo klub Izola na Google Zemljevidih, si oglejte lokacijo in nam pustite oceno. Vaše mnenje nam veliko pomeni.',
       cta: 'Odpri v Googlu',
     },
+    schedule: {
+      label: 'Urnik',
+      title: 'Tedenski urnik vadbe',
+      text: 'Urnik treningov za vse skupine – vrtec, mlajši, starejši ter veterani in rekreacija – v telovadnici OŠ Dante Alighieri.',
+      imgAlt: 'Tedenski urnik treningov Judo kluba Izola za vse skupine',
+    },
     enroll: {
       label: 'Vpis 2026–2027',
       title: 'Judo športna šola za dečke in deklice',
@@ -201,6 +219,55 @@ const sl = {
       title: 'Judo šola Iztoka Babiča',
       text: 'Naša šola deluje v treh lokacijah: Izola, Koper in Ankaran. Povezujemo tri klube z isto vizijo odličnosti in tradicijo vrhunskega juda.',
     },
+  },
+  kampi: {
+    hero: {
+      label: 'Kampi in prireditve',
+      title: 'Kampi, tekmovanja in prireditve',
+      sub: 'Poletni judo kampi, mednarodno povezovanje in prihajajoče prireditve Judo kluba Izola.',
+    },
+    event: {
+      badge: 'Napoved dogodka',
+      title: 'Evropski mladinski judo pokal',
+      date: 'Konec novembra 2026',
+      place: 'Arena Bonifika, Koper',
+      text: 'Judo klub Izola in Judo klub Impol skupaj sodelujeta pri organizaciji evropskega mladinskega judo pokala v Areni Bonifika. Podrobnejša najava s promocijo sledi kmalu.',
+      soon: 'Promocija v pripravi',
+    },
+    cta: {
+      title: 'Se nam želite pridružiti?',
+      text: 'Kontaktirajte nas za več informacij o kampih, treningih in prireditvah.',
+      button: 'Kontaktiraj nas',
+    },
+  },
+  strokovna: {
+    hero: {
+      label: 'Strokovna znanja',
+      title: 'Znanje, ki gradi šampione',
+      sub: 'Predavanja, strokovni članki in zgodovinski pogledi trenerja Iztoka Babiča.',
+    },
+    video: {
+      label: 'Predavanje',
+      title: 'Izsek s predavanja pred predstavniki JZS (2011)',
+      desc: 'O prečasnosti (anticipaciji) ter primerjava z borbeno akcijo. Trener Iztok Babič predstavlja strokovni pogled na predvidevanje in odzivnost v judu.',
+    },
+    docsLabel: 'Zgodovinske teme',
+    docsTitle: 'Dve zgodovinski temi',
+    docs: [
+      {
+        title: 'Sodobni zgodovinski pogledi na tekmovalno filozofijo športa',
+        desc: 'Razvoj tekmovalnega športa in njegove filozofije z vidika juda – od antičnih korenin do sodobnih pojavov ter pomena juda za razvoj mladih. (Avtor: Iztok Babič)',
+        meta: '9 strani · PDF',
+        cta: 'Preberi članek',
+      },
+      {
+        title: 'Mladi športniki v antičnih olimpijskih igrah',
+        desc: 'Vloga mladih športnikov v antičnih olimpijskih igrah in primerjava z današnjimi olimpijskimi igrami mladih ter vplivom politike na šport.',
+        meta: '4 strani · PDF',
+        cta: 'Preberi članek',
+      },
+    ],
+    note: 'Strokovna gradiva bomo redno dopolnjevali.',
   },
   onas: {
     hero: {

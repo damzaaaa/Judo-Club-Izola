@@ -82,14 +82,14 @@ export default function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-6">
             {t.nav.links.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
                 onClick={handleNavClick}
                 data-testid={`nav-link-${link.path === '/' ? 'domov' : link.path.replace('/', '')}`}
-                className={`font-['Manrope'] text-base font-bold transition-colors relative gold-underline ${
+                className={`font-['Manrope'] text-sm font-bold transition-colors relative gold-underline whitespace-nowrap ${
                   location.pathname === link.path
                     ? 'text-[#D4AF37]'
                     : 'text-[#0A0A0A] hover:text-[#D4AF37]'
@@ -103,7 +103,7 @@ export default function Navigation() {
           </div>
 
           {/* Mobile: switcher + menu button */}
-          <div className="flex md:hidden items-center gap-4">
+          <div className="flex lg:hidden items-center gap-4">
             <LanguageSwitcher idSuffix="-mobile" />
             <button
               data-testid="mobile-menu-button"
@@ -124,7 +124,7 @@ export default function Navigation() {
         {isMobileMenuOpen && (
           <div 
             data-testid="mobile-menu"
-            className="md:hidden bg-white border-t border-[#E5E7EB] py-4"
+            className="lg:hidden bg-white border-t border-[#E5E7EB] py-4"
           >
             <div className="flex flex-col gap-4">
               {t.nav.links.map((link) => (

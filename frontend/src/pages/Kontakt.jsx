@@ -154,6 +154,32 @@ export default function Kontakt() {
         </div>
       </section>
 
+      {/* Weekly Schedule Section */}
+      <section id="urnik" data-testid="kontakt-schedule-section" className="py-24 lg:py-32 bg-white scroll-mt-20">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <span className="inline-block uppercase text-xs tracking-[0.3em] text-[#D4AF37] font-semibold font-['Manrope'] mb-4">
+              {k.schedule.label}
+            </span>
+            <h2 className="font-['Outfit'] text-3xl sm:text-4xl font-bold text-[#0A0A0A] tracking-tight leading-tight mb-4">
+              {k.schedule.title}
+            </h2>
+            <p className="font-['Manrope'] text-base text-[#52525B] leading-relaxed max-w-2xl mx-auto">
+              {k.schedule.text}
+            </p>
+            <div className="w-16 h-px bg-[#D4AF37] mx-auto mt-6" />
+          </div>
+          <div className="max-w-5xl mx-auto">
+            <img
+              src="https://customer-assets-7cd3h4nn.emergentagent.net/job_izola-judo-club/artifacts/u6mawded_URNIK%20TRENINGOV%20VSEH%20SKUPIN.jpg"
+              alt={k.schedule.imgAlt}
+              data-testid="schedule-image"
+              className="w-full h-auto border border-[#E5E7EB] shadow-xl rounded-lg"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Enrolment & Schedule Section */}
       <section id="vpis" data-testid="kontakt-enroll-section" className="py-24 lg:py-32 bg-[#F9F9F9] scroll-mt-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -179,21 +205,6 @@ export default function Kontakt() {
               <p className="font-['Manrope'] text-base text-[#52525B] leading-relaxed mb-10">
                 {k.enroll.intro}
               </p>
-
-              <div className="space-y-4 mb-8">
-                {k.enroll.rows.map((row) => (
-                  <div
-                    key={row.group}
-                    className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 bg-white border border-[#E5E7EB] border-l-4 border-l-[#D4AF37] px-6 py-4"
-                  >
-                    <div>
-                      <p className="font-['Outfit'] text-base font-semibold text-[#0A0A0A]">{row.group}</p>
-                      <p className="font-['Manrope'] text-sm text-[#52525B]">{row.days}</p>
-                    </div>
-                    <p className="font-['Outfit'] text-lg font-bold text-[#D4AF37] whitespace-nowrap">{row.time}</p>
-                  </div>
-                ))}
-              </div>
 
               <p className="font-['Manrope'] text-sm text-[#52525B] italic">
                 {k.enroll.note}

@@ -16,9 +16,19 @@ const en = {
       keywords: 'judo izola gallery, judo camps, judo obala photos, Andreja Leški',
     },
     kontakt: {
-      title: 'Contact & enrolment 2026–2027 | Judo Club Izola',
-      description: 'Contact Judo Club Izola and enrol for 2026–2027. Training in the Dante Alighieri Primary School gym in Izola. Judo for boys and girls on the Coast.',
-      keywords: 'judo izola enrolment, judo obala contact, judo koper, judo ankaran, judo portoroz, judo enrolment 2026',
+      title: 'Schedule & contact | Judo Club Izola',
+      description: 'Training schedule and contact for Judo Club Izola. Training in the Dante Alighieri Primary School gym in Izola. Judo for boys and girls on the Coast.',
+      keywords: 'judo izola schedule, judo izola contact, judo obala, judo koper, judo ankaran, judo portoroz, judo enrolment 2026',
+    },
+    strokovna: {
+      title: 'Professional knowledge | Judo Club Izola',
+      description: 'Lectures, professional articles and historical perspectives by coach Iztok Babič on judo, the competitive philosophy of sport and Olympic tradition.',
+      keywords: 'judo professional knowledge, Iztok Babič lecture, judo theory, history of sport, olympic games, judo obala',
+    },
+    kampi: {
+      title: 'Camps and events | Judo Club Izola',
+      description: 'Summer judo camps in Izola, international networking and the European Junior Judo Cup at the Bonifika Arena. Judo Club Izola.',
+      keywords: 'judo camps izola, summer judo camp, european junior cup, Bonifika Arena, judo obala, judo koper',
     },
   },
   nav: {
@@ -26,7 +36,9 @@ const en = {
       { name: 'Home', path: '/' },
       { name: 'About us', path: '/o-nas' },
       { name: 'Gallery', path: '/galerija' },
-      { name: 'Contact', path: '/kontakt' },
+      { name: 'Professional knowledge', path: '/strokovna-znanja' },
+      { name: 'Camps & events', path: '/kampi-in-prireditve' },
+      { name: 'Schedule & contact', path: '/kontakt' },
     ],
   },
   footer: {
@@ -184,6 +196,12 @@ const en = {
       text: 'Look up Judo Club Izola on Google Maps, check the location and leave us a review. Your feedback means a lot to us.',
       cta: 'Open in Google',
     },
+    schedule: {
+      label: 'Schedule',
+      title: 'Weekly training schedule',
+      text: 'Training schedule for all groups – kindergarten, younger, older, and veterans & recreation – in the Dante Alighieri Primary School gym.',
+      imgAlt: 'Weekly training schedule of Judo Club Izola for all groups',
+    },
     enroll: {
       label: 'Enrolment 2026–2027',
       title: 'Judo sports school for boys and girls',
@@ -201,6 +219,55 @@ const en = {
       title: 'Iztok Babič Judo School',
       text: 'Our school operates in three locations: Izola, Koper and Ankaran. We connect three clubs with the same vision of excellence and a tradition of top-level judo.',
     },
+  },
+  kampi: {
+    hero: {
+      label: 'Camps and events',
+      title: 'Camps, competitions and events',
+      sub: 'Summer judo camps, international networking and upcoming events of Judo Club Izola.',
+    },
+    event: {
+      badge: 'Event announcement',
+      title: 'European Junior Judo Cup',
+      date: 'End of November 2026',
+      place: 'Bonifika Arena, Koper',
+      text: 'Judo Club Izola and Judo Club Impol jointly participate in organising the European Junior Judo Cup at the Bonifika Arena. A detailed announcement with promotion will follow soon.',
+      soon: 'Promotion coming soon',
+    },
+    cta: {
+      title: 'Would you like to join us?',
+      text: 'Contact us for more information about camps, training and events.',
+      button: 'Contact us',
+    },
+  },
+  strokovna: {
+    hero: {
+      label: 'Professional knowledge',
+      title: 'Knowledge that builds champions',
+      sub: 'Lectures, professional articles and historical perspectives by coach Iztok Babič.',
+    },
+    video: {
+      label: 'Lecture',
+      title: 'Excerpt from a lecture to JZS representatives (2011)',
+      desc: 'On anticipation ("prečasnost") and its comparison with combat action. Coach Iztok Babič presents a professional view of anticipation and responsiveness in judo.',
+    },
+    docsLabel: 'Historical topics',
+    docsTitle: 'Two historical topics',
+    docs: [
+      {
+        title: 'Modern historical views on the competitive philosophy of sport',
+        desc: 'The development of competitive sport and its philosophy from a judo perspective – from ancient roots to modern phenomena and the importance of judo for youth development. (Author: Iztok Babič)',
+        meta: '9 pages · PDF',
+        cta: 'Read the article',
+      },
+      {
+        title: 'Young athletes in the ancient Olympic Games',
+        desc: "The role of young athletes in the ancient Olympic Games, compared with today's Youth Olympic Games and the influence of politics on sport.",
+        meta: '4 pages · PDF',
+        cta: 'Read the article',
+      },
+    ],
+    note: 'We will regularly add more professional materials.',
   },
   onas: {
     hero: {

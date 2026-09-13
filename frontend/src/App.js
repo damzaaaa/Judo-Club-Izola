@@ -6,6 +6,8 @@ import Footer from "./components/Footer";
 import Domov from "./pages/Domov";
 import ONas from "./pages/ONas";
 import Galerija from "./pages/Galerija";
+import StrokovnaZnanja from "./pages/StrokovnaZnanja";
+import KampiInPrireditve from "./pages/KampiInPrireditve";
 import Kontakt from "./pages/Kontakt";
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
               <Route path="/" element={<Domov />} />
               <Route path="/o-nas" element={<ONas />} />
               <Route path="/galerija" element={<Galerija />} />
+              <Route path="/strokovna-znanja" element={<StrokovnaZnanja />} />
+              <Route path="/kampi-in-prireditve" element={<KampiInPrireditve />} />
               <Route path="/kontakt" element={<Kontakt />} />
             </Routes>
           </main>

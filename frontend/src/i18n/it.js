@@ -16,9 +16,19 @@ const it = {
       keywords: 'judo isola galleria, campi di judo, judo litorale foto, Andreja Leški',
     },
     kontakt: {
-      title: 'Contatti e iscrizioni 2026–2027 | Judo Club Isola',
-      description: 'Contatta il Judo Club Isola e iscriviti per il 2026–2027. Allenamenti nella palestra della Scuola elementare Dante Alighieri a Isola. Judo per bambini e bambine sul Litorale.',
-      keywords: 'judo isola iscrizioni, judo litorale contatti, judo capodistria, judo ancarano, judo portorose, iscrizioni judo 2026',
+      title: 'Orario e contatti | Judo Club Isola',
+      description: "Orario degli allenamenti e contatti del Judo Club Isola. Allenamenti nella palestra della Scuola elementare Dante Alighieri a Isola. Judo per bambini e bambine sul Litorale.",
+      keywords: 'judo isola orario, judo isola contatti, judo litorale, judo capodistria, judo ancarano, judo portorose, iscrizioni judo 2026',
+    },
+    strokovna: {
+      title: 'Conoscenze professionali | Judo Club Isola',
+      description: "Conferenze, articoli specialistici e prospettive storiche dell'allenatore Iztok Babič sul judo, la filosofia competitiva dello sport e la tradizione olimpica.",
+      keywords: 'judo conoscenze professionali, conferenza Iztok Babič, teoria del judo, storia dello sport, giochi olimpici, judo litorale',
+    },
+    kampi: {
+      title: 'Campi ed eventi | Judo Club Isola',
+      description: "Campi estivi di judo a Isola, collegamento internazionale e la Coppa europea juniores di judo all'Arena Bonifika. Judo Club Isola.",
+      keywords: 'campi di judo isola, campo estivo di judo, coppa europea juniores, Arena Bonifika, judo litorale, judo capodistria',
     },
   },
   nav: {
@@ -26,7 +36,9 @@ const it = {
       { name: 'Home', path: '/' },
       { name: 'Chi siamo', path: '/o-nas' },
       { name: 'Galleria', path: '/galerija' },
-      { name: 'Contatti', path: '/kontakt' },
+      { name: 'Conoscenze professionali', path: '/strokovna-znanja' },
+      { name: 'Campi ed eventi', path: '/kampi-in-prireditve' },
+      { name: 'Orario e contatti', path: '/kontakt' },
     ],
   },
   footer: {
@@ -184,6 +196,12 @@ const it = {
       text: 'Cerca il Judo Club Isola su Google Maps, guarda la posizione e lasciaci una recensione. La tua opinione è molto importante per noi.',
       cta: 'Apri in Google',
     },
+    schedule: {
+      label: 'Orario',
+      title: 'Orario settimanale degli allenamenti',
+      text: "Orario degli allenamenti per tutti i gruppi – asilo, più giovani, più grandi e veterani & ricreazione – nella palestra della Scuola elementare Dante Alighieri.",
+      imgAlt: 'Orario settimanale degli allenamenti del Judo Club Isola per tutti i gruppi',
+    },
     enroll: {
       label: 'Iscrizioni 2026–2027',
       title: 'Scuola sportiva di judo per bambini e bambine',
@@ -201,6 +219,55 @@ const it = {
       title: 'Scuola di judo di Iztok Babič',
       text: 'La nostra scuola opera in tre sedi: Isola, Capodistria e Ancarano. Colleghiamo tre club con la stessa visione di eccellenza e la tradizione del judo di alto livello.',
     },
+  },
+  kampi: {
+    hero: {
+      label: 'Campi ed eventi',
+      title: 'Campi, competizioni ed eventi',
+      sub: 'Campi estivi di judo, collegamento internazionale ed eventi in arrivo del Judo Club Isola.',
+    },
+    event: {
+      badge: 'Annuncio evento',
+      title: 'Coppa europea juniores di judo',
+      date: 'Fine novembre 2026',
+      place: 'Arena Bonifika, Capodistria',
+      text: "Il Judo Club Isola e il Judo Club Impol collaborano insieme all'organizzazione della Coppa europea juniores di judo all'Arena Bonifika. Un annuncio dettagliato con la promozione seguirà a breve.",
+      soon: 'Promozione in preparazione',
+    },
+    cta: {
+      title: 'Vuoi unirti a noi?',
+      text: 'Contattaci per maggiori informazioni su campi, allenamenti ed eventi.',
+      button: 'Contattaci',
+    },
+  },
+  strokovna: {
+    hero: {
+      label: 'Conoscenze professionali',
+      title: 'Il sapere che forma i campioni',
+      sub: "Conferenze, articoli specialistici e prospettive storiche dell'allenatore Iztok Babič.",
+    },
+    video: {
+      label: 'Conferenza',
+      title: 'Estratto da una conferenza ai rappresentanti della JZS (2011)',
+      desc: "Sull'anticipazione (\"prečasnost\") e il confronto con l'azione di combattimento. L'allenatore Iztok Babič presenta una visione professionale dell'anticipazione e della reattività nel judo.",
+    },
+    docsLabel: 'Temi storici',
+    docsTitle: 'Due temi storici',
+    docs: [
+      {
+        title: 'Prospettive storiche moderne sulla filosofia competitiva dello sport',
+        desc: "Lo sviluppo dello sport competitivo e della sua filosofia dal punto di vista del judo – dalle radici antiche ai fenomeni moderni e l'importanza del judo per lo sviluppo dei giovani. (Autore: Iztok Babič)",
+        meta: '9 pagine · PDF',
+        cta: "Leggi l'articolo",
+      },
+      {
+        title: 'Giovani atleti negli antichi Giochi olimpici',
+        desc: "Il ruolo dei giovani atleti negli antichi Giochi olimpici, confrontato con gli odierni Giochi olimpici giovanili e l'influenza della politica sullo sport.",
+        meta: '4 pagine · PDF',
+        cta: "Leggi l'articolo",
+      },
+    ],
+    note: 'Aggiungeremo regolarmente altri materiali specialistici.',
   },
   onas: {
     hero: {
