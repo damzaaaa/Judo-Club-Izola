@@ -157,11 +157,11 @@ export default function KampiInPrireditve() {
             <Prose>{tm.s5.p.map((p, i) => <p key={i}>{p}</p>)}</Prose>
             <div className="mt-10 grid sm:grid-cols-2 gap-8 max-w-3xl mx-auto items-start">
               <div>
-                <img src={IMG_LESKI_SKUPINSKA} alt={tm.s5.imgCaption} className="w-full h-auto border border-[#E5E7EB]" />
+                <img src={IMG_LESKI_SKUPINSKA} alt={tm.s5.imgCaption} className="w-full h-[440px] object-cover object-center border border-[#E5E7EB]" />
                 <p className="font-['Manrope'] text-sm text-[#52525B] mt-4 italic text-center">{tm.s5.imgCaption}</p>
               </div>
               <div>
-                <img src={IMG_NINA_DIPLOMA} alt={tm.s6.cap2} className="w-full h-auto border border-[#E5E7EB]" />
+                <img src={IMG_NINA_DIPLOMA} alt={tm.s6.cap2} className="w-full h-[440px] object-cover object-center border border-[#E5E7EB]" />
                 <p className="font-['Manrope'] text-sm text-[#52525B] mt-4 italic text-center">{tm.s6.cap2}</p>
               </div>
             </div>

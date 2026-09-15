@@ -102,13 +102,17 @@ export default function Kontakt() {
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
 
-              {/* Map */}
-              <div className="mt-12 aspect-video border border-[#E5E7EB] overflow-hidden">
+          {/* Map + Find us on Google side by side */}
+          <div className="mt-16 grid md:grid-cols-2 gap-8 items-stretch">
+            <div className="flex flex-col">
+              <div className="flex-grow min-h-[340px] border border-[#E5E7EB] overflow-hidden">
                 <iframe
                   title={k.map.title}
                   src="https://www.google.com/maps?q=Osnovna+%C5%A1ola+Dante+Alighieri+Izola&output=embed"
-                  className="w-full h-full"
+                  className="w-full h-full min-h-[340px]"
                   style={{ border: 0 }}
                   loading="lazy"
                   allowFullScreen
@@ -119,35 +123,35 @@ export default function Kontakt() {
               <p className="font-['Manrope'] text-sm text-[#52525B] mt-3 italic text-center">
                 {k.map.text}
               </p>
+            </div>
 
-              {/* Find us on Google */}
-              <div data-testid="google-block" className="mt-10 bg-[#0A0A0A] p-8 relative overflow-hidden">
-                <div className="absolute -top-12 -right-12 w-40 h-40 bg-[#D4AF37]/10 rounded-full blur-2xl pointer-events-none" />
-                <div className="relative z-10">
-                  <div className="flex items-center gap-1 mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 text-[#D4AF37] fill-[#D4AF37]" />
-                    ))}
-                  </div>
-                  <span className="inline-block uppercase text-xs tracking-[0.3em] text-[#D4AF37] font-semibold font-['Manrope'] mb-2">
-                    {k.google.label}
-                  </span>
-                  <h3 className="font-['Outfit'] text-xl font-bold text-white mb-3">
-                    {k.google.title}
-                  </h3>
-                  <p className="font-['Manrope'] text-sm text-gray-400 leading-relaxed mb-6">
-                    {k.google.text}
-                  </p>
-                  <a
-                    href={GOOGLE_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    data-testid="google-cta"
-                    className="inline-flex items-center justify-center gap-2 bg-[#D4AF37] text-[#0A0A0A] px-8 py-4 font-['Manrope'] font-semibold text-sm hover:bg-white transition-all duration-300 tracking-wide"
-                  >
-                    {k.google.cta}
-                  </a>
+            {/* Find us on Google */}
+            <div data-testid="google-block" className="bg-[#0A0A0A] p-8 lg:p-10 relative overflow-hidden flex flex-col justify-center">
+              <div className="absolute -top-12 -right-12 w-40 h-40 bg-[#D4AF37]/10 rounded-full blur-2xl pointer-events-none" />
+              <div className="relative z-10">
+                <div className="flex items-center gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 text-[#D4AF37] fill-[#D4AF37]" />
+                  ))}
                 </div>
+                <span className="inline-block uppercase text-xs tracking-[0.3em] text-[#D4AF37] font-semibold font-['Manrope'] mb-2">
+                  {k.google.label}
+                </span>
+                <h3 className="font-['Outfit'] text-2xl font-bold text-white mb-3">
+                  {k.google.title}
+                </h3>
+                <p className="font-['Manrope'] text-sm text-gray-400 leading-relaxed mb-6">
+                  {k.google.text}
+                </p>
+                <a
+                  href={GOOGLE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid="google-cta"
+                  className="inline-flex items-center justify-center gap-2 bg-[#D4AF37] text-[#0A0A0A] px-8 py-4 font-['Manrope'] font-semibold text-sm hover:bg-white transition-all duration-300 tracking-wide self-start"
+                >
+                  {k.google.cta}
+                </a>
               </div>
             </div>
           </div>
