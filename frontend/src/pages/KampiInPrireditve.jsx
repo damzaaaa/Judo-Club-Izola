@@ -155,9 +155,15 @@ export default function KampiInPrireditve() {
           <div className="mb-16">
             <SubTitle>{tm.s5.title}</SubTitle>
             <Prose>{tm.s5.p.map((p, i) => <p key={i}>{p}</p>)}</Prose>
-            <div className="mt-10 max-w-xs mx-auto">
-              <img src={IMG_LESKI_SKUPINSKA} alt={tm.s5.imgCaption} className="w-full h-auto border border-[#E5E7EB]" />
-              <p className="font-['Manrope'] text-sm text-[#52525B] mt-4 italic text-center">{tm.s5.imgCaption}</p>
+            <div className="mt-10 grid sm:grid-cols-2 gap-8 max-w-3xl mx-auto items-start">
+              <div>
+                <img src={IMG_LESKI_SKUPINSKA} alt={tm.s5.imgCaption} className="w-full h-auto border border-[#E5E7EB]" />
+                <p className="font-['Manrope'] text-sm text-[#52525B] mt-4 italic text-center">{tm.s5.imgCaption}</p>
+              </div>
+              <div>
+                <img src={IMG_NINA_DIPLOMA} alt={tm.s6.cap2} className="w-full h-auto border border-[#E5E7EB]" />
+                <p className="font-['Manrope'] text-sm text-[#52525B] mt-4 italic text-center">{tm.s6.cap2}</p>
+              </div>
             </div>
             <div className="prose prose-lg max-w-none font-['Manrope'] text-[#52525B] leading-relaxed mt-10">
               <p>{tm.s5.after}</p>
@@ -173,15 +179,9 @@ export default function KampiInPrireditve() {
             <div className="border-l-4 border-[#D4AF37] pl-6 py-2 mt-8 mb-10">
               <p className="font-['Outfit'] text-xl text-[#0A0A0A] font-bold">{tm.s6.quote}</p>
             </div>
-            <div className="grid md:grid-cols-2 gap-8 items-start">
-              <div>
-                <img src={IMG_MOJSTRSKI_IZPIT} alt={tm.s6.cap1} className="w-full h-auto border border-[#E5E7EB]" />
-                <p className="font-['Manrope'] text-sm text-[#52525B] mt-4 italic text-center">{tm.s6.cap1}</p>
-              </div>
-              <div>
-                <img src={IMG_NINA_DIPLOMA} alt={tm.s6.cap2} className="h-auto max-h-[560px] w-auto mx-auto border border-[#E5E7EB]" />
-                <p className="font-['Manrope'] text-sm text-[#52525B] mt-4 italic text-center">{tm.s6.cap2}</p>
-              </div>
+            <div className="max-w-3xl mx-auto">
+              <img src={IMG_MOJSTRSKI_IZPIT} alt={tm.s6.cap1} className="w-full h-auto border border-[#E5E7EB]" />
+              <p className="font-['Manrope'] text-sm text-[#52525B] mt-4 italic text-center">{tm.s6.cap1}</p>
             </div>
             <div className="prose prose-lg max-w-none font-['Manrope'] text-[#52525B] leading-relaxed mt-10">
               <p>{tm.s6.after}</p>
