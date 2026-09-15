@@ -173,13 +173,13 @@ export default function KampiInPrireditve() {
             <div className="border-l-4 border-[#D4AF37] pl-6 py-2 mt-8 mb-10">
               <p className="font-['Outfit'] text-xl text-[#0A0A0A] font-bold">{tm.s6.quote}</p>
             </div>
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-8 items-start">
               <div>
-                <img src={IMG_MOJSTRSKI_IZPIT} alt={tm.s6.cap1} className="w-full h-[420px] object-cover object-center border border-[#E5E7EB]" />
+                <img src={IMG_MOJSTRSKI_IZPIT} alt={tm.s6.cap1} className="w-full h-auto border border-[#E5E7EB]" />
                 <p className="font-['Manrope'] text-sm text-[#52525B] mt-4 italic text-center">{tm.s6.cap1}</p>
               </div>
               <div>
-                <img src={IMG_NINA_DIPLOMA} alt={tm.s6.cap2} className="w-full h-[420px] object-cover object-top border border-[#E5E7EB]" />
+                <img src={IMG_NINA_DIPLOMA} alt={tm.s6.cap2} className="h-auto max-h-[560px] w-auto mx-auto border border-[#E5E7EB]" />
                 <p className="font-['Manrope'] text-sm text-[#52525B] mt-4 italic text-center">{tm.s6.cap2}</p>
               </div>
             </div>
